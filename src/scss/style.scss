@@ -12,13 +12,14 @@
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
 $fontFamily: var(--font-family);
 $secondFamily: var(--second-family);
+$thirdFamily: var(--family-family);
 $fontSize: toRem(15); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
-$mainColor: var(--black-color);
-$whiteColor: var(--white-color);
-$masterColor: var(--master-color);
-$secondColor: var(--second-color);
+$mainColor: var(--main-color);
+// $whiteColor: var(--white-color);
+// $masterColor: var(--master-color);
+// $secondColor: var(--second-color);
 $backgroundColor: var(--background-color);
 
 
@@ -69,8 +70,8 @@ $responsiveType: 1;
 
 // Стили тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
 body {
-	font-size: toRem(18);
-	font-weight: 500;
+	// font-size: toRem(18);
+	font-weight: 400;
 	background: $backgroundColor;
 
 	// Скролл заблокирован
