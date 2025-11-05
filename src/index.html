@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"GoodHouse"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<section class="intro">
+				<div class="intro__container_intro">
+					<!-- <div class="intro__media"> -->
+					<div class="intro__gradient"></div>
+					<img data-src="@img/intro-bg.jpg" alt="" class="intro__img">
+					<!-- </div> -->
+
+					<div class="intro__container">
+						<div class="intro__content">
+							<h1 class="intro__title title-h1">
+								Снять квартиру и апартаменты посуточно в Екатеринбурге недорого
+							</h1>
+							<p class="intro__text">
+								Более 100 квартир во всех районах города без комиссии и предоплаты от Good House
+							</p>
+
+							<div class="intro__search-filter search-filter">
+								<form method="GET" action="" class="main-filter-form">
+									<div class="filter">
+
+										<div id="guests" class="filter-checkboxes filter-checkboxes_guest">
+											<p>Гостей</p>
+											<div class="filter-checkboxes-list">
+												<label class="filter-checkbox">
+													<input type="checkbox" name="guest[]" value="1">
+													<span>1</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="guest[]" value="2">
+													<span>2</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="guest[]" value="3">
+													<span>3</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="guest[]" value="4+">
+													<span>4+</span>
+												</label>
+											</div>
+										</div>
+
+										<div id="rooms" class="filter-checkboxes filter-checkboxes_rooms">
+											<p>Комнаты</p>
+											<div class="filter-checkboxes-list">
+												<label class="filter-checkbox">
+													<input type="checkbox" name="room[]" value="студия">
+													<span>Студия</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="room[]" value="1">
+													<span>1</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="room[]" value="2">
+													<span>2</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="room[]" value="3">
+													<span>3</span>
+												</label>
+												<label class="filter-checkbox">
+													<input type="checkbox" name="room[]" value="4+">
+													<span>4+</span>
+												</label>
+											</div>
+										</div>
+
+										<button class="intro__btn btn btn__filter">
+											<span>
+												Показать квартиры
+											</span>
+										</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+<div class="test__container">
+
+	<div class="test__slider swiper style=" position: releative;">
+		<div class="test__wrapper swiper-wrapper">
+			<div class="test__slide swiper-slide">1</div>
+			<div class="test__slide swiper-slide">2</div>
+			<div class="test__slide swiper-slide">3</div>
+			<div class="test__slide swiper-slide">4</div>
+			<div class="test__slide swiper-slide">5</div>
+		</div>
+
+	</div>
+
+	<button type="button" class="flat-more2__swiper-btn swiper-button-prev">Назад</button>
+	<button type="button" class="flat-more2__swiper-btn swiper-button-next">Вперед</button>
+</div>
+
+
+			<div class="benifits">
+				<div class="benifits__container">
+					<div class="benifits__items">
+						<div class="benifits__item">
+							<div class="benifits__icon">
+								<img data-src="@img/benefits/01.svg" alt="Иконка">
+							</div>
+							<p class="benifits__text">
+								Снимайте на любой срок: час, сутки или год
+							</p>
+						</div>
+						<div class="benifits__item">
+							<div class="benifits__icon">
+								<img data-src="@img/benefits/02.svg" alt="Иконка">
+							</div>
+							<p class="benifits__text">
+								Заселяйтесь круглосуточно бесконтактным способом
+							</p>
+						</div>
+						<div class="benifits__item">
+							<div class="benifits__icon">
+								<img data-src="@img/benefits/03.svg" alt="Иконка">
+							</div>
+							<p class="benifits__text">
+								Оплачивайте жильё после заселения
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="features">
+				<div class="features__container">
+					<h2 class="features__title title-h2">
+						<span>Преимущества</span> квартир от Good House
+					</h2>
+
+					<div class="features__row">
+						<div class="features__items">
+
+							<div class="features__item">
+								<div class="features__name">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+											fill="#116CF0" />
+									</svg>
+									<h3>
+										Только новые дома
+									</h3>
+								</div>
+
+								<p class="features__text">
+									Все квартиры расположены в новых домах с современной инфраструктурой
+								</p>
+							</div>
+							<div class="features__item">
+								<div class="features__name">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+											fill="#116CF0" />
+									</svg>
+									<h3>
+										Полная комплектация
+									</h3>
+								</div>
+
+								<p class="features__text">
+									Есть всё для жизни: кухня, посуда, плита, фен, утюг, ТВ, стиральная машина,
+									мебель и т.д.
+								</p>
+							</div>
+							<div class="features__item">
+								<div class="features__name">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+											fill="#116CF0" />
+									</svg>
+									<h3>
+										Чистота и свежий ремонт
+									</h3>
+								</div>
+
+								<p class="features__text">
+									За квартирами следит штат профессионалов: горничные, сантехники, электрики и мастера
+									по ремонту
+								</p>
+							</div>
+							<div class="features__item">
+								<div class="features__name">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+											fill="#116CF0" />
+									</svg>
+									<h3>
+										Белоснежное белье
+									</h3>
+								</div>
+
+								<p class="features__text">
+									Хлопковое, выглаженное, идеально чистое белье и махровые полотенца
+								</p>
+							</div>
+
+
+						</div>
+						<div class="features__media">
+							<img data-src="@img/features-img.jpg" alt="Image">
+							<div class="features__gradient"></div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="support">
+				<div class="support__container_width">
+					<div class="support__container">
+						<h2 class="support__title title-h2"><span>Круглосуточная</span> <i>поддержка</i>
+							сервис-менеджера</h2>
+						<div class="support__items">
+
+							<div class="support__item">
+								<div class="support__icon">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.58334 8.58597L1.42755 5.29297L0.072464 6.70697L4.58334 11.414L13.8859 1.70697L12.5308 0.292969L4.58334 8.58597Z"
+											fill="white" />
+									</svg>
+								</div>
+								<p class="support__text">
+									Поможет заселиться и выселиться
+								</p>
+							</div>
+							<div class="support__item">
+								<div class="support__icon">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.58334 8.58597L1.42755 5.29297L0.072464 6.70697L4.58334 11.414L13.8859 1.70697L12.5308 0.292969L4.58334 8.58597Z"
+											fill="white" />
+									</svg>
+								</div>
+								<p class="support__text">
+									Ответит на вопросы по квартире
+								</p>
+							</div>
+							<div class="support__item">
+								<div class="support__icon">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.58334 8.58597L1.42755 5.29297L0.072464 6.70697L4.58334 11.414L13.8859 1.70697L12.5308 0.292969L4.58334 8.58597Z"
+											fill="white" />
+									</svg>
+								</div>
+								<p class="support__text">
+									Докупит, если чего‑то не хватает, без доплаты
+								</p>
+							</div>
+							<div class="support__item">
+								<div class="support__icon">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.58334 8.58597L1.42755 5.29297L0.072464 6.70697L4.58334 11.414L13.8859 1.70697L12.5308 0.292969L4.58334 8.58597Z"
+											fill="white" />
+									</svg>
+								</div>
+								<p class="support__text">
+									Сориентирует по городу, где что находится
+								</p>
+							</div>
+							<div class="support__item">
+								<div class="support__icon">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4.58334 8.58597L1.42755 5.29297L0.072464 6.70697L4.58334 11.414L13.8859 1.70697L12.5308 0.292969L4.58334 8.58597Z"
+											fill="white" />
+									</svg>
+								</div>
+								<p class="support__text">
+									Пришлёт мастера, если что‑то сломается
+								</p>
+							</div>
+							<div class="support__item support__item_btn">
+								<span>
+									Найти квартиру
+								</span>
+								<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M2.99994 11.5H17.5859L12.2929 6.20697L13.7069 4.79297L21.4139 12.5L13.7069 20.207L12.2929 18.793L17.5859 13.5H2.99994V11.5Z"
+										fill="white" />
+								</svg>
+
+							</div>
+
+						</div>
+					</div>
+			</section>
+
+			<section class="guests">
+				<div class="guests__container">
+					<h2 class="guests__title title-h2">О нас пишут гости</h2>
+					<div class="guests__box">
+						<div class="guests__media">
+							<img data-src="@img/guest-img.jpg" alt="Фото гостей">
+							<div class="guests__gradient"></div>
+						</div>
+						<div class="guests__items">
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_1">
+									<img data-src="@img/guests/01.svg" alt="Иконка">
+									<span>Обращусь ещё обязательно</span>
+								</div>
+
+								<div class="guests__item guests__item_2">
+									<img data-src="@img/guests/02.svg" alt="Иконка">
+									<span>Остался очень доволен</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_3">
+									<img data-src="@img/guests/03.svg" alt="Иконка">
+									<span>Идеальный вариант для командировки</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_4">
+									<img data-src="@img/guests/04.svg" alt="Иконка">
+									<span>Обязательно вернёмся еще</span>
+								</div>
+
+								<div class="guests__item guests__item_5">
+									<img data-src="@img/guests/05.svg" alt="Иконка">
+									<span>Всё на высшем уровне</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_6">
+									<img data-src="@img/guests/06.svg" alt="Иконка">
+									<span>Лучшее предложение по посуточной аренде</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_7">
+									<img data-src="@img/guests/07.svg" alt="Иконка">
+									<span>Квартира, оправдала все ожидания</span>
+								</div>
+
+								<div class="guests__item guests__item_8">
+									<img data-src="@img/guests/08.svg" alt="Иконка">
+									<span>Хороший сервис</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_9">
+									<img data-src="@img/guests/09.svg" alt="Иконка">
+									<span>Провели незабываемые выходные</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_10">
+									<img data-src="@img/guests/10.svg" alt="Иконка">
+									<span>Чувствовали себя как дома</span>
+								</div>
+
+								<div class="guests__item guests__item_11">
+									<img data-src="@img/guests/11.svg" alt="Иконка">
+									<span>Будем обращаться еще</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_12">
+									<img data-src="@img/guests/12.svg" alt="Иконка">
+									<span>Долго выбирали где остановиться и не прогадали</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_13">
+									<img data-src="@img/guests/13.svg" alt="Иконка">
+									<span>Однозначно рекомендую</span>
+								</div>
+
+								<div class="guests__item guests__item_14">
+									<img data-src="@img/guests/14.svg" alt="Иконка">
+									<span>Хорошая атмосфера в квартире</span>
+								</div>
+							</div>
+
+							<div class="guests__row">
+								<div class="guests__item guests__item_15">
+									<img data-src="@img/guests/15.svg" alt="Иконка">
+									<span>Внимательный подход к гостям</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<div class="partners__slider swiper">
+				<div class="имя-блока__wrapper swiper-wrapper">
+					<div class="имя-блока__slide swiper-slide"></div>
+				</div>
+			</div>
+
+			<section class="partners">
+				<div class="partners__container">
+					<h2 class="partners__title title-h2">Наши гости</h2>
+					<div class="partners__row partners__slider swiper">
+						<div class="имя-блока__wrapper swiper-wrapper">
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/01.png" alt="Логотип гостей">
+								<img data-src="@img/partners/02.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/03.png" alt="Логотип гостей">
+								<img data-src="@img/partners/04.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/05.png" alt="Логотип гостей">
+								<img data-src="@img/partners/06.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/07.png" alt="Логотип гостей">
+								<img data-src="@img/partners/08.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/09.png" alt="Логотип гостей">
+								<img data-src="@img/partners/10.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/11.png" alt="Логотип гостей">
+								<img data-src="@img/partners/12.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/13.png" alt="Логотип гостей">
+								<img data-src="@img/partners/14.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/15.png" alt="Логотип гостей">
+								<img data-src="@img/partners/16.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/17.png" alt="Логотип гостей">
+								<img data-src="@img/partners/18.png" alt="Логотип гостей">
+							</div>
+							<div class="partners__box swiper-slide">
+								<img data-src="@img/partners/19.png" alt="Логотип гостей">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="cooperation">
+				<div class="cooperation__container">
+					<h2 class="cooperation__title title-h2"><span>Сотрудничаем</span> с организациями на выгодных
+						условиях</h2>
+					<div class="cooperation__row">
+						<div class="cooperation__slider swiper">
+							<div class="cooperation__wrapper swiper-wrapper"
+								data-flickity2='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+
+								<div class="cooperation__slide swiper-slide cooperation__slide_1">
+
+									<div class="cooperation__box">
+										<div class="coopertion__img cooperation__img_1">
+											<img data-src="@img/cooperation/01.jpg" alt="" class="">
+											<div class="cooperation__gradient cooperation__gradient_1"></div>
+										</div>
+										<p class="cooperation__text white">Круглосуточное заселение и выселение</p>
+									</div>
+								</div>
+
+								<div class="cooperation__slide swiper-slide cooperation__slide_2">
+									<div class="cooperation__box">
+										<p class="cooperation__text">Для любого количества сотрудников</p>
+									</div>
+								</div>
+
+								<div class="cooperation__slide swiper-slide cooperation__slide_3">
+									<div class="cooperation__box">
+										<div class="coopertion__img cooperation__img_2">
+											<img data-src="@img/cooperation/01.svg" alt="" class="">
+										</div>
+										<p class="cooperation__text">Разместим в одной локации или в разных</p>
+									</div>
+								</div>
+
+								<div class="cooperation__slide swiper-slide cooperation__slide_4">
+									<div class="cooperation__box">
+										<div class="cooperation__cell">
+											<p class="cooperation__text">Любая форма оплаты без комиссии банков</p>
+										</div>
+										<div class="cooperation__cell">
+											<p class="cooperation__text white">Скидки и бонусы за длительное проживание
+											</p>
+										</div>
+									</div>
+
+
+								</div>
+
+								<div class="cooperation__slide swiper-slide cooperation__slide_5">
+
+									<div class="coopertion__img cooperation__img_3">
+										<img data-src="@img/cooperation/02.jpg" alt="" class="">
+										<div class="cooperation__gradient"></div>
+										<p class="cooperation__text white">Предоставим все отчётные документы</p>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="callback">
+				<div class="callback__container">
+					<div class="callback__row">
+						<div class="callback__media">
+							<img data-src="@img/callback-img.jpg" alt="">
+							<div class="callback__gradient">
+							</div>
+						</div>
+						<div class="callback__content">
+							<img data-src="@img/callback-logo.svg" alt="" class="callback__logo">
+							<h3 class="callback__title title-h3">Помощь <br> сервис-менеджера</h3>
+							<p class="callback__text">Подберет квартиру или апартаменты под ваши требования и скинет
+								лучшие варианты
+								в мессенджер</p>
+							<div class="callback__form">
+								<form action="">
+									<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон"
+										class="input callback__input">
+									<button class="callback__btn btn">Жду звонка менеджера</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="moving">
+				<div class="moving__container_width">
+					<div class="moving__container">
+						<h2 class="moving__title title-h2">Как проходит заселение</h2>
+						<div class="moving__items">
+							<div class="moving__item">
+								<div class="moving__number">01</div>
+								<div class="moving__name">Выбор</div>
+								<p class="moving__text">Выберете квартиру самостоятельно на сайте или с помощью
+									менеджера</p>
+							</div>
+							<div class="moving__item">
+								<div class="moving__number">02</div>
+								<div class="moving__name">Подтверждение</div>
+								<p class="moving__text">Подтвердите по телефону менеджеру выбранные дату и срок
+									проживания</p>
+							</div>
+							<div class="moving__item">
+								<div class="moving__number">03</div>
+								<div class="moving__name">Заселение</div>
+								<p class="moving__text">Заселитесь в назначенное время бесконтактным способом или с
+									администратором</p>
+							</div>
+							<div class="moving__item">
+								<div class="moving__number">04</div>
+								<div class="moving__name">Оплата</div>
+								<p class="moving__text">Оплатите нужное количество дней, если вас все устраивает
+									в квартире</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="faq">
+				<div class="faq__container">
+					<h2 class="faq__title title-h2">Вопрос-ответ</h2>
+
+					<div class="faq__row">
+						<div data-spollers data-one-spoller class="spollers faq__spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Как снять квартиру в Good House?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad obcaecati veritatis
+									repellat officiis
+									quaerat fuga numquam odit architecto iste, maiores dolorem quisquam hic voluptatum
+									nobis porro
+									perferendis atque? Expedita, delectus?
+									Quam at nostrum assumenda laborum amet officiis modi, commodi incidunt beatae ab
+									veniam nihil placeat
+									eaque expedita dolore vero? Tenetur, velit vel quaerat aliquid earum dicta iste
+									error autem
+									voluptatem!
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Как происходит оплата?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Фото, цена и описание квартир настоящие?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Какие скидки и бонусы можно получить?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Как заселиться в квартиру?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Предоставляем отчетные документы?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Можно с животными?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Можно устраивать вечеринки?
+									<div class="spollers__icon"><svg width="11" height="12" viewBox="0 0 11 12"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.4981 0V5.75M5.4981 11.5V5.75M5.4981 5.75H10.9981M5.4981 5.75H0"
+												stroke="#116CF0" />
+										</svg></div>
+								</summary>
+								<div class="spollers__body">Ответ</div>
+							</details>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section class="contacts">
+				<div class="contacts__container_width">
+					<div class="contacts__container">
+						<h2 class="contacts__title title-h2">Контакты</h2>
+						<div class="contacts__content">
+							<div class="contacts__left">
+								<p class="contacts__text">Свяжитесь с нами самым <br> удобным способом</p>
+								<div class="contacts__contact-line">
+									<div class="contacts__contact-item">
+										<a href="tel:+79292163030" class="contacts__tel">+7 929 216-30-30</a>
+									</div>
+									<div class="contacts__contact-item">
+										<a href="" class="contacts__wh">WhatsApp</a>
+									</div>
+									<div class="contacts__contact-item">
+										<a href="" class="contacts__wh">Telegram</a>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__right">
+
+								<form action="" class="contacts__form form">
+									<div class="form__text">Или закажите звонок</div>
+									<div class="form__column">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон"
+											class="input contacts__input">
+										<button class="callback__btn btn form__btn">Заказать звонок</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

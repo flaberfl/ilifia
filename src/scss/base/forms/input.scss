@@ -1,0 +1,101 @@
+//<INPUT>
+// Сниппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input {
+	width: 100%;
+	display: block;
+	padding: toRem(20);
+	caret-color: $whiteColor;
+	height: toRem(62);
+	padding-left: toRem(25);
+	border: 1px solid #fff;
+	border-radius: 6px; // background: $grayBackColor;
+
+
+	@media (max-width:$mobile) {
+		height: 50px;
+	}
+
+	// &._form-focus {
+	// 	border: 1px solid #000;
+	// }
+
+	&._form-error {
+		border: 1px solid #d42023;
+		color: #d42023;
+
+
+		.input::placeholder {
+			display: none;
+		}
+	}
+}
+
+.form__error {
+	position: absolute;
+	z-index: 100;
+	bottom: 22px;
+	left: 22px;
+
+}
+
+.input {
+	color: $whiteColor;
+
+	&::placeholder {
+		font-weight: 400;
+		font-size: 20px;
+		color: rgba(255, 255, 255, 0.8);
+		font-family: $secondFamily;
+
+		@media (max-width:$mobile) {
+			font-size: toRem(14);
+		}
+	}
+
+	.footer & {
+		&::placeholder {
+			font-size: toRem(16);
+		}
+	}
+}
+
+.textarea[placeholder]:not([data-placeholder-nohiden]),
+.input[placeholder]:not([data-placeholder-nohiden]),
+.header__input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+.textarea {
+	resize: none;
+	padding: toRem(20);
+	width: 100%;
+	min-height: 140px;
+
+	// background: $grayBackColor;
+
+	font-size: toRem(16);
+	font-weight: 500;
+	line-height: 150%;
+	// color: $grayColor;
+
+	@media (max-width:$mobile) {
+		font-size: toRem(14);
+	}
+
+	@include adaptiveValue("border-radius", 35, 30);
+}
