@@ -17,7 +17,9 @@ $fontSize: toRem(15); // где 14(px) - размер шрифта по умол
 
 // Основные цвета
 $mainColor: var(--main-color);
-// $whiteColor: var(--white-color);
+$selectColor: var(--select-color);
+$titleColor: var(--title-color);
+$whiteColor:#fff;
 // $masterColor: var(--master-color);
 // $secondColor: var(--second-color);
 $backgroundColor: var(--background-color);
@@ -36,7 +38,7 @@ $maxWidthContainer: 1200;
 $containerPadding: 20;
 
 // Ширина срабатывания первого брейкпоинта
-$containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidth: $maxWidthContainer+$containerPadding;
 
 // Брейк-поинты
 $pc: toEm($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
