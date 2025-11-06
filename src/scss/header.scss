@@ -1,27 +1,12 @@
 //====================================================================================================
 .header {
-
-	&__container_header {}
-
 	&__wrapper {
-		position: fixed;
-		max-width: toRem(1325);
-		margin-top: toRem(36);
-		margin-left: auto;
-		margin-right: auto;
+		// position: fixed;
+		margin-top: toRem(20);
 
-		padding-right: 23px;
-		padding-left: 40px;
-
-		backdrop-filter: blur(17px);
-		background: rgba(255, 255, 255, 0.26);
-		border-radius: 6px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		inset: 0;
-		height: toRem(77);
-
 		transition: all 0.4s;
 		z-index: 800;
 
@@ -39,7 +24,17 @@
 	&__nav {}
 
 
-	&__logo {}
+	&__logo {
+		width: toRem(40);
+		height: toRem(40);
+
+		background-color: ;
+
+		@media (max-width:$mobile) {
+			width: toRem(35);
+			height: toRem(35);
+		}
+	}
 }
 
 .menu {
@@ -124,7 +119,6 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(4);
-			background-color: $masterColor;
 			border-radius: toRem(20);
 		}
 
