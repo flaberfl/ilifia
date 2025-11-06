@@ -5,9 +5,9 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0px 0px;
-	border-radius: toRem(50);
-	background-color: #fff;
+	padding: 20x;
+	border-radius: toRem(20);
+	background-color: $secondaryColor;
 
 	&__basket {
 		&:hover {

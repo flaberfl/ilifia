@@ -19,9 +19,9 @@ $fontSize: toRem(15); // где 14(px) - размер шрифта по умол
 $mainColor: var(--main-color);
 $selectColor: var(--select-color);
 $titleColor: var(--title-color);
-$masterColor: var(--master-color);
+$secondColor: var(--second-color);
 $whiteColor:#fff;
-// $secondColor: var(--second-color);
+$secondColor: var(--title-color);
 $backgroundColor: var(--background-color);
 
 
