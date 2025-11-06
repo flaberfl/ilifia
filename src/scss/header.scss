@@ -15,20 +15,23 @@
 		._fixed & {}
 	}
 
+
 	&__nav,
-	&__buttons {
+	&__actions {
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		gap: toRem(10);
 	}
 
-	&__nav {}
+	&__actions {}
 
 
 	&__logo {
 		width: toRem(40);
 		height: toRem(40);
 
-		background-color: ;
+		background-color: #fff;
 
 		@media (max-width:$mobile) {
 			width: toRem(35);
@@ -38,7 +41,7 @@
 }
 
 .menu {
-	padding: 0 toRem(10); // отступы безопасности
+	padding: toRem(10) toRem(10) toRem(10) 0; // отступы безопасности
 
 
 	// .menu__body
@@ -79,15 +82,7 @@
 
 	&__item {
 
-		._fixed & {
-			color: #595959;
-
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
+		._fixed & {}
 
 	}
 }

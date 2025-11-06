@@ -1,9 +1,27 @@
 .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: toRem(10);
-  border-radius: toRem(10);
   height: toRem(40);
+  border-radius: toRem(10);
+  background-color: transparent;
 }
 
-.link-tr {
-  background-color: transparent;
+.link-act {
+  background-color: $secondaryColor;
+}
+
+.title-h2 {
+  font-family: var(--third-family);
+  font-weight: 200;
+  color: #000;
+
+  @include adaptiveValue("font-size", 36, 20);
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
 }
