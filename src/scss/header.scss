@@ -115,23 +115,23 @@
 			width: 100%;
 			height: toRem(4);
 			border-radius: toRem(20);
+			// color: #000;
+			background-color: $mainColor;
+			width: toRem(22);
 		}
 
 		&::before {
 			top: toRem(0);
 			// right: toRem(7);
-			width: toRem(27);
 		}
 
 		&::after {
 			bottom: toRem(0);
 			// right: toRem(16);
-			width: toRem(27);
 		}
 
 		span {
 			top: calc(50% - toRem(2));
-			width: toRem(27);
 		}
 
 		.menu-open & {
