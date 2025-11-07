@@ -24,14 +24,27 @@
 		gap: toRem(10);
 	}
 
-	&__actions {}
+	&__actions {
+		padding: toRem(10);
+		border-radius: toRem(20);
+		background-color: #fff;
+	}
 
 
 	&__logo {
-		width: toRem(40);
-		height: toRem(40);
+		width: toRem(60);
+		height: toRem(60);
+		padding: toRem(20);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		background-color: #fff;
+		border-radius: toRem(10);
+
+		img {
+			width: 200%;
+		}
 
 		@media (max-width:$mobile) {
 			width: toRem(35);
@@ -41,7 +54,11 @@
 }
 
 .menu {
-	padding: toRem(10) toRem(10) toRem(10) 0; // отступы безопасности
+	// padding: toRem(10) toRem(10) toRem(10) 0;
+	padding: toRem(10);
+	border-radius: toRem(20);
+
+	background-color: #fff;
 
 
 	// .menu__body
