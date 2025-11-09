@@ -44,21 +44,29 @@
 
 		img {
 			width: 200%;
+
+			@media (max-width:$mobile) {
+				width: toRem(35);
+			}
+		}
+
+		@media (max-width:$tablet) {
+			margin-right: toRem(15);
 		}
 
 		@media (max-width:$mobile) {
 			width: toRem(35);
 			height: toRem(35);
 		}
+
+		@media (max-width:$mobileSmall) {
+			margin-right: toRem(5);
+		}
 	}
 }
 
 .menu {
 	// padding: toRem(10) toRem(10) toRem(10) 0;
-	padding: toRem(10);
-	border-radius: toRem(20);
-
-	background-color: #fff;
 
 
 	// .menu__body
@@ -66,6 +74,12 @@
 	&__body {
 		display: flex;
 		width: 100%;
+
+		padding: toRem(10);
+		border-radius: toRem(20);
+
+		background-color: #fff;
+
 
 		transition: all 1s;
 

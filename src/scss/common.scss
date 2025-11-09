@@ -21,6 +21,13 @@
   @include adaptiveValue("font-size", 36, 20);
 }
 
+.title-h3 {
+  font-weight: 400;
+  color: #000;
+
+  @include adaptiveValue("font-size", 24, 12);
+}
+
 .text {
   font-weight: 400;
   font-size: 14px;
