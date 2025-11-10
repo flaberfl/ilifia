@@ -1,12 +1,14 @@
 //====================================================================================================
 .header {
 	&__wrapper {
-		// position: fixed;
+		position: fixed;
 		margin-top: toRem(20);
+		max-width: toRem(1200);
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 		transition: all 0.4s;
 		z-index: 800;
 
@@ -61,6 +63,14 @@
 
 		@media (max-width:$mobileSmall) {
 			margin-right: toRem(5);
+		}
+	}
+
+	&__link {
+
+		span {
+			margin-left: toRem(6);
+			display: block;
 		}
 	}
 }

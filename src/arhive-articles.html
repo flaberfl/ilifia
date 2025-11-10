@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ilifia--Статьи"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+
+			<section class="arhive">
+				<div class="arhive__container--intro">
+					<img data-src="@img/intro-img.jpg" alt="Изображение" class="arhive__image">
+					<div class="arhive__container">
+						<div class="arhive__intro">
+							<h1 class="arhive__title title-h2">Заголовок</h1>
+							<div class="arhive__banner banner-arhive">
+								<img data-src="@img/stars-img.png" alt="Звезда" class="banner-arhive__img">
+								<h3 class="banner-arhive__title">3 дня <span>бесплатно</span></h3>
+								<h4 class="banner-arhive__subtutle"><span>Premium</span> доступа к ресурсам платформы</h4>
+								<p class="banner-arhive__text">Можно начать с пробного периода
+									и перейти на расширенные пакеты</p>
+								<a href="" class="banner-arhive__button button">Попробовать</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
