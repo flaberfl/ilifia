@@ -7,6 +7,10 @@
   height: toRem(40);
   border-radius: toRem(10);
   background-color: transparent;
+
+  &._active{
+    background-color: $selectColor;
+  }
 }
 
 .link-act {
