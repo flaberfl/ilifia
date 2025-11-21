@@ -10,6 +10,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    // @include adaptiveValue("gap", 70, 10);
 
     @include adaptiveValue("margin-bottom", 60, 30);
 
@@ -18,9 +19,18 @@
     }
   }
 
+  &__column {
+    white-space: nowrap;
+  }
+
   /* .footer__img */
   &__img {
-    margin-right: toRem(40);
+    // margin-right: toRem(40);
+    @include adaptiveValue("margin-right", 70, 10);
+
+    @media (max-width: toEm(1180)) {
+      margin-right: toRem(20);
+    }
   }
 
   /* .footer__menu */
@@ -30,8 +40,8 @@
   &__title {
     margin-bottom: toRem(20);
 
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 14px;
 
     &--fr {
       margin-bottom: auto;
@@ -39,19 +49,21 @@
   }
 
   /* .footer__title--menu */
-  &__title--menu {
-    font-size: 16px;
-  }
+  // &__title--menu {
+  //   font-size: 16px;
+  // }
 
   /* .footer__menu-list */
   &__menu-list {
     display: grid;
-    gap: toRem(15);
+    gap: toRem(12);
     margin-right: toRem(50);
   }
 
   /* .footer__menu-item */
-  &__menu-item {}
+  &__menu-item {
+    font-size: toRem(14);
+  }
 
   /* .footer__contacts */
   &__contacts {
@@ -70,7 +82,10 @@
   &__title--contacts {}
 
   /* .footer__menu-contacts */
-  &__menu-contacts {}
+  &__menu-contacts {
+    display: grid;
+    gap: toRem(12);
+  }
 
   /* .footer__social */
   &__social {}
@@ -82,12 +97,16 @@
   &__social-list {
     display: flex;
     gap: toRem(10);
+    margin-top: toRem(12);
 
     li a {
-      width: toRem(39);
-      height: toRem(39);
+      width: toRem(30);
+      height: toRem(30);
 
-      background: #d9d9d9;
+      border-radius: 5px;
+
+      background: var(--black);
+      opacity: 0.5;
     }
   }
 
@@ -96,11 +115,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: toRem(590);
-    width: 100%;
+    // max-width: toRem(590);
+    width: toRem(387);
+    // flex: 1 0 387px;
+    max-width: 100%;
     margin-left: auto;
     padding: toRem(20);
-    background: url('@img/footer-img.jpg') right 0 no-repeat;
+    background: var(--grey);
+    // background: url('@img/footer-img.jpg') right 0 no-repeat;
     background-size: cover;
     border-radius: toRem(20);
 
