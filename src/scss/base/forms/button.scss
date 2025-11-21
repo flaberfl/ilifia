@@ -5,7 +5,23 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
-	border-radius: toRem(20);
-	background-color: $secondaryColor;
+	padding: 10px 30px;
+	border-radius: toRem(5);
+	background-color: $brightGreenColor;
+
+	font-size: toRem(20);
+
+	transition: all 0.3s;
+
+
+	&:active{
+		
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+			background-color: #64d210;
+		}
+	}
 }

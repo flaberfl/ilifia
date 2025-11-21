@@ -1,38 +1,69 @@
 .link {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
-  padding: toRem(10);
-  height: toRem(40);
-  border-radius: toRem(10);
-  background-color: transparent;
+  padding: toRem(10) toRem(15);
+  height: toRem(38);
+  border-radius: toRem(5);
 
-  &._active{
-    background-color: $selectColor;
+  transition: all 0.3s;
+
+  &--lk {
+    background-color: $brightGreenColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: #64d210;
+        color: #fff;
+      }
+    }
+
+    @media (max-width:$mobile){
+       display: none; 
+    }
+  }
+
+  &--menu {
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(255, 215, 233, 0.35);
+      }
+    }
+  }
+
+  &._active {
+    background: rgba(255, 215, 233, 0.35);
   }
 }
 
-.link-act {
-  background-color: $secondaryColor;
+.mob-btn-lk {
+  display: none;
+
+  @media (max-width:$mobile){
+     display: block; 
+  }
 }
 
 .title-h2 {
-  font-family: var(--third-family);
-  font-weight: 200;
-  color: #000;
+  font-family: $secondFamily;
 
-  @include adaptiveValue("font-size", 36, 20);
+  @include adaptiveValue("font-size", 48, 28);
 }
 
-.title-h3 {
-  font-weight: 400;
-  color: #000;
+// .title-h3 {
+//   font-weight: 400;
+//   color: #000;
 
-  @include adaptiveValue("font-size", 24, 12);
+//   @include adaptiveValue("font-size", 24, 12);
+// }
+
+.subtitle {
+  text-align: center;
+  color: var(--black);
 }
 
-.text {
-  font-weight: 400;
-  font-size: 14px;
-}
+// .text {
+//   font-weight: 400;
+//   font-size: 14px;
+// }

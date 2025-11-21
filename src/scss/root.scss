@@ -19,15 +19,15 @@
 :root {
 
   //* Цвета
-  --main-color: #282828;
-  --second-color: #b9ff83;
-  --select-color: #ffc3c1;
-  // --background-color: #fff;
-  --background-color: #F3F3F5;
-  --title-color: #000;
+	--black: #282828;
+	--grey: #f3f3f5;
+	--white: #fff;
+	--pink: #ffaed1;
+	--light-pink: #ffd7e9;
+	--bright-green: #b9ff83;
+	--light-green: #d7fabc;
 
   //* Виды шрифта
   --font-family: "Hikasami", sans-serif;
-  --second-family: "NT Somic", sans-serif;
-  --third-family: "Bounded", sans-serif;
+  --second-family: "Unbounded", sans-serif;
 }
