@@ -2,11 +2,20 @@
 
   padding-top: 68px;
 
+
+
   // @include adaptiveValue("padding-bottom", 70, 30);
   // padding-bottom: 340px;
 
+  &__container--intro {
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
   /* .main-screen__container */
-  &__container {}
+  &__container {
+    position: relative;
+  }
 
   /* .main-screen__box */
   &__box {
@@ -113,10 +122,16 @@
   &__items {
     display: flex;
     gap: 20px;
-    // position: absolute;
+    position: absolute;
+    bottom: 58px;
 
 
-    @include adaptiveValue("margin-top", -70, 30);
+    overflow-x: auto;
+    // position: relative;
+    scrollbar-width: none;
+
+
+    // @include adaptiveValue("margin-top", -197, 30);
   }
 
   /* .main-screen__item */
@@ -142,10 +157,11 @@
 
   /* .main-screen__img */
   &__img {
-    // position: absolute;
+    position: absolute;
     z-index: 100;
     // mix-blend-mode: hue;
-
+    right: 0px;
+    bottom: 0px;
   }
 }
 

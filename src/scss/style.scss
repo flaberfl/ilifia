@@ -73,7 +73,9 @@ $responsiveType: 1;
 body {
 	color: $mainColor;
 	font-weight: 400;
-	background: $whiteColor;
+	// background: $whiteColor;
+  background: var(--grey);
+
 
 	// Скролл заблокирован
 	.lock & {
@@ -147,7 +149,7 @@ body {
 	// }
 
 	[class*="__container--intro"] {
-		max-width: toRem(1380);
+		max-width: toRem(1400);
 		margin: 0 auto;
 	}
 }
