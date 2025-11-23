@@ -19,8 +19,8 @@
       }
     }
 
-    @media (max-width:$tablet){
-       display: none; 
+    @media (max-width:$tablet) {
+      display: none;
     }
   }
 
@@ -40,8 +40,8 @@
 .mob-btn-lk {
   display: none;
 
-  @media (max-width:$tablet){
-     display: block; 
+  @media (max-width:$tablet) {
+    display: block;
   }
 }
 
@@ -67,3 +67,18 @@
 //   font-weight: 400;
 //   font-size: 14px;
 // }
+
+
+.breaker {
+  display: none;
+
+  @media (max-width:$tablet) {
+    display: flex;
+    width: 100%;
+    height: toRem(25);
+    flex: none;
+    order: -1;
+
+    @include adaptiveValue("height", 50, 25);
+  }
+}
