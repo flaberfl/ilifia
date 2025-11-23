@@ -3,7 +3,7 @@
   padding-top: 68px;
 
   // @include adaptiveValue("padding-bottom", 70, 30);
-  padding-bottom: 340px;
+  // padding-bottom: 340px;
 
   /* .main-screen__container */
   &__container {}
@@ -11,7 +11,15 @@
   /* .main-screen__box */
   &__box {
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: 41% auto;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
+      justify-items: center;
+      gap: 30px;
+
+      text-align: center;
+    }
   }
 
   /* .main-screen__content */
@@ -30,6 +38,18 @@
 
     white-space: nowrap;
     @include adaptiveValue("margin-bottom", 114, 10);
+
+
+    @media (max-width:$mobile) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    svg {
+      @media (max-width:$mobile) {
+        flex: 0 0 17px
+      }
+    }
 
 
     span {
@@ -66,10 +86,24 @@
 
     // background: url('@img/main-screen/intro.png') 0 0 no-repeat;
 
+    @media (max-width:$mobile) {
+      width: 70%;
+    }
+
+    @media (max-width: toEm(440)) {
+      width: auto;
+      margin-right: -43px;
+      margin-left: -43px;
+    }
+
     img {
       // position: absolute;
       // right: 0;
-      bottom: 0;
+      // bottom: 0;
+
+      @media (min-width:$mobile) {
+        margin-left: 58px;
+      }
 
       // aspect-ratio: 687 / 680;
     }
