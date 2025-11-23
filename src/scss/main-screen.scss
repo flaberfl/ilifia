@@ -1,0 +1,90 @@
+.main-screen {
+
+  /* .main-screen__container */
+  &__container {}
+
+  /* .main-screen__box */
+  &__box {}
+
+  /* .main-screen__content */
+  &__content {}
+
+  /* .main-screen__tip */
+  &__tip {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    max-width: toRem(315);
+
+    border: 1px solid var(--light-pink);
+    border-radius: 5px;
+    padding: 7px 15px;
+
+
+    span {
+      opacity: 0.85;
+
+      font-weight: 500;
+      @include adaptiveValue("font-size", 16, 12);
+    }
+  }
+
+  /* .main-screen__title */
+  &__title {
+
+    font-family: $secondFamily;
+    @include adaptiveValue("font-size", 128, 86);
+  }
+
+  /* .main-screen__subtitle */
+  &__subtitle {
+    max-width: toRem(490);
+
+    font-weight: 500;
+    line-height: normal;
+    @include adaptiveValue("font-size", 20, 16);
+  }
+
+  /* .main-screen__media */
+  &__media {}
+
+  /* .main-screen__items */
+  &__items {}
+
+  /* .main-screen__item */
+  &__item {
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+
+    // backdrop-filter: blur(13px);
+    // background: var(--light-green);
+    background: var(--bright-green);
+
+    @include adaptiveValue("padding-top", 25, 15);
+    @include adaptiveValue("padding-right", 25, 15);
+    @include adaptiveValue("padding-bottom", 25, 15);
+    @include adaptiveValue("padding-left", 25, 15);
+
+    @include adaptiveValue("width", 224, 124);
+    @include adaptiveValue("height", 139, 124);
+
+  }
+
+  /* .main-screen__img */
+  &__img {
+    // position: absolute;
+    z-index: 100;
+    // mix-blend-mode: hue;
+
+  }
+}
+
+.item-main-screen {
+
+  /* .item-main-screen__title */
+  &__title {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 16, 14);
+  }
+}
