@@ -48,6 +48,7 @@
 
       font-family: $secondFamily;
       font-weight: 600;
+      line-height: normal;
 
       @include adaptiveValue("font-size", 24, 20);
     }
@@ -141,6 +142,13 @@
     border-radius: toRem(10);
 
     @include adaptiveValue("width", 387, 300);
+
+    &-img {
+      position: absolute;
+      max-width: 100%;
+      right: -60px;
+      top: -20px;
+    }
 
   }
 
