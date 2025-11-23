@@ -91,9 +91,10 @@
 	&__body {
 		display: flex;
 		width: 100%;
+		gap: toRem(10);
 
-		padding: toRem(10);
-		border-radius: toRem(20);
+		// padding: toRem(10);
+		// border-radius: toRem(20);
 
 		background-color: #fff;
 

@@ -34,7 +34,7 @@ $maxWidth: 1440;
 $maxWidthContainer: 1200;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 40;
+$containerPadding: 20;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer+$containerPadding;
@@ -135,8 +135,8 @@ body {
 			}
 
 			@else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 20);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 20);
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 10);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 10);
 			}
 		}
 	}
