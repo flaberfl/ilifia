@@ -82,3 +82,8 @@
     @include adaptiveValue("height", 50, 25);
   }
 }
+
+.next-block {
+  background: var(--grey);
+  height: 320px;
+}
