@@ -1,6 +1,7 @@
 .main-screen {
 
-  padding-top: 68px;
+  // margin-top: toRem(20);
+  // padding-top: 190px;
 
 
 
@@ -10,6 +11,7 @@
   &__container--intro {
     border-radius: 20px;
     background-color: #fff;
+    padding-top: 190px;
   }
 
   /* .main-screen__container */
