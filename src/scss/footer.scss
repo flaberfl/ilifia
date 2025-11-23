@@ -21,6 +21,25 @@
 
   &__column {
     white-space: nowrap;
+
+    &--contacts {
+      // display: flex;
+      // flex-direction: row;
+    }
+
+    &--docs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__column-box {
+    display: flex;
+
+    @media (max-width: toEm(1100)) {
+      flex-direction: column;
+      gap: toRem(20);
+    }
   }
 
   /* .footer__img */
@@ -53,6 +72,13 @@
       @include adaptiveValue("font-size", 24, 20);
     }
 
+    .footer__column--contacts & {
+      @media (max-width: toEm(1100)) {
+        margin-bottom: 8px;
+      }
+
+    }
+
   }
 
   &__ref {
@@ -73,6 +99,14 @@
     display: grid;
     gap: toRem(12);
     margin-right: toRem(50);
+    align-items: center;
+
+    &--contacts {
+
+      @media (max-width: toEm(1100)) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
   }
 
   /* .footer__menu-item */
@@ -81,6 +115,14 @@
 
     &--docs {
       text-decoration: underline;
+    }
+
+    &--cop {
+      margin-top: auto;
+
+      @media (max-width: toEm(1100)){
+         padding-top: 30px; 
+      }
     }
   }
 
@@ -116,7 +158,7 @@
   &__social-list {
     display: flex;
     gap: toRem(10);
-    margin-top: toRem(12);
+    // margin-top: toRem(12);
 
     li a {
       width: toRem(30);
@@ -133,8 +175,9 @@
   &__banner {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     position: relative;
-    margin-left: auto;
+    // margin-left: auto;
     padding: toRem(30);
     background: var(--grey);
     // background: url('@img/footer-img.jpg') right 0 no-repeat;
