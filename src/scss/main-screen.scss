@@ -13,6 +13,10 @@
     background-color: #fff;
 
     @include adaptiveValue("padding-top", 190, 115);
+
+    @media (min-width:$tablet) {
+      padding-bottom: 50px;
+    }
   }
 
   /* .main-screen__container */
