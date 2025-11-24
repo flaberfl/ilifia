@@ -96,6 +96,10 @@
   }
 }
 
-.section-110 {
+.section-110pb {
   @include adaptiveValue("padding-bottom", 110, 70);
+}
+
+.section-110pt {
+  @include adaptiveValue("padding-top", 110, 70);
 }

@@ -10,21 +10,20 @@
     // position: relative;
     border-radius: toRem(20);
     background-color: $grayColor;
-    overflow: hidden;
 
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-right", 50, 20);
     @include adaptiveValue("padding-bottom", 50, 20);
     @include adaptiveValue("padding-left", 50, 20);
 
-    @media (min-width:$mobile) {
-        // padding-right: 384px;
+
+    @media (max-width:$tablet) {
+        overflow: hidden;
     }
 
     @media (max-width:$mobile) {
         grid-template-columns: auto;
         grid-template-rows: 1fr 1fr;
-
     }
 }
 
