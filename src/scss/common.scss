@@ -48,7 +48,7 @@
 .title-h2 {
   font-family: $secondFamily;
 
-  @include adaptiveValue("font-size", 48, 28);
+  @include adaptiveValue("font-size", 48, 24);
 }
 
 // .title-h3 {
@@ -96,6 +96,5 @@
 }
 
 .section-110 {
-  @include adaptiveValue("padding-top", 110, 70);
   @include adaptiveValue("padding-bottom", 110, 70);
 }

@@ -6,12 +6,19 @@
 .target-ilifia__container {}
 
 .target-ilifia__title {
-    margin-bottom: 40px;
+    @include adaptiveValue("margin-bottom", 47, 31);
 
     span {
+
+        font-family: $fontFamily;
         line-height: normal;
         font-weight: 600;
         @include adaptiveValue("font-size", 24, 16);
+
+        @media (max-width:$mobile) {
+            margin-top: 10px;
+            display: block;
+        }
     }
 }
 
@@ -70,7 +77,7 @@
     font-weight: 600;
     @include adaptiveValue("font-size", 24, 20);
 
-    @include adaptiveValue("margin-bottom", 10, 7);
+    @include adaptiveValue("margin-bottom", 15, 13);
 }
 
 .target-ilifia__descr {
