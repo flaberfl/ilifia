@@ -2,9 +2,6 @@
 
   background-color: #fff;
 
-  /* .community__container */
-  &__container {}
-
   /* .community__wrapper */
   &__wrapper {
     display: grid;
@@ -13,7 +10,6 @@
 
     border-radius: 20px;
     background-color: $grayColor;
-
 
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-right", 50, 10);
@@ -27,9 +23,6 @@
       gap: 40px;
     }
   }
-
-  /* .community__content */
-  &__content {}
 
   /* .community__title */
   &__title {
@@ -49,10 +42,7 @@
   &__items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // row-gap: 20px;
     column-gap: 10px;
-
-
     margin-bottom: 50px;
 
     @include adaptiveValue("row-gap", 20, 6);
@@ -72,7 +62,6 @@
   &__item {
     display: flex;
     gap: toRem(10);
-    // max-width: 246px;
 
     p {
       font-size: toRem(16);

@@ -1,9 +1,6 @@
 .experts {
   background-color: #fff;
 
-  /* .experts__container */
-  &__container {}
-
   /* .experts__title */
   &__title {
     margin-bottom: 11px;
@@ -47,10 +44,6 @@
     align-items: center;
 
     background: var(--grey);
-
-    img {
-      // max-width: 100%;
-    }
   }
 
   /* .experts__about */
@@ -89,7 +82,3 @@
     }
   }
 }
-
-.title-h2 {}
-
-.subtitle {}
