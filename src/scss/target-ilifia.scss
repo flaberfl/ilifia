@@ -20,12 +20,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+
+    @media (max-width:$tablet) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
 }
 
 .target-ilifia__item {
     display: grid;
     grid-template-columns: 1fr 36%;
-  
+
     border: 2px solid var(--grey);
     border-radius: 10px;
     overflow: hidden;
@@ -67,5 +72,8 @@
     position: absolute;
     bottom: -40px;
     right: -24%;
-    // max-width: 100%;
+
+    @media (max-width:$tablet) {
+        max-width: 100%;
+    }
 }
