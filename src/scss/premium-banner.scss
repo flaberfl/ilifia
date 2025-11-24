@@ -6,10 +6,11 @@
 
 .premium-banner__box {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     // position: relative;
     border-radius: toRem(20);
     background-color: $grayColor;
+    overflow: hidden;
 
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-right", 50, 20);
@@ -17,12 +18,19 @@
     @include adaptiveValue("padding-left", 50, 20);
 
     @media (min-width:$mobile) {
-        padding-right: 384px;
+        // padding-right: 384px;
     }
 
     @media (max-width:$mobile) {
         grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
 
+    }
+}
+
+.premium-banner__content {
+    @media (min-width:$mobile) {
+        padding-right: 310px;
     }
 }
 
@@ -38,7 +46,7 @@
 }
 
 .premium-banner__subtitle {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     line-height: normal;
     @include adaptiveValue("font-size", 20, 16);
@@ -48,13 +56,28 @@
 
 .premium-banner__media {
     position: relative;
+
+    @media (max-width: toEm(480)) {
+        height: 70%;
+    }
 }
 
 .premium-banner__img {
     position: absolute;
-    right: -65px;
-    bottom: -8px;
-    max-width: 100%;
+    right: -116px;
+    bottom: -53px;
+    // max-width: 100%;
 
     @include adaptiveValue("width", 548, 320);
+
+    @media (max-width:$mobile) {
+        right: auto;
+        left: 60%;
+        transform: translate(-50%, 0);
+    }
+
+    @media (max-width: toEm(480)) {
+        left: 50%;
+        bottom: -90px;
+    }
 }

@@ -8,15 +8,18 @@
 	padding: 10px 30px;
 	border-radius: toRem(5);
 	background-color: $brightGreenColor;
-
-	font-size: toRem(20);
-
+	height: 47px;
+	
 	transition: all 0.3s;
 
+	@include adaptiveValue("font-size", 20, 16);
 
-	&:active{
-		
+	@media (max-width:$mobile) {
+		height: 41px;
 	}
+
+
+	&:active {}
 
 	@media (any-hover: hover) {
 		&:hover {
