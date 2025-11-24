@@ -60,8 +60,9 @@
 // }
 
 .subtitle {
-  text-align: center;
-  color: var(--black);
+  line-height: normal;
+
+  @include adaptiveValue("font-size", 20, 16);
 }
 
 // .text {

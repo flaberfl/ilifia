@@ -1,6 +1,10 @@
 .comfortable {
   background-color: #fff;
 
+  @media (max-width:$mobile){
+     padding-bottom: 0 !important; 
+  }
+
   /* .comfortable__container */
   &__container {}
 
