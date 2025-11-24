@@ -47,6 +47,7 @@
 
 .title-h2 {
   font-family: $secondFamily;
+  line-height: normal;
 
   @include adaptiveValue("font-size", 48, 24);
 }
