@@ -1,7 +1,5 @@
 //====================================================================================================
 .header {
-	margin-top: 20px;
-
 	&__wrapper {
 		position: fixed;
 
@@ -15,26 +13,50 @@
 		z-index: 800;
 		height: 100px;
 
-		@media (max-width:$mobile) {
+
+		@media (max-width:$tablet) {
 			height: 80px;
+		}
+
+		@media (min-width:$tablet) {
+			margin-top: 20px;
+
+			._fixed & {
+				margin-top: 0;
+			}
 		}
 
 		.menu-open & {}
 
-		._fixed & {}
+
 	}
 
 	&__container {
-		// margin-top: 20px;
-		// padding-top: toRem(20);
-		// padding-bottom: toRem(20);
-
-		// height: 100px;
+		position: relative;
 		display: flex;
 		align-items: center;
 		width: 100%;
 		justify-content: space-between;
-		background-color: #fff;
+
+		@media (max-width:$tablet) {
+			background-color: #fff;
+			height: 100%;
+		}
+
+
+		._fixed & {
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				opacity: .8;
+				z-index: -1;
+				border-radius: 5px;
+			}
+		}
 	}
 
 
@@ -111,7 +133,6 @@
 		// padding: toRem(10);
 		// border-radius: toRem(20);
 
-		background-color: #fff;
 
 
 		transition: all 1s;
@@ -125,6 +146,7 @@
 			top: 0;
 			left: 0;
 			// transform: scale(.7);
+			background-color: #fff;
 			visibility: hidden;
 			opacity: 0;
 			padding: 20px 9px 25px;

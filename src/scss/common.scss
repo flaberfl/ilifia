@@ -90,5 +90,7 @@
 
 
 .wrapper {
-  margin-top: 20px;
+  @media (min-width:$tablet) {
+    margin-top: 20px;
+  }
 }
