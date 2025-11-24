@@ -11,7 +11,8 @@
   &__container--intro {
     border-radius: 20px;
     background-color: #fff;
-    padding-top: 190px;
+
+    @include adaptiveValue("padding-top", 190, 115);
   }
 
   /* .main-screen__container */
@@ -39,6 +40,7 @@
   /* .main-screen__tip */
   &__tip {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 22px;
     max-width: toRem(315);
@@ -130,16 +132,27 @@
   &__items {
     display: flex;
     gap: 20px;
-    position: absolute;
+    // position: absolute;
     // bottom: 58px;
 
-
+    white-space: nowrap;
 
     overflow-x: auto;
     // position: relative;
     scrollbar-width: none;
 
-    @include adaptiveValue("bottom", 58, 14);
+    // @include adaptiveValue("bottom", 58, 14);
+
+    @include adaptiveValue("margin-top", -190, -147);
+
+    @media (min-width:$mobile) and (max-width:$tablet) {
+      margin-top: -119px;
+    }
+
+    @media (max-width:$mobile) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
 
 
     // @include adaptiveValue("margin-top", -197, 30);
@@ -151,6 +164,8 @@
     border-radius: 20px;
     overflow: hidden;
     z-index: 1;
+
+    min-width: 124px;
 
     // backdrop-filter: blur(13px);
     // background: var(--light-green);
