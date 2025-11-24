@@ -12,7 +12,7 @@
   /* .experts__subtitle */
   &__subtitle {
     max-width: toRem(490);
-    margin-bottom: 38px;
+    margin-bottom: 28px;
   }
 
   /* .experts__items */
@@ -22,6 +22,10 @@
 
     overflow-x: auto;
     scrollbar-width: none;
+
+    @media (max-width:$tablet) {
+      margin-right: -10px;
+    }
   }
 
   /* .experts__item */
@@ -38,16 +42,24 @@
 
   /* .experts__photo */
   &__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background: var(--grey);
 
     img {
-      max-width: 100%;
+      // max-width: 100%;
     }
   }
 
   /* .experts__about */
   &__about {
     padding: 20px;
+
+    @media (max-width:$mobile) {
+      padding: 15px;
+    }
   }
 
   /* .experts__name */
@@ -60,7 +72,7 @@
 
   /* .experts__spec */
   &__spec {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
 
     @media (max-width:$mobile) {
       font-size: toRem(14);
@@ -71,6 +83,7 @@
   /* .experts__text */
   &__text {
     line-height: normal;
+
     @media (max-width:$mobile) {
       font-size: 14px;
     }
