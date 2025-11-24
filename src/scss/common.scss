@@ -104,3 +104,7 @@
 .section-110pt {
   @include adaptiveValue("padding-top", 110, 70);
 }
+
+.section-110mb {
+  @include adaptiveValue("margin-bottom", 110, 70);
+}

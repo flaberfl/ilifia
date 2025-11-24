@@ -1,0 +1,82 @@
+.experts {
+  background-color: #fff;
+
+  /* .experts__container */
+  &__container {}
+
+  /* .experts__title */
+  &__title {
+    margin-bottom: 11px;
+  }
+
+  /* .experts__subtitle */
+  &__subtitle {
+    max-width: toRem(490);
+    margin-bottom: 38px;
+  }
+
+  /* .experts__items */
+  &__items {
+    display: flex;
+    gap: toRem(20);
+
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  /* .experts__item */
+  &__item {
+    min-width: toRem(220);
+
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    backdrop-filter: blur(13px);
+    background: rgba(255, 255, 255, 0.5);
+
+    @include adaptiveValue("width", 285, 220);
+  }
+
+  /* .experts__photo */
+  &__photo {
+    background: var(--grey);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* .experts__about */
+  &__about {
+    padding: 20px;
+  }
+
+  /* .experts__name */
+  &__name {
+    margin-bottom: toRem(15);
+
+    font-size: toRem(20);
+    font-weight: 600;
+  }
+
+  /* .experts__spec */
+  &__spec {
+    margin-bottom: 15px;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(14);
+      font-weight: 500;
+    }
+  }
+
+  /* .experts__text */
+  &__text {
+    line-height: normal;
+    @media (max-width:$mobile) {
+      font-size: 14px;
+    }
+  }
+}
+
+.title-h2 {}
+
+.subtitle {}
