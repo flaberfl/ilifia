@@ -1,21 +1,67 @@
-.target-ilifia {}
+.target-ilifia {
+    background-color: #fff;
+}
 
-.section-110 {}
 
 .target-ilifia__container {}
 
-.target-ilifia__title {}
+.target-ilifia__title {
+    margin-bottom: 40px;
 
-.target-ilifia__items {}
+    span {
+        line-height: normal;
+        font-weight: 600;
+        @include adaptiveValue("font-size", 24, 16);
+    }
+}
 
-.target-ilifia__item {}
+.target-ilifia__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.target-ilifia__item {
+    display: grid;
+    grid-template-columns: 1fr 36%;
+
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    overflow: hidden;
+
+    backdrop-filter: blur(13px);
+    background: #fff;
+
+    @include adaptiveValue("padding-top", 40, 15);
+    @include adaptiveValue("padding-right", 40, 15);
+    @include adaptiveValue("padding-bottom", 40, 15);
+    @include adaptiveValue("padding-left", 40, 15);
+}
 
 .target-ilifia__content {}
 
-.target-ilifia__name {}
+.target-ilifia__name {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 24, 20);
 
-.target-ilifia__descr {}
+    @include adaptiveValue("margin-bottom", 10, 7);
+}
 
-.target-ilifia__media {}
+.target-ilifia__descr {
 
-.target-ilifia__img {}
+    line-height: normal;
+
+    @media (max-width:$mobile) {
+        font-size: 14px;
+    }
+}
+
+.target-ilifia__media {
+    position: relative;
+}
+
+.target-ilifia__img {
+    position: absolute;
+    bottom: 0;
+}
