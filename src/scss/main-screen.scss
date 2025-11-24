@@ -184,20 +184,44 @@
 }
 
 .banner-groups__item {
-  display: flex;
+  display: grid;
+  // display: flex;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: toRem(20);
 
+  padding: toRem(15);
+  padding: toRem(20);
+
   border-radius: 10px;
   border-radius: 20px;
+
   backdrop-filter: blur(13px);
   background: rgba(255, 255, 255, 0.75);
 }
 
 .banner-groups__img {
-  max-width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
+  position: relative;
+  background: var(--grey);
+  overflow: hidden;
+
+  // min-width: toRem(163)
+
+  @include adaptiveValue("width", 163, 270);
+  @include adaptiveValue("height", 152, 147);
+
+  img {
+    // position: absolute;
+    //  inset: 0;
+    // width: 100%;
+    // height: 100%;
+    max-width: 100%;
+  }
+
 }
 
 .banner-groups__content {}
@@ -207,6 +231,7 @@
 
   font-weight: 600;
   font-size: 20px;
+   line-height: normal;
 }
 
 .banner-groups__text {
