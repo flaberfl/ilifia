@@ -1,0 +1,60 @@
+.premium-banner {
+    background-color: #fff;
+}
+
+.premium-banner__container {}
+
+.premium-banner__box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    // position: relative;
+    border-radius: toRem(20);
+    background-color: $grayColor;
+
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-right", 50, 20);
+    @include adaptiveValue("padding-bottom", 50, 20);
+    @include adaptiveValue("padding-left", 50, 20);
+
+    @media (min-width:$mobile) {
+        padding-right: 384px;
+    }
+
+    @media (max-width:$mobile) {
+        grid-template-columns: auto;
+
+    }
+}
+
+.premium-banner__title {
+    margin-bottom: 10px;
+    max-width: 680px;
+
+    font-family: $secondFamily;
+    line-height: normal;
+
+
+    @include adaptiveValue("font-size", 36, 24);
+}
+
+.premium-banner__subtitle {
+    margin-bottom: 30px;
+
+    line-height: normal;
+    @include adaptiveValue("font-size", 20, 16);
+}
+
+.premium-banner__button {}
+
+.premium-banner__media {
+    position: relative;
+}
+
+.premium-banner__img {
+    position: absolute;
+    right: -65px;
+    bottom: -8px;
+    max-width: 100%;
+
+    @include adaptiveValue("width", 548, 320);
+}

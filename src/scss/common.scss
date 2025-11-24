@@ -94,3 +94,8 @@
     margin-top: 20px;
   }
 }
+
+.section-110 {
+  @include adaptiveValue("padding-top", 110, 70);
+  @include adaptiveValue("padding-bottom", 110, 70);
+}

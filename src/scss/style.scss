@@ -74,7 +74,7 @@ body {
 	color: $mainColor;
 	font-weight: 400;
 	// background: $whiteColor;
-  background: var(--grey);
+	background: var(--grey);
 
 
 	// Скролл заблокирован
@@ -169,3 +169,4 @@ body {
 // Подключение стилей отдельных страниц
 // @import "arhive";
 @import "main-screen";
+@import "premium-banner";
