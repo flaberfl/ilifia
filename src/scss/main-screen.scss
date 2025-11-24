@@ -98,19 +98,25 @@
     // background: url('@img/main-screen/intro.png') 0 0 no-repeat;
 
     @media (max-width:$mobile) {
-      width: 70%;
+      width: 80%;
     }
 
     @media (max-width: toEm(440)) {
       width: auto;
-      margin-right: -43px;
-      margin-left: -43px;
+      margin-right: -21px;
+      margin-left: -21px;
+      // margin-right: -43px;
+      // margin-left: -43px;
     }
 
     img {
       // position: absolute;
       // right: 0;
       // bottom: 0;
+
+      @media (max-width: toEm(440)) {
+        height: 430px;
+      }
 
       @media (min-width:$mobile) {
         margin-left: 58px;
@@ -125,12 +131,15 @@
     display: flex;
     gap: 20px;
     position: absolute;
-    bottom: 58px;
+    // bottom: 58px;
+
 
 
     overflow-x: auto;
     // position: relative;
     scrollbar-width: none;
+
+    @include adaptiveValue("bottom", 58, 14);
 
 
     // @include adaptiveValue("margin-top", -197, 30);
@@ -160,10 +169,14 @@
   /* .main-screen__img */
   &__img {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     // mix-blend-mode: hue;
     right: 0px;
     bottom: 0px;
+
+    img {
+      @include adaptiveValue("width", 154, 103);
+    }
   }
 }
 
@@ -171,6 +184,9 @@
 
   /* .item-main-screen__title */
   &__title {
+    position: relative;
+    z-index: 10;
+
     font-weight: 500;
     @include adaptiveValue("font-size", 16, 14);
   }
