@@ -62,11 +62,11 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 3,
-					spaceBetween: 0,
+					// spaceBetween: 0,
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 0,
+					spaceBetween: 10,
 				},
 				1920: {
 					slidesPerView: 3,

@@ -68,10 +68,32 @@
 
   position: relative;
   padding: toRem(40) toRem(55);
+  padding-bottom: 20px;
 
   border-radius: 20px;
 
   background-color: $grayColor;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    background-color: $grayColor;
+    top: 0;
+
+    z-index: 1;
+  }
+
+  &::before {
+    left: 42px;
+  }
+
+  &::after {
+    right: 42px;
+  }
+
 }
 
 .swiper {}
@@ -213,7 +235,30 @@
   // border-radius: 10px;
 }
 
-.swiper-pagination {}
+.swiper-pagination {
+  display: flex;
+  gap: toRem(5);
+  height: 10px;
+  width: toRem(55);
+
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background-color: $mainColor;
+  border-radius: 50px;
+  opacity: .25;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.recipes-slider .swiper-pagination {
+  margin: toRem(20) auto toRem(20);
+}
 
 .recipes-block-btn {}
 
