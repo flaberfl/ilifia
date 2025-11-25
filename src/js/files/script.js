@@ -7,6 +7,54 @@ window.addEventListener("load", function () {
 });
 
 
+const video = document.getElementById('video');
+const playPauseBtn = document.getElementById('play-pause-btn');
+const progressBar = document.getElementById('progress-bar');
+const currentTimeEl = document.getElementById('current-time');
+const totalTimeEl = document.getElementById('total-time');
+
+// Обновляем общее время при загрузке метаданных
+video.addEventListener('loadedmetadata', () => {
+  totalTimeEl.textContent = formatTime(video.duration);
+});
+
+// Обновляем прогресс и время во время воспроизведения
+video.addEventListener('timeupdate', () => {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressBar.value = percent;
+  currentTimeEl.textContent = formatTime(video.currentTime);
+});
+
+// Перемотка при клике на ползунок
+progressBar.addEventListener('input', () => {
+  const time = (progressBar.value / 100) * video.duration;
+  video.currentTime = time;
+});
+
+// Переключение Play/Pause
+playPauseBtn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playPauseBtn.textContent = '⏸';
+  } else {
+    video.pause();
+    playPauseBtn.textContent = '▶';
+  }
+});
+
+// Обновляем кнопку при окончании воспроизведения
+video.addEventListener('ended', () => {
+  playPauseBtn.textContent = '▶';
+});
+
+// Формат времени (секунды -> MM:SS)
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+
 
 // let position = 0;
 // const sliderContent = document.querySelector('.main-screen__items');

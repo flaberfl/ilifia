@@ -516,12 +516,31 @@
 									<p>Обеспечат витаминами и нутриентами</p>
 								</div>
 							</div>
-							<a href="" class="recipes-block__button button">Смотреть все рецепты</a>
+							<a href="" class="recipes-block__button button" data-da=".recipes-block__container, 991">Смотреть все
+								рецепты</a>
 						</div>
 
 					</div>
 				</div>
 			</section>
+
+
+			<div class="video-player">
+				<video id="video" preload="metadata" controls>
+					<source src="path/to/your/video.mp4" type="video/mp4">
+					Ваш браузер не поддерживает видео.
+				</video>
+
+				<div class="player-controls">
+					<button id="play-pause-btn">▶</button>
+					<div class="progress-container">
+						<input type="range" id="progress-bar" value="0" min="0" max="100">
+					</div>
+					<div class="time-info">
+						<span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+					</div>
+				</div>
+			</div>
 
 
 		</main>

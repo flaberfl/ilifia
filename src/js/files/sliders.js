@@ -66,8 +66,14 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 10,
+					spaceBetween: -35,
 				},
+
+				// 1245: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 10,
+				// },
+
 				1920: {
 					slidesPerView: 3,
 					spaceBetween: -35,
