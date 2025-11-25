@@ -1,0 +1,91 @@
+.recipes-block {
+
+  background: #fff;
+
+  /* .recipes-block__container */
+  &__container {}
+
+  /* .recipes-block__title */
+  &__title {}
+
+  /* .recipes-block__wrapper */
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 73% auto;
+
+  }
+
+  /* .recipes-block__slider */
+  &__slider {}
+
+  /* .recipes-block__slide */
+  &__slide {}
+
+  /* .recipes-block__column */
+  &__column {}
+
+  /* .recipes-block__slogans */
+  &__slogans {}
+
+  /* .recipes-block__slogan */
+  &__slogan {}
+
+  /* .recipes-block__button */
+  &__button {}
+}
+
+.title-h2 {}
+
+.recipes-slider {
+  padding: toRem(40) toRem(102);
+
+  border-radius: 20px;
+
+  background-color: $grayColor;
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.slide-recipes {
+
+  /* .slide-recipes__top */
+  &__top {}
+
+  /* .slide-recipes__badge */
+  &__badge {}
+
+  /* .slide-recipes__badge--type */
+  &__badge--type {}
+
+  /* .slide-recipes__badge--time */
+  &__badge--time {}
+
+  /* .slide-recipes__photo */
+  &__photo {}
+
+  /* .slide-recipes__about */
+  &__about {}
+
+  /* .slide-recipes__name */
+  &__name {}
+
+  /* .slide-recipes__descr */
+  &__descr {}
+
+  /* .slide-recipes__more-link */
+  &__more-link {}
+}
+
+.swiper-pagination {}
+
+.recipes-block-btn {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.button {}
