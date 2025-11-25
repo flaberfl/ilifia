@@ -26,9 +26,9 @@ function initSliders() {
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			// watchSlidesProgress: true,
-			// watchOverflow: true,
-			slidesPerView: 1,
+			centeredSlides: true,
+
+			centeredSlidesBounds: true,
 
 			// autoHeight: true,
 			speed: 800,

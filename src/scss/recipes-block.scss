@@ -11,8 +11,8 @@
   /* .recipes-block__wrapper */
   &__wrapper {
     display: grid;
-    grid-template-columns: 73% auto;
-
+    grid-template-columns: 74.6% auto;
+    gap: toRem(20)
   }
 
   /* .recipes-block__slider */
@@ -22,16 +22,41 @@
   &__slide {}
 
   /* .recipes-block__column */
-  &__column {}
+  &__column {
+    display: grid;
+  }
 
   /* .recipes-block__slogans */
-  &__slogans {}
+  &__slogans {
+    display: grid;
+    align-content: start;
+    gap: toRem(10);
+  }
 
   /* .recipes-block__slogan */
-  &__slogan {}
+  &__slogan {
+    display: flex;
+    gap: toRem(10);
+    padding: toRem(20);
+
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+
+    p {
+      line-height: normal;
+    }
+
+    svg {
+      flex: 0 0 toRem(20);
+    }
+  }
 
   /* .recipes-block__button */
-  &__button {}
+  &__button {
+    margin-top: auto;
+
+    white-space: nowrap;
+  }
 }
 
 .title-h2 {}
