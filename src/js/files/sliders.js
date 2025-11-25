@@ -26,12 +26,14 @@ function initSliders() {
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
+			slidesPerView: 'auto',
 			centeredSlides: true,
-
 			centeredSlidesBounds: true,
 
-			// autoHeight: true,
-			speed: 800,
+			// spaceBetween: 10,
+			// loop: true,
+			autoHeight: true,
+			speed: 1200,
 
 			lazy: true,
 
@@ -64,11 +66,11 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 0,
 				},
 				1920: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: -35,
 				},
 			},
 
