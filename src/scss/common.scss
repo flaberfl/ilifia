@@ -108,3 +108,22 @@
 .section-110mb {
   @include adaptiveValue("margin-bottom", 110, 70);
 }
+
+.additional-content {
+  padding: toRem(20);
+
+  text-align: center;
+
+  h3 {
+    margin-bottom: toRem(10);
+
+    font-size: toRem(20);
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: toRem(20);
+
+    font-size: 14px;
+  }
+}

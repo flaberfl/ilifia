@@ -525,22 +525,182 @@
 			</section>
 
 
-			<div class="video-player">
-				<video id="video" preload="metadata" controls>
-					<source src="path/to/your/video.mp4" type="video/mp4">
+			<!-- <div class="video-player">
+				<video id="video" poster="@img/video-poster.jpg">
+					<source src="@img/1212.mp4" type="video/mp4">
 					Ваш браузер не поддерживает видео.
 				</video>
 
+				<div class="additional-content">
+					<h3>Название подкаста</h3>
+					<p>Красткое описание подкаста</p>
+
+
+					<button id="play-pause-btn">
+
+						<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="24" cy="24" r="24" fill="#FFAED1" />
+							<path
+								d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
+								fill="white" />
+						</svg>
+
+
+						<svg class="icon-pause" style="display: none;" width="54" height="54" viewBox="0 0 54 54" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="27" cy="27" r="27" fill="#FFAED1" />
+							<path
+								d="M31.0781 19.9365C36.5156 23.0758 36.5156 30.9242 31.0781 34.0635V34.0635C25.6406 37.2029 18.8437 33.2787 18.8437 27V27C18.8437 20.7213 25.6406 16.7971 31.0781 19.9365V19.9365Z"
+								fill="white" />
+						</svg>
+
+					</button>
+				</div>
+
 				<div class="player-controls">
-					<button id="play-pause-btn">▶</button>
+
+
+					<select id="playback-rate">
+						<option value="0.5">0.5x</option>
+						<option value="1" selected>1x</option>
+						<option value="1.25">1.25x</option>
+						<option value="1.5">1.5x</option>
+						<option value="2">2x</option>
+					</select>
+
 					<div class="progress-container">
-						<input type="range" id="progress-bar" value="0" min="0" max="100">
+						<div class="progress-track" id="progress-track">
+							<div class="progress-fill" id="progress-fill"></div>
+							<div class="progress-thumb" id="progress-thumb"></div>
+						</div>
+						<div class="time-row">
+							<span id="current-time">0:00</span>
+							<span id="total-time">0:00</span>
+						</div>
 					</div>
-					<div class="time-info">
-						<span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+
+
+
+				</div>
+			</div> -->
+
+			<div class="video-player" data-video-src="@img/1212.mp4" data-poster="@img/video-poster.jpg">
+				<div class="video-container">
+					<video class="video-element" preload="none">
+
+					</video>
+				</div>
+
+				<div class="additional-content">
+					<h3>Название подкаста</h3>
+					<p>Красткое описание подкаста</p>
+
+
+					<button class="play-pause-btn">
+
+						<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="24" cy="24" r="24" fill="#FFAED1" />
+							<path
+								d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
+								fill="white" />
+						</svg>
+
+
+						<svg class="icon-pause" style="display: none;" width="54" height="54" viewBox="0 0 54 54" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="27" cy="27" r="27" fill="#FFAED1" />
+							<path
+								d="M31.0781 19.9365C36.5156 23.0758 36.5156 30.9242 31.0781 34.0635V34.0635C25.6406 37.2029 18.8437 33.2787 18.8437 27V27C18.8437 20.7213 25.6406 16.7971 31.0781 19.9365V19.9365Z"
+								fill="white" />
+						</svg>
+
+					</button>
+				</div>
+
+				<div class="player-controls">
+
+
+					<select class="playback-rate">
+						<option value="0.5">0.5x</option>
+						<option value="1" selected>1x</option>
+						<option value="1.25">1.25x</option>
+						<option value="1.5">1.5x</option>
+						<option value="2">2x</option>
+					</select>
+
+					<div class="progress-container">
+						<div class="progress-track">
+							<div class="progress-fill"></div>
+							<div class="progress-thumb"></div>
+						</div>
+						<div class="time-row">
+							<span class="current-time">0:00</span>
+							<span class="total-time">0:00</span>
+						</div>
 					</div>
 				</div>
 			</div>
+
+			<div class="video-player" data-video-src="@img/1212.mp4" data-poster="@img/video-poster.jpg">
+				<div class="video-container">
+					<video class="video-element">
+
+					</video>
+				</div>
+
+				<div class="additional-content">
+					<h3>Название подкаста</h3>
+					<p>Красткое описание подкаста</p>
+
+
+					<button class="play-pause-btn">
+
+						<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="24" cy="24" r="24" fill="#FFAED1" />
+							<path
+								d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
+								fill="white" />
+						</svg>
+
+
+						<svg class="icon-pause" style="display: none;" width="54" height="54" viewBox="0 0 54 54" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<circle cx="27" cy="27" r="27" fill="#FFAED1" />
+							<path
+								d="M31.0781 19.9365C36.5156 23.0758 36.5156 30.9242 31.0781 34.0635V34.0635C25.6406 37.2029 18.8437 33.2787 18.8437 27V27C18.8437 20.7213 25.6406 16.7971 31.0781 19.9365V19.9365Z"
+								fill="white" />
+						</svg>
+
+					</button>
+				</div>
+
+				<div class="player-controls">
+
+
+					<select class="playback-rate">
+						<option value="0.5">0.5x</option>
+						<option value="1" selected>1x</option>
+						<option value="1.25">1.25x</option>
+						<option value="1.5">1.5x</option>
+						<option value="2">2x</option>
+					</select>
+
+					<div class="progress-container">
+						<div class="progress-track">
+							<div class="progress-fill"></div>
+							<div class="progress-thumb"></div>
+						</div>
+						<div class="time-row">
+							<span class="current-time">0:00</span>
+							<span class="total-time">0:00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 
 		</main>
