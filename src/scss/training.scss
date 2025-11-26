@@ -1,0 +1,50 @@
+.training {
+  background-color: #fff;
+
+  /* .training__container */
+  &__container {}
+
+  /* .training__title */
+  &__title {
+    margin-bottom: toRem(10);
+
+    text-align: center;
+  }
+
+  /* .training__subtitile */
+  &__subtitile {
+    text-align: center;
+
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  /* .training__items */
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* .training__item */
+  &__item {}
+
+  /* .training__image */
+  &__image {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  /* .training__name */
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+
+    @include adaptiveValue("margin-bottom", 10, 5);
+  }
+
+  /* .training__text */
+  &__text {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  /* .training__link */
+  &__link {}
+}

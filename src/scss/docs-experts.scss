@@ -22,7 +22,8 @@
   &__items {
     overflow-x: auto;
     scrollbar-width: none;
-
+    position: relative;
+    z-index: 20;
 
     @media (max-width:$tablet) {
       margin-right: -10px;
@@ -30,7 +31,30 @@
   }
 
   /* .docs-experts__blogs */
-  &__blogs {}
+  &__blogs,
+  &__video {
+    position: relative;
+
+    @media (min-width:$tablet) {
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        background-color: $pinkColor;
+        border-radius: 100%;
+
+        z-index: 10;
+      }
+    }
+
+  }
 
   /* .docs-experts__link */
   &__link {
