@@ -32,7 +32,7 @@ function initSliders() {
 
 			// spaceBetween: 10,
 			// loop: true,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 1200,
 
 			lazy: true,
@@ -51,18 +51,24 @@ function initSliders() {
 
 			// Брейкпоинты
 			breakpoints: {
-				360: {
-					slidesPerView: 1,
-					spaceBetween: 0,
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+					centeredSlides: true,
+					centeredSlidesBounds: true,
 				},
-				640: {
+				500: {
 					slidesPerView: 2,
-					spaceBetween: 0,
-					// autoHeight: true,
+					spaceBetween: 20,
+					centeredSlides: false,
+					centeredSlidesBounds: false,
 				},
+
 				768: {
+					centeredSlides: true,
+					centeredSlidesBounds: true,
 					slidesPerView: 3,
-					// spaceBetween: 0,
+					spaceBetween: -35,
 				},
 				992: {
 					slidesPerView: 3,
