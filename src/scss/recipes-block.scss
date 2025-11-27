@@ -393,8 +393,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 10px;
-  background: #f9f9f9;
+  // padding: 10px;
 }
 
 #play-pause-btn {
@@ -425,7 +424,7 @@
   display: flex;
   justify-content: space-between;
   /* текущее слева, общее — справа */
-  font-size: 14px;
+  font-size: 12px;
   color: $mainColor;
   margin-top: 5px;
 }
