@@ -25,14 +25,21 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
+    align-items: center;
+    justify-items: center;
+
 
     @media (max-width: toEm(950)) {
       grid-template-columns: auto;
       grid-template-rows: repeat(6, 1fr);
-      justify-content: end;
+      justify-items: end;
 
       gap: 35px;
       min-height: toRem(445);
+    }
+
+    @media (max-width:$mobileSmall) {
+      gap: 0;
     }
 
 
@@ -42,9 +49,21 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    max-width: 100%;
+    // max-width: 100%;
 
     @include adaptiveValue("width", 548, 443);
+
+    @media (max-width: toEm(950)) {
+      left: 45%;
+    }
+
+    @media (max-width: toEm(700)) {
+      left: 33%;
+    }
+
+    @media (max-width:$mobileSmall) {
+      left: 9%;
+    }
   }
 
   &__row {
@@ -86,8 +105,6 @@
   &__tip {
     position: relative;
     padding: toRem(20) toRem(10) toRem(20) toRem(50);
-    align-self: center;
-    justify-self: center;
     backdrop-filter: blur(13px);
     background: rgba(255, 255, 255, 0.5);
     border: 2px solid var(--grey);
@@ -119,8 +136,8 @@
         margin-right: 150px;
       }
 
-      @media (max-width: toEm(950)){
-         grid-row: 6; 
+      @media (max-width: toEm(950)) {
+        grid-row: 6;
       }
     }
 
@@ -131,11 +148,14 @@
 
       @media (max-width: toEm(950)) {
         grid-row: 1;
-        justify-self: end;
-
-        margin-right: 150px;
       }
 
+    }
+
+    &--5 {
+      @media (max-width: toEm(950)) {
+        grid-row: 5;
+      }
     }
   }
 
