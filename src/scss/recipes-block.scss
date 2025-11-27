@@ -389,86 +389,86 @@
 //   background: $grayColor;
 // }
 
-// .player-controls {
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-//   padding: 10px;
-//   background: #f9f9f9;
-// }
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+}
 
-// #play-pause-btn {
-//   font-size: 24px;
-//   cursor: pointer;
-//   border: none;
-//   background: transparent;
-//   width: 48px;
-//   height: 48px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
+#play-pause-btn {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-//   margin: 0 auto;
-// }
+  margin: 0 auto;
+}
 
-// .progress-container {
-//   flex: 1;
-// }
+.progress-container {
+  flex: 1;
+}
 
-// #progress-bar {
-//   width: 100%;
-//   height: 6px;
-//   cursor: pointer;
-// }
+#progress-bar {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+}
 
-// .time-row {
-//   display: flex;
-//   justify-content: space-between;
-//   /* текущее слева, общее — справа */
-//   font-size: 14px;
-//   color: $mainColor;
-//   margin-top: 5px;
-// }
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  /* текущее слева, общее — справа */
+  font-size: 14px;
+  color: $mainColor;
+  margin-top: 5px;
+}
 
-// .additional-content {
-//   background-color: #fff;
-// }
+.additional-content {
+  background-color: #fff;
+}
 
 
 
-// .progress-track {
-//   position: relative;
-//   width: 100%;
-//   height: 2px;
-//   background: #f3f3f5;
-//   border-radius: 3px;
-//   cursor: pointer;
-//   overflow: visible;
-//   /* чтобы шарик не обрезался */
-// }
+.progress-track {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #f3f3f5;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: visible;
+  /* чтобы шарик не обрезался */
+}
 
-// .progress-fill {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 0%;
-//   background: #ffaed1;
-//   border-radius: 3px;
-//   z-index: 1;
-// }
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #ffaed1;
+  border-radius: 3px;
+  z-index: 1;
+}
 
-// .progress-thumb {
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   transform: translate(-50%, -50%);
-//   width: 6px;
-//   height: 6px;
-//   background: #ffaed1;
-//   border-radius: 50%;
-//   z-index: 2;
-//   /* pointer-events: none; <-- убираем это */
-//   pointer-events: auto;
-//   /* ✅ теперь шарик реагирует на клики */
-// }
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: #ffaed1;
+  border-radius: 50%;
+  z-index: 2;
+  /* pointer-events: none; <-- убираем это */
+  pointer-events: auto;
+  /* ✅ теперь шарик реагирует на клики */
+}

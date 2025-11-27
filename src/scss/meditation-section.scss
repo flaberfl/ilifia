@@ -24,16 +24,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
     align-items: center;
     justify-items: center;
-
 
     @media (max-width: toEm(950)) {
       grid-template-columns: auto;
       grid-template-rows: repeat(6, 1fr);
       justify-items: end;
-
       gap: 35px;
       min-height: toRem(445);
     }
@@ -41,15 +38,12 @@
     @media (max-width:$mobileSmall) {
       gap: 0;
     }
-
-
   }
 
   &__image-main {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    // max-width: 100%;
 
     @include adaptiveValue("width", 548, 443);
 
