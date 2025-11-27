@@ -21,6 +21,7 @@
     position: relative;
     min-height: 548px;
 
+    margin-bottom: toRem(50);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -153,5 +154,30 @@
     }
   }
 
+  &__items {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    // width: 100%;
+    display: flex;
 
+    @include adaptiveValue("gap", 70, 20);
+  }
+
+  &__item {
+    max-width: toRem(285);
+
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    backdrop-filter: blur(13px);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+}
+
+
+.audio-player {
+  padding: toRem(20);
+
+  text-align: center;
 }
