@@ -209,11 +209,10 @@
 
     @media (max-width:$tablet) {
       margin: 0 auto;
-
       order: -2;
     }
 
-    @media (max-width: toEm(380)) {
+    @media (max-width: toEm(500)){
       overflow: hidden;
     }
 

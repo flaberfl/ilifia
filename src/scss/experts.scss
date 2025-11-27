@@ -1,5 +1,18 @@
 .experts {
+  position: relative;
   background-color: #fff;
+
+  &__decor {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+
+    @media (max-width:$tablet) {
+      display: none;
+    }
+  }
 
   /* .experts__title */
   &__title {
@@ -16,10 +29,13 @@
   &__items {
     display: flex;
     gap: toRem(20);
+    position: relative;
+    z-index: 10;
 
     overflow-x: auto;
     scrollbar-width: none;
 
+  
     @media (max-width:$tablet) {
       margin-right: -10px;
     }
