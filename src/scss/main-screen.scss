@@ -1,7 +1,6 @@
 .main-screen {
   &__container--intro {
     border-radius: 20px;
-    background-color: #fff;
 
     // @include adaptiveValue("padding-top", 190, 115);
     @include adaptiveValue("padding-top", 170, 115);

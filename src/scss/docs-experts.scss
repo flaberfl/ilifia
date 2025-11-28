@@ -1,10 +1,4 @@
 .docs-experts {
-
-  background-color: #fff;
-
-  /* .docs-experts__container */
-  &__container {}
-
   /* .docs-experts__title */
   &__title {
     margin-bottom: toRem(10);
@@ -69,34 +63,6 @@
 
   /* .docs-experts__video */
   &__video {}
-}
-
-
-.blogs-docs {
-
-  /* .blogs-docs__items */
-  &__items {}
-
-  /* .blogs-docs__item */
-  &__item {}
-
-  /* .blogs-docs__media */
-  &__media {}
-
-  /* .blogs-docs__tip */
-  &__tip {}
-
-  /* .blogs-docs__about */
-  &__about {}
-
-  /* .blogs-docs__title */
-  &__title {}
-
-  /* .blogs-docs__text */
-  &__text {}
-
-  /* .blogs-docs__link */
-  &__link {}
 }
 
 .tip {

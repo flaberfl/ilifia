@@ -1,15 +1,7 @@
-.target-ilifia {
-    background-color: #fff;
-}
-
-
-.target-ilifia__container {}
-
 .target-ilifia__title {
     @include adaptiveValue("margin-bottom", 47, 31);
 
     span {
-
         font-family: $fontFamily;
         line-height: normal;
         font-weight: 600;
@@ -100,7 +92,6 @@
 
     @media (max-width:$tablet) {
         max-width: 100%;
-        // width: 70%;
         bottom: -35px;
         right: -14%;
     }

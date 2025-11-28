@@ -1,9 +1,4 @@
 .recipes-block {
-  background: #fff;
-
-  /* .recipes-block__container */
-  &__container {}
-
   /* .recipes-block__title */
   &__title {
     @include adaptiveValue("margin-bottom", 40, 30);
@@ -36,9 +31,6 @@
   &__slider {
     position: relative;
   }
-
-  /* .recipes-block__slide */
-  &__slide {}
 
   /* .recipes-block__column */
   &__column {
@@ -113,9 +105,7 @@
   padding-bottom: 20px;
 
   border-radius: 20px;
-
   background-color: $grayColor;
-
 
   @media (max-width: toEm(1225)) {
     padding-top: 30px;
@@ -126,7 +116,6 @@
   @media (max-width: toEm(499)) {
     margin-right: -20px;
   }
-
 
   &::before,
   &::after {
@@ -172,8 +161,6 @@
 
   transition: transform 0.3s ease-in;
 
-  // flex: 0 0 255px;
-  // width: toRem(255) !important;
 
   /* .slide-recipes__top */
   &__top {
@@ -311,7 +298,6 @@
       right: -10px;
     }
   }
-
 }
 
 
@@ -349,12 +335,6 @@
 .recipes-slider .swiper-pagination {
   margin: toRem(20) auto toRem(20);
 }
-
-.recipes-block-btn {}
-
-.swiper-button-prev {}
-
-.swiper-button-next {}
 
 
 // .video-player {

@@ -1,5 +1,4 @@
 .meditation-section {
-  background: #fff;
 
   &__title {
     margin-bottom: toRem(10);
@@ -188,9 +187,7 @@
       min-width: toRem(220);
     }
   }
-
 }
-
 
 .audio-player {
   padding: toRem(20);

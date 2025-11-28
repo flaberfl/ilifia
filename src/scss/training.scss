@@ -1,8 +1,4 @@
 .training {
-  background-color: #fff;
-
-  /* .training__container */
-  &__container {}
 
   /* .training__title */
   &__title {
@@ -71,8 +67,8 @@
 
   /* .training__link */
   &__link {
-    @media (max-width:$mobileSmall){
-       width: 100%; 
+    @media (max-width:$mobileSmall) {
+      width: 100%;
     }
   }
 }

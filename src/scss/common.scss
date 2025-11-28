@@ -97,6 +97,10 @@
   }
 }
 
+section {
+  background-color: #fff;
+}
+
 .section-110pb {
   @include adaptiveValue("padding-bottom", 110, 70);
 }
