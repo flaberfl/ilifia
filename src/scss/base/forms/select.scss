@@ -205,6 +205,10 @@
 		// Максимальная высота
 		max-height: toRem(200);
 
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
 		// Стили скроллбара
 		.simplebar-scrollbar {
 			&::before {

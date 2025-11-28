@@ -34,7 +34,11 @@
     overflow-x: auto;
     scrollbar-width: none;
 
-  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
     @media (max-width:$tablet) {
       margin-right: -10px;
     }
