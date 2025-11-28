@@ -1,5 +1,10 @@
 import Swiper from 'swiper';
-import { Navigation, EffectFade, Autoplay, Pagination } from 'swiper/modules';
+import {
+	Navigation,
+	EffectFade,
+	Autoplay,
+	Pagination
+} from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -30,8 +35,12 @@ function initSliders() {
 			centeredSlides: true,
 			centeredSlidesBounds: true,
 
+			// slidesPerView: 1, // Показываем 3 слайда
+			// slidesPerGroup: 1,
+
 			// spaceBetween: 10,
-			// loop: true,
+			loop: true,
+			// loopAdditionalSlides: 3,
 			// autoHeight: true,
 			speed: 1200,
 
@@ -46,7 +55,7 @@ function initSliders() {
 
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true, // Позволяет кликать по точкам пагинации
+				clickable: true,
 			},
 
 			// Брейкпоинты
@@ -56,18 +65,22 @@ function initSliders() {
 					spaceBetween: 20,
 					centeredSlides: true,
 					centeredSlidesBounds: true,
+					speed: 700,
 				},
 				500: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 					centeredSlides: false,
 					centeredSlidesBounds: false,
+					speed: 700,
+					loop: 'false'
 				},
 
 				768: {
 					centeredSlides: true,
 					centeredSlidesBounds: true,
 					slidesPerView: 3,
+					speed: 700,
 					spaceBetween: -35,
 				},
 				992: {
@@ -89,11 +102,19 @@ function initSliders() {
 			// События
 			on: {
 
+				// init: function () {
+				// 	updatePaginationVisibility.call(this);
+				// },
+				// slideChange: function () {
+				// 	updatePaginationVisibility.call(this);
+				// }
+
 			}
 		});
 	}
 
 }
+
 
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
@@ -101,3 +122,41 @@ window.addEventListener("load", function (e) {
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
+
+
+
+// function updatePaginationVisibility() {
+// 	const slidesPerView = 3;
+// 	const totalSlides = this.slides.length;
+// 	const groupsCount = Math.ceil(totalSlides / slidesPerView);
+
+// 	const bullets = this.pagination.bullets;
+
+// 	// Скрываем/показываем точки
+// 	bullets.forEach((bullet, index) => {
+// 		if (index % slidesPerView === 0 && index < groupsCount * slidesPerView) {
+// 			bullet.style.display = 'inline-block';
+// 			bullet.classList.add('visible-bullet');
+// 		} else {
+// 			bullet.style.display = 'none';
+// 			bullet.classList.remove('visible-bullet');
+// 		}
+
+// 		// Убираем активный класс у всех
+// 		bullet.classList.remove('swiper-pagination-bullet-active');
+// 	});
+
+// 	// Находим индекс активной "группы" по текущему слайду
+// 	const currentIndex = this.activeIndex;
+// 	const currentGroupIndex = Math.floor(currentIndex / slidesPerView);
+
+// 	// Находим все **видимые** точки
+// 	const visibleBullets = Array.from(bullets).filter(bullet => bullet.classList.contains('visible-bullet'));
+
+// 	// Находим нужную **видимую** точку по индексу группы
+// 	const activeVisibleBullet = visibleBullets[currentGroupIndex];
+
+// 	if (activeVisibleBullet) {
+// 		activeVisibleBullet.classList.add('swiper-pagination-bullet-active');
+// 	}
+// }

@@ -136,6 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// const totalSlides = document.querySelectorAll('.swiper-slide').length;
+// const slidesPerView = 3;
+// const totalBullets = Math.ceil(totalSlides / slidesPerView);
+
+// // Генерация пагинации вручную
+// let paginationHTML = '';
+// for (let i = 0; i < totalBullets; i++) {
+//   paginationHTML += `<span class="swiper-pagination-bullet" data-index="${i}"></span>`;
+// }
+// document.querySelector('.swiper-pagination').innerHTML = paginationHTML;
+
+
 // document.addEventListener('DOMContentLoaded', () => {
 //   const audioPlayers = document.querySelectorAll('.audio-player');
 
