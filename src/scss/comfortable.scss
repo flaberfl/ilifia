@@ -40,6 +40,7 @@
       position: absolute;
       left: -52px;
       bottom: -20px;
+      z-index: 10;
 
       @media (max-width:$mobile) {
         left: auto;
@@ -63,9 +64,12 @@
 
   /* .comfortable__items */
   &__items {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(20);
+
+    z-index: 100;
 
     @media (max-width: toEm(510)) {
       grid-template-columns: auto;
