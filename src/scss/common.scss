@@ -132,3 +132,18 @@ section {
     font-size: 14px;
   }
 }
+
+.favorite-btn {
+  cursor: pointer;
+
+  &.enable {
+
+
+    svg {
+      path {
+        fill: #FFAED1;
+        opacity: 1;
+      }
+    }
+  }
+}

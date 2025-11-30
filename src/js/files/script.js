@@ -228,3 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //     }
 //   });
 // });
+
+const favoriteBtns = document.querySelectorAll('.favorite-btn');
+
+favoriteBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    this.classList.toggle('enable');
+  });
+});
