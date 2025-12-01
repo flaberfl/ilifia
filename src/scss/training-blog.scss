@@ -1,4 +1,5 @@
 .training-blog {
+  padding-bottom: toRem(60);
 
   background: none;
 
@@ -67,12 +68,34 @@
   /* Расстояние между элементами */
   // padding: 20px;
 
+  @media (max-width: toEm(1164)) {
+    gap: toRem(10);
+  }
+
+  @media (max-width:$tablet) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+  }
+
+  @media (max-width: toEm(600)) {
+    grid-template-columns: auto;
+  }
+
   /* .training-articles__item */
   &__item {
+    max-width: 389px;
 
     border: 2px solid var(--white);
     border-radius: 20px;
 
+
+    @media (any-hover: hover) {
+      &:hover {
+        .training-articles__image {
+          transform: scale(1.3);
+        }
+      }
+    }
   }
 
   /* .training-articles__media */
@@ -84,6 +107,8 @@
 
     overflow: hidden;
     border-radius: toRem(20) toRem(20) 0 0;
+
+    justify-self: center;
 
     .block & {
 
@@ -115,12 +140,20 @@
 
   }
 
+  &__image {
+    max-width: 100%;
+    // width: 100%;
+
+    transition: transform 0.3s;
+  }
+
   &__link {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+    z-index: 60;
   }
 
   /* .training-articles__body */

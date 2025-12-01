@@ -384,6 +384,10 @@ section {
   }
 
   @include adaptiveValue("gap", 20, 15);
+
+  @media (max-width: toEm(1164)){
+      margin-right: -10px;
+  }
 }
 
 .filter-title {
