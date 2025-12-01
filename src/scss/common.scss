@@ -165,6 +165,7 @@ section {
   @include adaptiveValue("padding-right", 40, 20);
   @include adaptiveValue("padding-top", 40, 30);
   @include adaptiveValue("padding-bottom", 40, 30);
+  @include adaptiveValue("margin-bottom", 60, 30);
 
   @media (max-width: toEm(1140)) {
     gap: toRem(20);
@@ -365,4 +366,45 @@ section {
     display: block;
   }
 
+}
+
+
+.filter {
+  display: flex;
+  align-items: center;
+
+  @include adaptiveValue("gap", 30, 15);
+}
+
+.filter-title {
+  opacity: .5;
+
+  font-size: 14px;
+}
+
+.filter-container {
+  display: flex;
+
+  @include adaptiveValue("gap", 6, 10);
+}
+
+.filter-category {
+  padding: toRem(7) toRem(25);
+
+  border-radius: 20px;
+  background-color: #fff;
+
+  font-size: 14px;
+
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgba(255, 174, 209, 0.35);
+    }
+  }
+}
+
+.remove-btn {
+  // display: none;
 }
