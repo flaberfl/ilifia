@@ -236,3 +236,65 @@ favoriteBtns.forEach(function (btn) {
     this.classList.toggle('enable');
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryItems = document.querySelectorAll('.filter-category[data-category]');
+  const articles = document.querySelectorAll('.training-articles__item');
+
+  // Функция для отображения статей по активным категориям
+  function showArticlesByActiveCategories() {
+    // Получаем список активных категорий
+    const activeCategories = Array.from(categoryItems)
+      .filter(item => item.classList.contains('active'))
+      .map(item => item.getAttribute('data-category'));
+
+    // Если активных категорий нет — показываем все
+    if (activeCategories.length === 0) {
+      articles.forEach(article => {
+        article.classList.add('visible');
+      });
+    } else {
+      // Иначе — показываем только те, которые подходят под хотя бы одну активную категорию
+      articles.forEach(article => {
+        const articleCategory = article.getAttribute('data-category');
+        if (activeCategories.includes(articleCategory)) {
+          article.classList.add('visible');
+        } else {
+          article.classList.remove('visible');
+        }
+      });
+    }
+  }
+
+  // Обработчик клика по категории
+  categoryItems.forEach(item => {
+    const link = item.querySelector('a');
+    const removeBtn = item.querySelector('.remove-btn');
+    const category = item.getAttribute('data-category');
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // <--- Добавлено
+
+      // Переключаем активный класс у текущей категории
+      item.classList.toggle('active');
+
+      // Пересчитываем, какие статьи показывать
+      showArticlesByActiveCategories();
+    });
+
+    // Обработчик клика по крестику
+    removeBtn.addEventListener('click', function (e) {
+      e.preventDefault(); // <--- Добавлено
+
+      // Убираем активный класс у текущей категории
+      item.classList.remove('active');
+
+      // Пересчитываем, какие статьи показывать
+      showArticlesByActiveCategories();
+    });
+  });
+
+  // По умолчанию показываем все статьи
+  showArticlesByActiveCategories();
+});
