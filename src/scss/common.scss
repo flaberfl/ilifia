@@ -135,10 +135,13 @@ section {
 
 .favorite-btn {
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  z-index: 100;
 
   &.enable {
-
-
     svg {
       path {
         fill: #FFAED1;
@@ -372,6 +375,13 @@ section {
 .filter {
   display: flex;
   align-items: center;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include adaptiveValue("gap", 20, 15);
 }

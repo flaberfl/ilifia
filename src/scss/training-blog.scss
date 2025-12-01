@@ -39,12 +39,12 @@
   &__button {}
 }
 
-.button {}
-
 .blog-body {
 
   /* .blog-body__filter */
-  &__filter {}
+  &__filter {
+    @include adaptiveValue("margin-bottom", 20, 10);
+  }
 }
 
 .filter {}
@@ -59,20 +59,95 @@
 
 .training-articles {
 
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  /* Основной трюк */
+  gap: 20px;
+  /* Расстояние между элементами */
+  // padding: 20px;
+
   /* .training-articles__item */
-  &__item {}
+  &__item {
+
+    border: 2px solid var(--white);
+    border-radius: 20px;
+
+  }
 
   /* .training-articles__media */
-  &__media {}
+  &__media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: toRem(20) toRem(20) 0 0;
+
+    .block & {
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background: #282828;
+        background-blend-mode: overlay;
+        opacity: 0.5;
+        z-index: 50;
+        border-radius: toRem(20) toRem(20) 0 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, 50%);
+        width: toRem(28);
+        height: toRem(37);
+        background: url('@img/blog/overlay-icon.svg') 0 0 no-repeat;
+        z-index: 60;
+      }
+    }
+
+  }
+
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
 
   /* .training-articles__body */
-  &__body {}
+  &__body {
+
+    background: rgba(255, 255, 255, 0.5);
+
+    @include adaptiveValue("padding-top", 20, 15);
+    @include adaptiveValue("padding-left", 30, 15);
+    @include adaptiveValue("padding-bottom", 30, 15);
+    @include adaptiveValue("padding-right", 30, 15);
+  }
 
   /* .training-articles__title */
-  &__title {}
+  &__title {
+    margin-bottom: toRem(10);
+
+    line-height: 110%;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 30, 20);
+  }
 
   /* .training-articles__decsr */
-  &__decsr {}
+  &__decsr {
+    font-size: 16px;
+    line-height: normal;
+  }
 }
 
 .block {}
