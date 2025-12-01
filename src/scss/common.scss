@@ -398,6 +398,10 @@ section {
 
   transition: all 0.3s;
 
+  &.active {
+    background-color: $pinkColor;
+  }
+
   @media (any-hover: hover) {
     &:hover {
       background: rgba(255, 174, 209, 0.35);
@@ -408,4 +412,14 @@ section {
 .remove-btn {
   background: url('@img/remove-btn.svg') 0 0 no-repeat;
   // display: none;
+}
+
+.training-articles__item {
+  display: none;
+  /* Скрыты по умолчанию */
+}
+
+.training-articles__item.visible {
+  display: block;
+  /* Показываются, если подходят под фильтр */
 }
