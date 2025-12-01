@@ -13,12 +13,21 @@
 		z-index: 800;
 		height: 100px;
 
+		background: #fff;
+
+		.main-page & {
+			background: none;
+		}
+
 		@media (max-width:$tablet) {
 			height: 80px;
 		}
 
 		@media (min-width:$tablet) {
-			margin-top: 20px;
+
+			.main-page & {
+				margin-top: 20px;
+			}
 
 			._fixed & {
 				margin-top: 0;

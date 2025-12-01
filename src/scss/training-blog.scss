@@ -1,0 +1,80 @@
+.training-blog {
+
+  background: none;
+
+  /* .training-blog__container */
+  &__container {}
+}
+
+.blog-top {
+
+  /* .blog-top__content */
+  &__content {}
+
+  /* .blog-top__title */
+  &__title {}
+
+  /* .blog-top__subtitle */
+  &__subtitle {}
+
+  /* .blog-top__features */
+  &__features {}
+
+  /* .blog-top__feature */
+  &__feature {}
+
+  /* .blog-top__premium */
+  &__premium {}
+}
+
+.premium-blog-top {
+
+  /* .premium-blog-top__title */
+  &__title {}
+
+  /* .premium-blog-top__subtitle */
+  &__subtitle {}
+
+  /* .premium-blog-top__button */
+  &__button {}
+}
+
+.button {}
+
+.blog-body {
+
+  /* .blog-body__filter */
+  &__filter {}
+}
+
+.filter {}
+
+.filter-title {}
+
+.filter-container {}
+
+.filter-category {}
+
+.remove-btn {}
+
+.training-articles {
+
+  /* .training-articles__item */
+  &__item {}
+
+  /* .training-articles__media */
+  &__media {}
+
+  /* .training-articles__body */
+  &__body {}
+
+  /* .training-articles__title */
+  &__title {}
+
+  /* .training-articles__decsr */
+  &__decsr {}
+}
+
+.block {}
+
+.favorite-btn {}

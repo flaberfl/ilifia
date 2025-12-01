@@ -147,3 +147,29 @@ section {
     }
   }
 }
+
+
+.blog-top {
+
+  /* .blog-top__content */
+  &__content {}
+
+  /* .blog-top__title */
+  &__title {
+
+    line-height: normal;
+    @include adaptiveValue("font-size", 40, 24);
+  }
+
+  /* .blog-top__subtitle */
+  &__subtitle {}
+
+  /* .blog-top__features */
+  &__features {}
+
+  /* .blog-top__feature */
+  &__feature {}
+
+  /* .blog-top__premium */
+  &__premium {}
+}
