@@ -373,7 +373,7 @@ section {
   display: flex;
   align-items: center;
 
-  @include adaptiveValue("gap", 30, 15);
+  @include adaptiveValue("gap", 20, 15);
 }
 
 .filter-title {
@@ -390,12 +390,16 @@ section {
 
 .filter-category {
   padding: toRem(7) toRem(25);
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+  cursor: pointer;
 
   border-radius: 20px;
   background-color: #fff;
 
   font-size: 14px;
-
+  white-space: nowrap;
   transition: all 0.3s;
 
   &.active {
@@ -410,8 +414,11 @@ section {
 }
 
 .remove-btn {
-  background: url('@img/remove-btn.svg') 0 0 no-repeat;
-  // display: none;
+  display: none;
+
+  .active & {
+    display: block;
+  }
 }
 
 .training-articles__item {

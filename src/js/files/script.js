@@ -267,8 +267,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  console.log('TesT');
-
   // Обработчик клика по категории
   categoryItems.forEach(item => {
     const link = item.querySelector('a');
