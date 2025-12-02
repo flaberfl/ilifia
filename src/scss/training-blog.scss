@@ -154,6 +154,10 @@
     left: 0;
     top: 0;
     z-index: 60;
+
+    .block & {
+      pointer-events: none;
+    }
   }
 
   /* .training-articles__body */
