@@ -132,6 +132,8 @@ section {
 }
 
 .article__subtitle {
+  max-width: toRem(590);
+
   line-height: normal;
 }
 
@@ -169,6 +171,23 @@ section {
         fill: #FFAED1;
         opacity: 1;
       }
+    }
+  }
+}
+
+.favorite-link {
+  padding-right: toRem(40);
+}
+
+.favorite-link .favorite-btn {
+  left: auto;
+  right: 0px;
+  top: 50%;
+  transform: translate(0px, -50%);
+
+  svg {
+    path {
+      stroke: $mainColor;
     }
   }
 }
