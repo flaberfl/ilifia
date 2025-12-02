@@ -113,6 +113,28 @@ section {
   @include adaptiveValue("margin-bottom", 110, 70);
 }
 
+.mb-30 {
+  margin-bottom: toRem(30);
+}
+
+.mb-20-10 {
+  @include adaptiveValue("margin-bottom", 20, 10);
+}
+
+.mb-30-20 {
+  @include adaptiveValue("margin-bottom", 30, 20);
+}
+
+.article-h2 {
+  font-weight: 600;
+  line-height: normal;
+  @include adaptiveValue("font-size", 40, 24);
+}
+
+.article__subtitle {
+  line-height: normal;
+}
+
 .additional-content {
   padding: toRem(20);
   white-space: nowrap;
@@ -385,8 +407,8 @@ section {
 
   @include adaptiveValue("gap", 20, 15);
 
-  @media (max-width: toEm(1164)){
-      margin-right: -10px;
+  @media (max-width: toEm(1164)) {
+    margin-right: -10px;
   }
 }
 
@@ -443,4 +465,16 @@ section {
 .training-articles__item.visible {
   display: block;
   /* Показываются, если подходят под фильтр */
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__item {
+    @media (max-width:$mobile) {
+      font-size: 14px;
+    }
+  }
 }

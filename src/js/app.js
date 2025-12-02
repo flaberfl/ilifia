@@ -52,7 +52,7 @@ flsFunctions.menuInit();
 Документация: https://start-template.ru/modul-taby-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показать еще"
