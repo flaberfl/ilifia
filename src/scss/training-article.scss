@@ -39,17 +39,24 @@
 .tabs {}
 
 .tabs__navigation {
-  // overflow-x: auto;
-  // scrollbar-width: none;
+  display: flex;
+  
 
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include adaptiveValue("gap", 20, 10);
 }
 
 .tabs__title {}
 
 .training-article-tablink {
+  min-width: toRem(183);
+
   border: 2px solid var(--grey);
   border-radius: 20px;
 
