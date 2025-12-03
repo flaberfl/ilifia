@@ -86,3 +86,198 @@
     }
   }
 }
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.p4 {
+  grid-area: p4;
+}
+
+.p5 {
+  grid-area: p5;
+}
+
+.p6 {
+  grid-area: p6;
+}
+
+.rec-article {
+
+  /* .rec-article__container--intro */
+  &__container--intro {}
+
+  /* .rec-article__container */
+  &__container {}
+
+  /* .rec-article__top */
+  &__top {}
+
+  /* .rec-article__title */
+  &__title {}
+
+  /* .rec-article__body */
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, auto);
+    // justify-items: start;
+    gap: toRem(20);
+
+    grid-template-areas:
+      "p1 p1 p2 p2"
+      "p3 p3 p2 p2"
+      "p3 p3 p2 p2"
+      "p5 p5 p4 p4"
+      "p6 p6 . .";
+  }
+
+  /* .rec-article__text-side */
+  &__text-side {}
+
+  /* .rec-article__subtitle */
+  &__subtitle {
+    // grid-column: 1 / 4;
+    // grid-row: 1 / 2;
+  }
+
+  /* .rec-article__main-img */
+  &__main-img {
+    // grid-column: 4 / 7;
+  }
+
+  /* .rec-article__ingredients-box */
+  &__ingredients-box {
+    // grid-column: 1 / 4;
+    // grid-row: 2 span 2;
+  }
+
+  /* .rec-article__calories */
+  &__calories {}
+
+  /* .rec-article__imgs-steps */
+  &__imgs-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .rec-article__img-step */
+  &__img-step {}
+
+  /* .rec-article__steps */
+  &__steps {}
+
+  /* .rec-article__more */
+  &__more {}
+}
+
+.article {
+
+  /* .article__container--intro */
+  &__container--intro {}
+
+  /* .article__top */
+  &__top {}
+
+  /* .article__title */
+  &__title {}
+
+  /* .article__subtitle */
+  &__subtitle {}
+}
+
+.breadcrumbs {
+
+  /* .breadcrumbs__icon */
+  &__icon {}
+
+  /* .breadcrumbs__list */
+  &__list {}
+
+  /* .breadcrumbs__item */
+  &__item {
+
+    /* .breadcrumbs__item_active */
+    &_active {}
+  }
+}
+
+.mb-30 {}
+
+.mb-20-10 {}
+
+.article-h2 {}
+
+.favorite-link {}
+
+.favorite-btn {}
+
+.arcticle {
+
+  /* .arcticle__body */
+  &__body {}
+}
+
+.mb-30-20 {}
+
+.ingredients-box {
+
+  /* .ingredients-box__ingredients */
+  &__ingredients {}
+
+  /* .ingredients-box__title */
+  &__title {}
+
+  /* .ingredients-box__parts */
+  &__parts {}
+
+  /* .ingredients-box__name */
+  &__name {}
+
+  /* .ingredients-box__sturcture */
+  &__sturcture {}
+
+  /* .ingredients-box__part */
+  &__part {}
+}
+
+.calories-reg-article {
+
+  /* .calories-reg-article__item */
+  &__item {}
+
+  /* .calories-reg-article__name */
+  &__name {}
+
+  /* .calories-reg-article__value */
+  &__value {}
+}
+
+.title-article {}
+
+.steps-rec-article {
+
+  /* .steps-rec-article__title */
+  &__title {}
+
+  /* .steps-rec-article__parts */
+  &__parts {}
+
+  /* .steps-rec-article__name */
+  &__name {}
+
+  /* .steps-rec-article__sturcture */
+  &__sturcture {}
+
+  /* .steps-rec-article__part */
+  &__part {}
+}

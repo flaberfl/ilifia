@@ -567,6 +567,12 @@ section.blog {
   }
 
 
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 
   &__subtitle {
     max-width: toRem(590);
