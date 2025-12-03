@@ -101,6 +101,10 @@ section {
   background-color: #fff;
 }
 
+section.blog {
+  background: none;
+}
+
 .section-110pb {
   @include adaptiveValue("padding-bottom", 110, 70);
 }
@@ -129,12 +133,6 @@ section {
   font-weight: 600;
   line-height: normal;
   @include adaptiveValue("font-size", 40, 24);
-}
-
-.article__subtitle {
-  max-width: toRem(590);
-
-  line-height: normal;
 }
 
 .additional-content {
@@ -516,5 +514,13 @@ section {
 
     @include adaptiveValue("padding-bottom", 60, 40);
     @include adaptiveValue("padding-top", 60, 40);
+  }
+
+
+
+  &__subtitle {
+    max-width: toRem(590);
+
+    line-height: normal;
   }
 }
