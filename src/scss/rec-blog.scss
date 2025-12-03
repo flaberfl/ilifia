@@ -129,7 +129,7 @@
   &__body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, auto);
+    // grid-template-rows: repeat(12, auto);
     // justify-items: start;
     gap: toRem(20);
 
@@ -152,7 +152,11 @@
 
   /* .rec-article__main-img */
   &__main-img {
-    // grid-column: 4 / 7;
+    img {
+      border-radius: toRem(10);
+      max-width: 100%;
+    }
+
   }
 
   /* .rec-article__ingredients-box */
@@ -251,15 +255,54 @@
 }
 
 .calories-reg-article {
+  padding-top: toRem(20);
+  padding-bottom: toRem(20);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  border-radius: toRem(10);
+  background-color: $grayColor;
+
+  @media (max-width:$mobile) {
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+  }
 
   /* .calories-reg-article__item */
-  &__item {}
+  &__item {
+    padding-right: toRem(20);
+    padding-left: toRem(20);
+
+    text-align: center;
+
+    &:not(:last-child) {
+      border-right: 2px solid #fff;
+    }
+
+    @media (max-width:$mobile) {
+      padding-right: toRem(10);
+      padding-left: toRem(10);
+    }
+  }
 
   /* .calories-reg-article__name */
-  &__name {}
+  &__name {
+    margin-bottom: toRem(7);
+
+    font-weight: 600;
+
+    @media (max-width:$mobile) {
+      margin-bottom: toRem(5);
+
+      font-size: toRem(14);
+    }
+  }
 
   /* .calories-reg-article__value */
-  &__value {}
+  &__value {
+    @include adaptiveValue("font-size", 27, 18);
+  }
 }
 
 .title-article {}
