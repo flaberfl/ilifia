@@ -202,7 +202,7 @@ section.blog {
   overflow: hidden;
   display: grid;
   // grid-template-columns: 67% auto;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 31%;
   gap: toRem(30);
   padding: toRem(40);
 
