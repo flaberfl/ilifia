@@ -187,7 +187,7 @@ section.blog {
 .favorite-link {
   padding-right: toRem(40);
 
-  @media (max-width:$mobile) {
+  @media (max-width: toEm(1200)) {
     span {
       display: none;
     }
@@ -579,4 +579,11 @@ section.blog {
 
     line-height: normal;
   }
+}
+
+.title-article {
+  margin-bottom: toRem(20);
+
+  font-size: toRem(24);
+  font-weight: 600;
 }

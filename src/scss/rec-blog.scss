@@ -138,7 +138,7 @@
       "p3 p3 p2 p2"
       "p3 p3 p2 p2"
       "p5 p5 p4 p4"
-      "p6 p6 . .";
+      "p6 p6 p4 p4";
   }
 
   /* .rec-article__text-side */
@@ -172,16 +172,40 @@
   &__imgs-steps {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: toRem(20);
+    // justify-content: end;
+    align-self: start;
+    // margin-top: -50px;
+    @include adaptiveValue("margin-top", -50, -420);
+
+    // @media (max-width: toEm(1175)){
+    //     grid-template-columns: auto;
+    // }
   }
 
   /* .rec-article__img-step */
-  &__img-step {}
+  &__img-step {
+    img {
+      border-radius: toRem(10);
+      max-width: 100%;
+    }
+  }
 
   /* .rec-article__steps */
   &__steps {}
 
   /* .rec-article__more */
-  &__more {}
+  &__more {
+
+    p {
+      line-height: normal;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
 }
 
 .article {
@@ -199,40 +223,6 @@
   &__subtitle {}
 }
 
-.breadcrumbs {
-
-  /* .breadcrumbs__icon */
-  &__icon {}
-
-  /* .breadcrumbs__list */
-  &__list {}
-
-  /* .breadcrumbs__item */
-  &__item {
-
-    /* .breadcrumbs__item_active */
-    &_active {}
-  }
-}
-
-.mb-30 {}
-
-.mb-20-10 {}
-
-.article-h2 {}
-
-.favorite-link {}
-
-.favorite-btn {}
-
-.arcticle {
-
-  /* .arcticle__body */
-  &__body {}
-}
-
-.mb-30-20 {}
-
 .ingredients-box {
 
   /* .ingredients-box__ingredients */
@@ -242,10 +232,14 @@
   &__title {}
 
   /* .ingredients-box__parts */
-  &__parts {}
+  &__parts {
+    max-width: toRem(418) !important;
+  }
 
   /* .ingredients-box__name */
-  &__name {}
+  &__name {
+    font-weight: 500;
+  }
 
   /* .ingredients-box__sturcture */
   &__sturcture {}
@@ -254,9 +248,25 @@
   &__part {}
 }
 
+.rec-box-parts {
+  max-width: toRem(500);
+  display: flex;
+  justify-content: space-between;
+  gap: toRem(20);
+
+  &:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
+}
+
+.rec-box-part {
+  line-height: normal;
+}
+
 .calories-reg-article {
   padding-top: toRem(20);
   padding-bottom: toRem(20);
+  margin-bottom: toRem(30);
   display: flex;
   align-items: center;
   width: fit-content;
@@ -305,7 +315,6 @@
   }
 }
 
-.title-article {}
 
 .steps-rec-article {
 
@@ -316,7 +325,9 @@
   &__parts {}
 
   /* .steps-rec-article__name */
-  &__name {}
+  &__name {
+    font-weight: 500;
+  }
 
   /* .steps-rec-article__sturcture */
   &__sturcture {}
