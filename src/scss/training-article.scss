@@ -40,7 +40,7 @@
 
 .tabs__navigation {
   display: flex;
-  
+
 
   overflow-x: auto;
   scrollbar-width: none;
@@ -55,7 +55,7 @@
 .tabs__title {}
 
 .training-article-tablink {
-  min-width: toRem(183);
+  width: toRem(183);
 
   border: 2px solid var(--grey);
   border-radius: 20px;
@@ -98,6 +98,12 @@
 }
 
 .tabs__content {}
+
+.tabs-top {
+  @media (max-width: toEm(1036)){
+     margin-right: toRem(-20); 
+  }
+}
 
 // .tabs__body {
 //   div {

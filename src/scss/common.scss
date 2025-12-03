@@ -177,6 +177,12 @@ section {
 
 .favorite-link {
   padding-right: toRem(40);
+
+  @media (max-width:$mobile) {
+    span {
+      display: none;
+    }
+  }
 }
 
 .favorite-link .favorite-btn {
@@ -495,5 +501,20 @@ section {
     @media (max-width:$mobile) {
       font-size: 14px;
     }
+  }
+}
+
+.article {
+  margin-bottom: toRem(20);
+
+  background-color: $grayColor;
+
+
+  &__container--intro {
+    border-radius: toRem(20);
+    background-color: #fff;
+
+    @include adaptiveValue("padding-bottom", 60, 40);
+    @include adaptiveValue("padding-top", 60, 40);
   }
 }
