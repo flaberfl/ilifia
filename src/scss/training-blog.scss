@@ -1,43 +1,5 @@
 .training-blog {
   padding-bottom: toRem(60);
-
-  // background: none;
-
-  /* .training-blog__container */
-  &__container {}
-}
-
-.blog-top {
-
-  /* .blog-top__content */
-  &__content {}
-
-  /* .blog-top__title */
-  &__title {}
-
-  /* .blog-top__subtitle */
-  &__subtitle {}
-
-  /* .blog-top__features */
-  &__features {}
-
-  /* .blog-top__feature */
-  &__feature {}
-
-  /* .blog-top__premium */
-  &__premium {}
-}
-
-.premium-blog-top {
-
-  /* .premium-blog-top__title */
-  &__title {}
-
-  /* .premium-blog-top__subtitle */
-  &__subtitle {}
-
-  /* .premium-blog-top__button */
-  &__button {}
 }
 
 .blog-body {
@@ -48,16 +10,6 @@
   }
 }
 
-.filter {}
-
-.filter-title {}
-
-.filter-container {}
-
-.filter-category {}
-
-.remove-btn {}
-
 .training-articles {
 
   display: grid;
@@ -65,8 +17,7 @@
   grid-template-columns: repeat(3, 1fr);
   /* Основной трюк */
   gap: 20px;
-  /* Расстояние между элементами */
-  // padding: 20px;
+
 
   @media (max-width: toEm(1164)) {
     gap: toRem(10);
@@ -109,35 +60,6 @@
     border-radius: toRem(20) toRem(20) 0 0;
 
     justify-self: center;
-
-    .block & {
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-
-        background: #282828;
-        background-blend-mode: overlay;
-        opacity: 0.5;
-        z-index: 50;
-        border-radius: toRem(20) toRem(20) 0 0;
-      }
-
-      &::after {
-        position: absolute;
-        content: '';
-        // left: 50%;
-        // top: 50%;
-        // transform: translate(-50%, 50%);
-        width: toRem(28);
-        height: toRem(37);
-        background: url('@img/blog/overlay-icon.svg') 0 0 no-repeat;
-        z-index: 60;
-      }
-    }
-
   }
 
   &__image {
