@@ -1,91 +1,17 @@
-.rec-blog {
-
-  // .rec-blog__container
-
-  &__container {}
-}
-
-.training-blog {}
-
-.blog {}
-
-.blog-top {
-
-  // .blog-top__content
-
-  &__content {}
-
-  // .blog-top__title
-
-  &__title {}
-
-  // .blog-top__subtitle
-
-  &__subtitle {}
-
-  // .blog-top__features
-
-  &__features {}
-
-  // .blog-top__feature
-
-  &__feature {}
-
-  // .blog-top__premium
-
-  &__premium {}
-}
-
-.auth2 {}
-
-.premium-blog-top {
-
-  // .premium-blog-top__title
-
-  &__title {}
-
-  // .premium-blog-top__subtitle
-
-  &__subtitle {}
-
-  // .premium-blog-top__button
-
-  &__button {}
-
-  // .premium-blog-top__button--auth-user
-
-  &__button--auth-user {}
-}
-
-.premium-decor2 {}
-
-.premium-decor {}
-
-.button {}
-
-.blog-body {
-
-  // .blog-body__filter
-
-  &__filter {}
-}
-
-
-
 .rec-articles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: toRem(20);
-  
-  @media (max-width: toEm(1100)){
+
+  @media (max-width: toEm(1100)) {
     grid-template-columns: repeat(3, 1fr);
   }
-  
-  @media (max-width:$mobile){
+
+  @media (max-width:$mobile) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (max-width: toEm(550)){
+
+  @media (max-width: toEm(550)) {
     grid-template-columns: auto;
     justify-content: center;
   }
@@ -95,8 +21,8 @@
   &__item {
     transform: scale(1) !important;
 
-    @media (max-width: toEm(550)){
-       max-width: toRem(300); 
+    @media (max-width: toEm(550)) {
+      max-width: toRem(300);
     }
   }
 
@@ -127,8 +53,8 @@
     opacity: 0.5;
     font-size: toRem(14);
 
-    @media (max-width:$mobile){
-       font-size: 12px; 
+    @media (max-width:$mobile) {
+      font-size: 12px;
     }
   }
 
@@ -145,7 +71,6 @@
   // .rec-articles__descr
 
   &__descr {
-
     font-size: toRem(14);
   }
 
@@ -161,42 +86,3 @@
     }
   }
 }
-
-.block {}
-
-.slide-recipes {
-
-  // .slide-recipes__top
-
-  &__top {}
-
-  // .slide-recipes__badge
-
-  &__badge {}
-
-  // .slide-recipes__badge--type
-
-  &__badge--type {}
-
-  // .slide-recipes__badge--time
-
-  &__badge--time {}
-
-  // .slide-recipes__photo
-
-  &__photo {}
-
-  // .slide-recipes__about
-
-  &__about {}
-
-  // .slide-recipes__descr
-
-  &__descr {}
-
-  // .slide-recipes__more-link
-
-  &__more-link {}
-}
-
-.favorite-btn {}
