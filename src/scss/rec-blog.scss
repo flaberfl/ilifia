@@ -1,0 +1,177 @@
+.rec-blog {
+
+  // .rec-blog__container
+
+  &__container {}
+}
+
+.training-blog {}
+
+.blog {}
+
+.blog-top {
+
+  // .blog-top__content
+
+  &__content {}
+
+  // .blog-top__title
+
+  &__title {}
+
+  // .blog-top__subtitle
+
+  &__subtitle {}
+
+  // .blog-top__features
+
+  &__features {}
+
+  // .blog-top__feature
+
+  &__feature {}
+
+  // .blog-top__premium
+
+  &__premium {}
+}
+
+.auth2 {}
+
+.premium-blog-top {
+
+  // .premium-blog-top__title
+
+  &__title {}
+
+  // .premium-blog-top__subtitle
+
+  &__subtitle {}
+
+  // .premium-blog-top__button
+
+  &__button {}
+
+  // .premium-blog-top__button--auth-user
+
+  &__button--auth-user {}
+}
+
+.premium-decor2 {}
+
+.premium-decor {}
+
+.button {}
+
+.blog-body {
+
+  // .blog-body__filter
+
+  &__filter {}
+}
+
+
+
+.rec-articles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: toRem(20);
+
+  // .rec-articles__item
+
+  &__item {
+
+    transform: scale(1) !important;
+  }
+
+  // .rec-articles__media
+
+  &__media {
+    position: relative;
+  }
+
+  &__top {
+    top: auto !important;
+    bottom: 20px !important;
+
+    @media (max-width:$mobile) {
+      bottom: 15px !important;
+    }
+  }
+
+  // .rec-articles__about
+
+  &__about {
+    padding-top: toRem(15);
+  }
+
+  // .rec-articles__type
+
+  &__type {
+    opacity: 0.5;
+    font-size: toRem(14);
+
+    @media (max-width:$mobile){
+       font-size: 12px; 
+    }
+  }
+
+  // .rec-articles__title
+
+  &__title {
+    margin-bottom: toRem(10);
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  // .rec-articles__descr
+
+  &__descr {}
+
+  // .rec-articles__link
+
+  &__link {
+    display: flex !important;
+  }
+}
+
+.block {}
+
+.slide-recipes {
+
+  // .slide-recipes__top
+
+  &__top {}
+
+  // .slide-recipes__badge
+
+  &__badge {}
+
+  // .slide-recipes__badge--type
+
+  &__badge--type {}
+
+  // .slide-recipes__badge--time
+
+  &__badge--time {}
+
+  // .slide-recipes__photo
+
+  &__photo {}
+
+  // .slide-recipes__about
+
+  &__about {}
+
+  // .slide-recipes__descr
+
+  &__descr {}
+
+  // .slide-recipes__more-link
+
+  &__more-link {}
+}
+
+.favorite-btn {}

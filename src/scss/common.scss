@@ -171,6 +171,17 @@ section.blog {
       }
     }
   }
+
+  .rec-articles & {
+    opacity: .5;
+
+    svg {
+      path {
+        stroke: $mainColor;
+      }
+    }
+  }
+
 }
 
 .favorite-link {
@@ -195,6 +206,8 @@ section.blog {
     }
   }
 }
+
+
 
 
 .blog-top {
