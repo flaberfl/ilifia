@@ -57,7 +57,9 @@
 .meditation-section {
 
   /* .meditation-section__item */
-  &__item {}
+  &__item {
+    border-radius: toRem(20);
+  }
 }
 
 .audio-player {}
@@ -73,6 +75,7 @@
   /* .meditation__media-photo */
   &__media-photo {
     max-width: 100%;
+    width: 100%;
   }
 }
 
