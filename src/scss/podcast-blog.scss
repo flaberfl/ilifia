@@ -39,8 +39,16 @@
         background: url('@img/blog/overlay-icon.svg') 0 0 no-repeat;
         z-index: 60;
 
-        @media (max-width:$tablet){
-           top: 30%; 
+        @media (max-width:$tablet) {
+          top: 30%;
+        }
+
+        @media (max-width:$mobile) {
+          top: 38%;
+        }
+
+        @media (max-width:$mobileSmall) {
+          top: 30%;
         }
       }
     }
