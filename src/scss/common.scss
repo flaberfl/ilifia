@@ -186,6 +186,7 @@ section.blog {
 
 .favorite-link {
   padding-right: toRem(40);
+  margin-left: auto;
 
   @media (max-width: toEm(1200)) {
     span {
