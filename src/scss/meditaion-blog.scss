@@ -71,7 +71,9 @@
 .meditation {
 
   /* .meditation__media-photo */
-  &__media-photo {}
+  &__media-photo {
+    max-width: 100%;
+  }
 }
 
 .favorite-btn {}
