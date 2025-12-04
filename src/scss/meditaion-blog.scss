@@ -1,10 +1,3 @@
-.meditaion-blog {
-
-  /* .meditaion-blog__container */
-  &__container {}
-}
-
-
 .meditation-articles {
 
   display: grid;
@@ -62,14 +55,6 @@
   }
 }
 
-.audio-player {}
-
-.articles {
-
-  /* .articles__media */
-  &__media {}
-}
-
 .meditation {
 
   /* .meditation__media-photo */
@@ -78,29 +63,3 @@
     width: 100%;
   }
 }
-
-.favorite-btn {}
-
-.additional-content {}
-
-.play-pause-btn {}
-
-.icon-play {}
-
-.icon-pause {}
-
-.player-controls {}
-
-.progress-container {}
-
-.progress-track {}
-
-.progress-fill {}
-
-.progress-thumb {}
-
-.time-row {}
-
-.current-time {}
-
-.total-time {}

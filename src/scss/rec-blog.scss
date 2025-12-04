@@ -113,24 +113,10 @@
 
 .rec-article {
 
-  /* .rec-article__container--intro */
-  &__container--intro {}
-
-  /* .rec-article__container */
-  &__container {}
-
-  /* .rec-article__top */
-  &__top {}
-
-  /* .rec-article__title */
-  &__title {}
-
   /* .rec-article__body */
   &__body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    // grid-template-rows: repeat(12, auto);
-    // justify-items: start;
     gap: toRem(20);
 
     grid-template-areas:
@@ -154,15 +140,6 @@
     }
   }
 
-  /* .rec-article__text-side */
-  &__text-side {}
-
-  /* .rec-article__subtitle */
-  &__subtitle {
-    // grid-column: 1 / 4;
-    // grid-row: 1 / 2;
-  }
-
   /* .rec-article__main-img */
   &__main-img {
     margin: 0 auto;
@@ -177,15 +154,6 @@
     }
 
   }
-
-  /* .rec-article__ingredients-box */
-  &__ingredients-box {
-    // grid-column: 1 / 4;
-    // grid-row: 2 span 2;
-  }
-
-  /* .rec-article__calories */
-  &__calories {}
 
   /* .rec-article__imgs-steps */
   &__imgs-steps {
@@ -211,12 +179,7 @@
       &::-webkit-scrollbar {
         display: none;
       }
-
     }
-
-    // @media (max-width: toEm(1175)){
-    //     grid-template-columns: auto;
-    // }
   }
 
   /* .rec-article__img-step */
@@ -380,23 +343,10 @@
   }
 }
 
-
 .steps-rec-article {
-
-  /* .steps-rec-article__title */
-  &__title {}
-
-  /* .steps-rec-article__parts */
-  &__parts {}
 
   /* .steps-rec-article__name */
   &__name {
     font-weight: 500;
   }
-
-  /* .steps-rec-article__sturcture */
-  &__sturcture {}
-
-  /* .steps-rec-article__part */
-  &__part {}
 }
