@@ -1,0 +1,101 @@
+.meditaion-blog {
+
+  /* .meditaion-blog__container */
+  &__container {}
+}
+
+
+.meditation-articles {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: toRem(20);
+
+  @media (max-width: toEm(1100)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width:$mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: toEm(550)) {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  /* .meditation-articles__item */
+  &__item {}
+
+  /* .meditation-articles__media-box */
+  &__media-box {}
+
+  .additional-content {
+    background: none;
+    padding: 0;
+
+    h3 {
+      margin-bottom: toRem(10);
+    }
+
+    h4 {
+      margin-bottom: toRem(20);
+
+      font-size: toRem(14);
+
+      @media (max-width:$mobile) {
+        margin-bottom: toRem(15);
+      }
+    }
+  }
+
+  .play-pause-btn {
+    margin-bottom: toRem(20);
+  }
+}
+
+.meditation-section {
+
+  /* .meditation-section__item */
+  &__item {}
+}
+
+.audio-player {}
+
+.articles {
+
+  /* .articles__media */
+  &__media {}
+}
+
+.meditation {
+
+  /* .meditation__media-photo */
+  &__media-photo {}
+}
+
+.favorite-btn {}
+
+.additional-content {}
+
+.play-pause-btn {}
+
+.icon-play {}
+
+.icon-pause {}
+
+.player-controls {}
+
+.progress-container {}
+
+.progress-track {}
+
+.progress-fill {}
+
+.progress-thumb {}
+
+.time-row {}
+
+.current-time {}
+
+.total-time {}
