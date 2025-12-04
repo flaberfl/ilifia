@@ -510,6 +510,13 @@ section.blog {
   gap: 15px;
 
   &__item {
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     @media (max-width:$mobile) {
       font-size: 14px;
     }
