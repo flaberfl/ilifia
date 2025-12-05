@@ -167,7 +167,7 @@
     @include adaptiveValue("margin-top", -50, -420);
 
     @media (max-width:$tablet) {
-      margin-top: 0;
+      margin-top: 0 !important;
     }
 
     @media (max-width:$mobileSmall) {
