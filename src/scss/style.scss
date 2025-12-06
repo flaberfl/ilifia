@@ -76,6 +76,9 @@ body {
 	// background: $whiteColor;
 	background: var(--grey);
 
+	&.lk {
+		background-color: #fff;
+	}
 
 	// Скролл заблокирован
 	.lock & {
@@ -118,6 +121,10 @@ body {
 .page {
 	&:not(.main-page &) {
 		@include adaptiveValue("padding-top", 140, 100);
+	}
+
+	&.profile {
+		@include adaptiveValue("padding-top", 120, 80);
 	}
 }
 
