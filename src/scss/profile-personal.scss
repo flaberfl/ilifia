@@ -214,15 +214,27 @@
 
   // .banner-profile__left-side
 
-  &__left-side {}
+  &__left-side {
+    padding: toRem(20);
+
+    background-color: $grayColor;
+    border-radius: toRem(5);
+  }
 
   // .banner-profile__subtitle
 
-  &__subtitle {}
+  &__subtitle {
+    font-size: 14px;
+  }
 
   // .banner-profile__title
 
-  &__title {}
+  &__title {
+    margin-bottom: toRem(12);
+
+    font-weight: 600;
+    @include adaptiveValue("font-size", 32, 20);
+  }
 
   // .banner-profile__right-side
 
