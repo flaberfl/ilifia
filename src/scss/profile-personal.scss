@@ -13,18 +13,33 @@
 
   // .profile__content
 
-  &__content {}
+  &__content {
+    padding: toRem(30);
+
+    border-radius: toRem(10);
+    background-color: #fff;
+
+    @media (max-width:$mobile) {
+      padding: toRem(20);
+    }
+  }
 }
 
 .profile-personal {
 
   // .profile-personal__content
 
-  &__content {}
+  &__content {
+    // display: flex;
+  }
 
   // .profile-personal__card
 
-  &__card {}
+  &__card {
+    display: flex;
+
+    @include adaptiveValue("gap", 30, 10);
+  }
 
   // .profile-personal__photo
 
@@ -32,11 +47,19 @@
 
   // .profile-personal__contacts-box
 
-  &__contacts-box {}
+  &__contacts-box {
+    // display: flex;
+  }
 
   // .profile-personal__name
 
-  &__name {}
+  &__name {
+    display: flex;
+    gap: toRem(10);
+
+    font-weight: 600;
+    @include adaptiveValue("font-size", 24, 16);
+  }
 
   // .profile-personal__first-name
 
@@ -64,7 +87,9 @@
 
   // .profile-personal__action
 
-  &__action {}
+  &__action {
+    margin-left: auto;
+  }
 
   // .profile-personal__bottom
 
