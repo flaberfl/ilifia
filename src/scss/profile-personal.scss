@@ -48,7 +48,8 @@
   // .profile-personal__contacts-box
 
   &__contacts-box {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
   }
 
   // .profile-personal__name
@@ -56,6 +57,7 @@
   &__name {
     display: flex;
     gap: toRem(10);
+    margin-bottom: auto;
 
     font-weight: 600;
     @include adaptiveValue("font-size", 24, 16);
@@ -71,15 +73,30 @@
 
   // .profile-personal__contacts
 
-  &__contacts {}
+  &__contacts {
+
+    display: flex;
+
+    @include adaptiveValue("gap", 40, 10);
+  }
 
   // .profile-personal__contact
 
-  &__contact {}
+  &__contact {
+    display: grid;
+    gap: toRem(4);
+  }
 
   // .profile-personal__sub-name
 
-  &__sub-name {}
+  &__sub-name {
+    font-size: toRem(14);
+    opacity: 0.5;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(12);
+    }
+  }
 
   // .profile-personal__value
 
@@ -89,6 +106,15 @@
 
   &__action {
     margin-left: auto;
+    align-self: flex-start;
+
+    button {
+      display: flex;
+      gap: toRem(10);
+      align-items: center;
+
+      font-size: 15px;
+    }
   }
 
   // .profile-personal__bottom
