@@ -76,9 +76,9 @@ body {
 	// background: $whiteColor;
 	background: var(--grey);
 
-	&.lk {
-		background-color: #fff;
-	}
+	// &.lk {
+	// 	background-color: #fff;
+	// }
 
 	// Скролл заблокирован
 	.lock & {
@@ -198,3 +198,4 @@ body {
 @import "meditaion-blog";
 @import "podcast-blog";
 @import "docs-blog";
+@import "profile-personal";

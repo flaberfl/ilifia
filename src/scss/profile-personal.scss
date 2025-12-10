@@ -1,0 +1,172 @@
+.profile {
+
+
+  // .profile__body
+
+  &__body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    @include adaptiveValue("gap", 30, 20);
+  }
+
+  // .profile__content
+
+  &__content {}
+}
+
+.profile-personal {
+
+  // .profile-personal__content
+
+  &__content {}
+
+  // .profile-personal__card
+
+  &__card {}
+
+  // .profile-personal__photo
+
+  &__photo {}
+
+  // .profile-personal__contacts-box
+
+  &__contacts-box {}
+
+  // .profile-personal__name
+
+  &__name {}
+
+  // .profile-personal__first-name
+
+  &__first-name {}
+
+  // .profile-personal__last-name
+
+  &__last-name {}
+
+  // .profile-personal__contacts
+
+  &__contacts {}
+
+  // .profile-personal__contact
+
+  &__contact {}
+
+  // .profile-personal__sub-name
+
+  &__sub-name {}
+
+  // .profile-personal__value
+
+  &__value {}
+
+  // .profile-personal__action
+
+  &__action {}
+
+  // .profile-personal__bottom
+
+  &__bottom {}
+
+  // .profile-personal__banner
+
+  &__banner {}
+}
+
+.personal {
+
+  // .personal__container
+
+  &__container {}
+}
+
+.sidebar {
+
+
+  // .sidebar__body
+
+  &__body {}
+
+  // .sidebar__menu
+
+  &__menu {
+    display: grid;
+    padding: toRem(10);
+    width: toRem(285);
+
+    border-radius: 10px;
+    background-color: #fff;
+
+    @include adaptiveValue("gap", 15, 10);
+
+  }
+
+  // .sidebar__item
+
+  &__item {
+    display: flex;
+    padding-left: toRem(25);
+
+    border-radius: 5px;
+
+    @include adaptiveValue("height", 50, 40);
+
+    &.active {
+      background: var(--light-pink);
+    }
+
+    &:nth-child(2) {
+      padding-left: toRem(20);
+    }
+  }
+
+  // .sidebar__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+    @include adaptiveValue("font-size", 16, 14);
+  }
+
+  // .sidebar__settings
+
+  &__settings {}
+}
+
+.active {}
+
+.banner-profile {
+
+  // .banner-profile__left-side
+
+  &__left-side {}
+
+  // .banner-profile__subtitle
+
+  &__subtitle {}
+
+  // .banner-profile__title
+
+  &__title {}
+
+  // .banner-profile__right-side
+
+  &__right-side {}
+
+  // .banner-profile__friend
+
+  &__friend {}
+}
+
+.footer {
+
+  // .footer__ref
+
+  &__ref {}
+
+  // .footer__link
+
+  &__link {}
+}
