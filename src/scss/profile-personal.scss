@@ -38,7 +38,10 @@
   &__card {
     display: flex;
 
+    border-bottom: 2px solid $grayColor;
+
     @include adaptiveValue("gap", 30, 10);
+    @include adaptiveValue("padding-bottom", 30, 20);
   }
 
   // .profile-personal__photo
@@ -201,6 +204,13 @@
 .active {}
 
 .banner-profile {
+
+  display: flex;
+  gap: toRem(20);
+
+  @media (max-width:$mobile) {
+    gap: toRem(10);
+  }
 
   // .banner-profile__left-side
 
