@@ -1,5 +1,6 @@
 .profile {
 
+  // padding-top: toRem(120);
 
   // .profile__body
 
@@ -83,18 +84,21 @@
 
 .sidebar {
 
-  
-  
+
+
   // .sidebar__body
-  
+
   &__body {}
-  
+
   // .sidebar__menu
-  
+
   &__menu {
     min-height: toRem(720);
-    display: grid;
-    align-content: start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // display: grid;
+    // align-content: start;
     padding: toRem(10);
     width: toRem(285);
 
