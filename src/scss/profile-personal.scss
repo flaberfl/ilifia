@@ -83,15 +83,18 @@
 
 .sidebar {
 
-
+  
+  
   // .sidebar__body
-
+  
   &__body {}
-
+  
   // .sidebar__menu
-
+  
   &__menu {
+    min-height: toRem(720);
     display: grid;
+    align-content: start;
     padding: toRem(10);
     width: toRem(285);
 
@@ -118,6 +121,11 @@
 
     &:nth-child(2) {
       padding-left: toRem(20);
+    }
+
+    &:last-child {
+      margin-top: auto;
+      // align-self: baseline;
     }
   }
 
