@@ -1,5 +1,4 @@
 .profile {
-
   @media (max-width:$mobile) {
     justify-items: center;
   }
@@ -12,13 +11,10 @@
 
     @media (max-width:$mobile) {
       grid-template-columns: auto;
-
     }
-
   }
 
   // .profile__content
-
   &__content {
     padding: toRem(30);
 
@@ -37,13 +33,6 @@
 }
 
 .profile-personal {
-
-  // .profile-personal__content
-
-  &__content {
-    // display: flex;
-  }
-
   // .profile-personal__card
 
   &__card {
@@ -87,14 +76,6 @@
     }
   }
 
-  // .profile-personal__first-name
-
-  &__first-name {}
-
-  // .profile-personal__last-name
-
-  &__last-name {}
-
   // .profile-personal__contacts
 
   &__contacts {
@@ -137,11 +118,10 @@
     margin-left: auto;
     align-self: flex-start;
 
-    button {
+    a {
       display: flex;
       gap: toRem(10);
       align-items: center;
-      // white-space: nowrap;
 
       font-size: 15px;
 
@@ -152,26 +132,10 @@
       }
     }
   }
-
-  // .profile-personal__bottom
-
-  &__bottom {}
-
-  // .profile-personal__banner
-
-  &__banner {}
 }
 
-.personal {
-
-  // .personal__container
-
-  &__container {}
-}
 
 .sidebar {
-
-
 
   // .sidebar__body
 
@@ -194,7 +158,6 @@
     @media (min-width:$mobile) {
       min-height: toRem(720);
       width: 200px;
-      // width: auto;
       flex-direction: column;
     }
 
@@ -234,7 +197,6 @@
 
     &:last-child {
       margin-top: auto;
-      // align-self: baseline;
     }
 
     @media (max-width:$mobile) {
@@ -260,8 +222,6 @@
 
   &__settings {}
 }
-
-.active {}
 
 .banner-profile {
   display: flex;
@@ -302,10 +262,6 @@
       flex-direction: column;
       align-items: flex-start;
     }
-
-    // @media (max-width: toEm(1180)){
-    //    gap: toRem(10); 
-    // }
 
     &-box {
       display: grid;
@@ -367,7 +323,6 @@
     max-width: toRem(357);
 
     border-radius: toRem(10);
-
     background-color: $grayColor;
 
     @media (min-width:toEm(1164)) {
@@ -379,19 +334,5 @@
       width: toRem(280);
     }
   }
-
-  // .banner-profile__friend
-
-  &__friend {}
 }
 
-.footer {
-
-  // .footer__ref
-
-  &__ref {}
-
-  // .footer__link
-
-  &__link {}
-}

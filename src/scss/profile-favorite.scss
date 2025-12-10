@@ -1,0 +1,101 @@
+.profile {
+
+  /* .profile__container */
+  &__container {}
+
+  /* .profile__body */
+  &__body {}
+
+  /* .profile__content */
+  &__content {}
+
+  /* .profile__header */
+  &__header {
+    display: flex;
+    // max-width: toRem(830);
+    padding-bottom: 10px;
+    margin-bottom: toRem(20);
+    overflow-x: auto;
+
+    border-bottom: 2px solid var(--grey);
+
+    @include adaptiveValue("gap", 30, 6);
+
+    li {
+      padding: 10px 20px;
+      border-radius: 5px;
+
+      &.active {
+        background: var(--light-pink);
+      }
+    }
+  }
+
+  /* .profile__item-header */
+  &__item-header {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+  }
+}
+
+.profile-favorite {
+
+  /* .profile-favorite__content */
+  &__content {
+    padding: toRem(10);
+  }
+
+  /* .profile-favorite__training */
+  &__training {}
+}
+
+.sidebar {
+
+  /* .sidebar__menu */
+  &__menu {}
+
+  /* .sidebar__item */
+  &__item {}
+
+  /* .sidebar__link */
+  &__link {}
+}
+
+.active {}
+
+
+._profile {
+  .training-articles {
+
+    /* .training-articles__item */
+    &__item {}
+
+    /* .training-articles__media */
+    &__media {
+        border-radius: toRem(10) toRem(10) 0 0;
+    }
+
+    /* .training-articles__link */
+    &__link {}
+
+    /* .training-articles__image */
+    &__image {}
+
+    /* .training-articles__body */
+    &__body {
+      padding: toRem(15);
+    }
+
+    /* .training-articles__title */
+    &__title {
+      font-size: 20px;
+
+    }
+
+    /* .training-articles__decsr */
+    &__decsr {
+      font-size: 14px;
+    }
+  }
+}
