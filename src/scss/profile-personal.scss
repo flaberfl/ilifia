@@ -215,12 +215,26 @@
   // .banner-profile__left-side
 
   &__left-side {
+    min-height: toRem(140);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
     padding: toRem(20);
+    gap: toRem(42);
 
     background-color: $grayColor;
     border-radius: toRem(5);
+
+    &-box {
+      display: grid;
+      gap: toRem(8);
+    }
   }
 
+  &__image {
+    position: absolute;
+    right: 0;
+  }
   // .banner-profile__subtitle
 
   &__subtitle {
