@@ -195,9 +195,9 @@
     &:nth-child(2) {
       padding-left: toRem(20);
 
-      @media (max-width: toEm(500)) {
-        padding-left: 10px;
-      }
+      // @media (max-width: toEm(500)) {
+      //   padding-left: 30px;
+      // }
     }
 
     &:last-child {
@@ -205,7 +205,7 @@
     }
 
     @media (max-width:$mobile) {
-      padding-left: toRem(10);
+      padding-left: toRem(10) !important;
       width: toRem(145);
     }
 

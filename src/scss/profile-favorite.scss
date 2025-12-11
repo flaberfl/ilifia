@@ -10,7 +10,7 @@
   &__content {}
 
   &__top {
-    // max-width: toRem(770);
+    max-width: toRem(770);
   }
 
   /* .profile__header */
@@ -19,6 +19,7 @@
     padding-bottom: 10px;
     margin-bottom: toRem(20);
     justify-content: space-between;
+    flex-wrap: wrap;
 
 
     border-bottom: 2px solid var(--grey);
@@ -29,6 +30,7 @@
 
 
     @media (max-width:$mobile) {
+      flex-wrap: nowrap;
       overflow-x: auto;
       scrollbar-width: none;
 
@@ -83,41 +85,47 @@
 .active {}
 
 
-._profile {
-  .training-articles {
+// ._profile {
+.training-articles {
 
-    @media (max-width: toEm(1030)) {
-      grid-template-columns: auto auto;
-    }
+  @media (max-width: toEm(1030)) {
+    grid-template-columns: auto auto;
+  }
 
-    /* .training-articles__item */
-    &__item {}
+  @media (max-width: toEm(600)) {
+    grid-template-columns: auto;
 
-    /* .training-articles__media */
-    &__media {
-      border-radius: toRem(10) toRem(10) 0 0;
-    }
+  }
 
-    /* .training-articles__link */
-    &__link {}
+  /* .training-articles__item */
+  &__item {}
 
-    /* .training-articles__image */
-    &__image {}
+  /* .training-articles__media */
+  &__media {
+    border-radius: toRem(10) toRem(10) 0 0;
+  }
 
-    /* .training-articles__body */
-    &__body {
-      padding: toRem(15);
-    }
+  /* .training-articles__link */
+  &__link {}
 
-    /* .training-articles__title */
-    &__title {
-      font-size: 20px;
+  /* .training-articles__image */
+  &__image {}
 
-    }
+  /* .training-articles__body */
+  &__body {
+    padding: toRem(15);
+  }
 
-    /* .training-articles__decsr */
-    &__decsr {
-      font-size: 14px;
-    }
+  /* .training-articles__title */
+  &__title {
+    font-size: 20px;
+
+  }
+
+  /* .training-articles__decsr */
+  &__decsr {
+    font-size: 14px;
   }
 }
+
+// }

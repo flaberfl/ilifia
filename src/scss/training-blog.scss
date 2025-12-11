@@ -1,8 +1,5 @@
-.training-blog {
-}
 
 .blog-body {
-
   /* .blog-body__filter */
   &__filter {
     @include adaptiveValue("margin-bottom", 20, 10);
