@@ -125,7 +125,7 @@
 
       font-size: 15px;
 
-      @media (max-width: toEm(1200)) {
+      @media (max-width: toEm(1020)) {
         span {
           display: none;
         }
@@ -147,7 +147,6 @@
     height: 100%;
     display: flex;
     padding: toRem(10);
-
     border-radius: 10px;
     background-color: #fff;
     flex-wrap: wrap;
@@ -155,14 +154,20 @@
     @include adaptiveValue("gap", 15, 10);
 
 
+
     @media (min-width:$mobile) {
       min-height: toRem(720);
-      width: 200px;
       flex-direction: column;
+      width: 200px;
     }
 
-    @media (min-width: toEm(1080)) {
+    @media (min-width:toEm(1220)) {
       width: toRem(285);
+    }
+
+
+    @media (min-width: toEm(1080)) {
+      // width: toRem(200);
     }
 
     @media (max-width: toEm(500)) {
@@ -335,4 +340,3 @@
     }
   }
 }
-
