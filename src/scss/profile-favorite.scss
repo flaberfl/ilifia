@@ -10,7 +10,10 @@
   &__content {}
 
   &__top {
-    max-width: toRem(770);
+    width: 700px;
+    // width: 100%;
+    // overflow: hidden;
+    // max-width: toRem(770);
   }
 
   /* .profile__header */
@@ -19,8 +22,6 @@
     padding-bottom: 10px;
     margin-bottom: toRem(20);
     justify-content: space-between;
-    flex-wrap: wrap;
-
 
     border-bottom: 2px solid var(--grey);
 
@@ -29,7 +30,12 @@
     // @include adaptiveValue("gap", 30, 6);
 
 
-    @media (max-width:$mobile) {
+    @media (max-width: toEm(1025)) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: toEm(600)) {
+      white-space: nowrap;
       flex-wrap: nowrap;
       overflow-x: auto;
       scrollbar-width: none;
@@ -43,9 +49,14 @@
     li {
       padding: 10px 20px;
       border-radius: 5px;
+      min-width: toRem(123);
 
       &.active {
         background: var(--light-pink);
+      }
+
+      @media (max-width:$mobile) {
+        padding: 7px 15px;
       }
     }
   }
@@ -55,7 +66,6 @@
     display: flex;
     align-items: center;
     gap: toRem(15);
-    // min-width: toRem(123);
   }
 }
 
@@ -93,8 +103,7 @@
   }
 
   @media (max-width: toEm(600)) {
-    grid-template-columns: auto;
-
+    grid-template-columns: 1fr;
   }
 
   /* .training-articles__item */
