@@ -17,8 +17,33 @@
     justify-content: center;
   }
 
+  ._profile & {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: toEm(1150)) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    @media (max-width:$mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
   /* .meditation-articles__item */
-  &__item {}
+  &__item {
+
+    ._profile & {
+
+      @media (max-width: toEm(1150)) {
+        max-width: toRem(300);
+      }
+
+    }
+
+
+  }
 
   /* .meditation-articles__media-box */
   &__media-box {}
