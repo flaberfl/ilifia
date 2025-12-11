@@ -170,6 +170,10 @@
     padding-left: 0;
   }
 
+  ._profile & {
+    padding: toRem(15);
+  }
+
   /* .cast-about__title */
   &__title {
     margin-bottom: toRem(7);
