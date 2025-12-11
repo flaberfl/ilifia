@@ -40,10 +40,24 @@
 
   /* .add-post__file */
   &__file {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    background: url(@img/profile/profile-personal.jpg) center no-repeat;
+
+
     input {
       display: none;
     }
   }
+
+
+
+
 }
 
 
