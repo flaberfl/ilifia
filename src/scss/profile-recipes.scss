@@ -1,6 +1,5 @@
 ._profile {
 
-
   .rec-articles {
 
     grid-template-columns: repeat(3, 1fr);
@@ -14,88 +13,17 @@
       grid-template-columns: 1fr;
     }
 
-
-
     // .rec-articles__item
 
     &__item {
-      @media (max-width:$mobile){
-         max-width: toRem(300); 
+      @media (max-width:$mobile) {
+        max-width: toRem(300);
       }
     }
-
-    // .rec-articles__media
 
     &__media {
       overflow: hidden;
       border-radius: toRem(10) toRem(10) 0 0;
     }
-
-    // .rec-articles__top
-
-    &__top {}
-
-    // .rec-articles__about
-
-    &__about {}
-
-    // .rec-articles__type
-
-    &__type {}
-
-    // .rec-articles__title
-
-    &__title {}
-
-    // .rec-articles__descr
-
-    &__descr {}
-
-    // .rec-articles__link
-
-    &__link {}
   }
-
-  .slide-recipes {
-
-    // .slide-recipes__top
-
-    &__top {}
-
-    // .slide-recipes__badge
-
-    &__badge {}
-
-    // .slide-recipes__badge--type
-
-    &__badge--type {}
-
-    // .slide-recipes__badge--time
-
-    &__badge--time {}
-
-    // .slide-recipes__photo
-
-    &__photo {}
-
-    // .slide-recipes__about
-
-    &__about {}
-
-    // .slide-recipes__descr
-
-    &__descr {}
-
-    // .slide-recipes__more-link
-
-    &__more-link {}
-  }
-
-  .articles {
-
-    // .articles__media
-
-    &__media {}
-  }
-
 }
