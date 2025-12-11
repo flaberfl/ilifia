@@ -123,6 +123,18 @@
   @media (max-width:$mobile) {
     grid-template-columns: auto;
   }
+
+  .profile-favorite__podcast & {
+
+    @media (max-width:$mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: toEm(600)) {
+      grid-template-columns: 1fr;
+
+    }
+  }
 }
 
 .cast-item {
@@ -138,6 +150,12 @@
     border-radius: 10px;
     backdrop-filter: none;
     background: transparent;
+  }
+
+  .profile-favorite__podcast & {
+    @media (max-width:$mobile) {
+      width: 100%;
+    }
   }
 }
 
