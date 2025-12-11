@@ -3,7 +3,7 @@
 .select {
 	min-width: 0;
 	position: relative;
-	max-width: 197px;
+	width: 183px !important;
 	width: 100%;
 
 
@@ -139,8 +139,8 @@
 
 		font-weight: 400;
 		font-size: 15px;
-		line-height: 107%;
-		color: rgba(5, 5, 5, 0.7);
+		// line-height: 107%;
+		color: $mainColor;
 
 		@media (any-hover: hover) {
 			&:hover {
