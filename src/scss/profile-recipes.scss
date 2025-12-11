@@ -3,13 +3,33 @@
 
   .rec-articles {
 
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    @media (max-width: toEm(560)) {
+      grid-template-columns: 1fr;
+    }
+
+
+
     // .rec-articles__item
 
-    &__item {}
+    &__item {
+      @media (max-width:$mobile){
+         max-width: toRem(300); 
+      }
+    }
 
     // .rec-articles__media
 
-    &__media {}
+    &__media {
+      overflow: hidden;
+      border-radius: toRem(10) toRem(10) 0 0;
+    }
 
     // .rec-articles__top
 
