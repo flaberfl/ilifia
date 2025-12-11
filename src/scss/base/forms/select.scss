@@ -144,7 +144,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $masterColor;
+				color: $mainColor;
 			}
 		}
 
@@ -238,7 +238,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $masterColor;
+				background-color: $mainColor;
 				color: #fff;
 			}
 		}
