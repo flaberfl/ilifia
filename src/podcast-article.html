@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ilifia--Статья подкаста"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+
+		<main class="page">
+			<section class="podcast-article article">
+				<div class='training-article__container--intro article__container--intro'>
+
+					<div class='podcast-article__container'>
+
+						<div class="breadcrumbs mb-30">
+
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item breadcrumbs__item_active"><a href="podcast-blog.html">
+										<div class="breadcrumbs__icon">
+
+											<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M0.705078 9.3523L9.64748 0.352295M0.705078 9.3523L9.64748 18.3523M0.705078 9.3523H18.7051"
+													stroke="#282828" />
+											</svg>
+
+										</div>
+										Все подкасты
+									</a>
+								</li>
+							</ul>
+
+						</div>
+						<div class="podcast-article__top article__top mb-20-10">
+							<h2 class="podcast-article__title article__title article-h2">Название подкаста</h2>
+							<div class="favorite-link">
+								<span>В избранное</span>
+								<div class="favorite-btn">
+									<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5"
+											d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
+											fill="none" stroke="white" stroke-width="2" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h3 class="podcast-article__subtitle article__subtitle mb-30-20">Краткое описание тренировки. Данный текст
+							является примером текста-«рыбы», который используется для заполнения макета перед вставкой конечного
+							контента.</h3>
+
+						<div class="podcast-article__body arcticle__body">
+							<div style="position: relative; padding-top: 56.25%; width: 100%"><iframe
+									src="https://kinescope.io/embed/wvBjSYGaY48VwkxAEd694F" loading="lazy"
+									allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+									frameborder="0" allowfullscreen
+									style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe></div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</main>
+
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

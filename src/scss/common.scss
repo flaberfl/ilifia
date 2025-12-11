@@ -171,6 +171,16 @@ section.profile {
         opacity: 1;
       }
     }
+
+    .favorite-link & {
+      svg {
+        path {
+          stroke: white;
+          opacity: .5;
+        }
+      }
+    }
+
   }
 
   .rec-articles & {
@@ -189,6 +199,14 @@ section.profile {
   padding-right: toRem(40);
   margin-left: auto;
 
+  transition: opacity 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   @media (max-width: toEm(1200)) {
     span {
       display: none;
@@ -204,6 +222,7 @@ section.profile {
 
   svg {
     path {
+      opacity: 1;
       stroke: $mainColor;
     }
   }

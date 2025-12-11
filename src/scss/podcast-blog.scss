@@ -12,6 +12,9 @@
 
   /* .podcast-articles__media */
   &__media {
+    border-radius: toRem(10);
+    overflow: hidden;
+
     .block & {
 
       &::before {
