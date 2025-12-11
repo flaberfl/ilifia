@@ -113,6 +113,71 @@ function initSliders() {
 		});
 	}
 
+	if (document.querySelector('.profile-header__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.profile-header__slider', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			observer: true,
+			observeParents: true,
+			slidesPerView: 5,
+
+
+			// slidesPerView: 1, // Показываем 3 слайда
+			// slidesPerGroup: 1,
+
+			// loopAdditionalSlides: 3,
+			// autoHeight: true,
+			speed: 1200,
+
+			// // Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+	
+				},
+				500: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+	
+				},
+
+				768: {
+
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+
+				// 1245: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 10,
+				// },
+
+				1920: {
+					slidesPerView: 5,
+					spaceBetween: 30,
+				},
+			},
+
+			// События
+			on: {
+
+				// init: function () {
+				// 	updatePaginationVisibility.call(this);
+				// },
+				// slideChange: function () {
+				// 	updatePaginationVisibility.call(this);
+				// }
+
+			}
+		});
+	}
+
 }
 
 

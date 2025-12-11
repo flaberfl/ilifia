@@ -10,14 +10,23 @@
   &__content {}
 
   &__top {
-    width: 700px;
+    // display: flex;
     // width: 100%;
     // overflow: hidden;
-    // max-width: toRem(770);
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
   }
 
   /* .profile__header */
   &__header {
+    // white-space: nowrap;
+    // max-width: toRem(570);
+
     display: flex;
     padding-bottom: 10px;
     margin-bottom: toRem(20);
@@ -27,7 +36,11 @@
 
     gap: toRem(6);
 
+
+
+
     // @include adaptiveValue("gap", 30, 6);
+
 
 
     @media (max-width: toEm(1025)) {
@@ -35,21 +48,19 @@
     }
 
     @media (max-width: toEm(600)) {
-      white-space: nowrap;
       flex-wrap: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
+      // white-space: nowrap;
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include adaptiveValue("width", 570, 320);
 
     }
 
     li {
       padding: 10px 20px;
       border-radius: 5px;
-      min-width: toRem(123);
+      // min-width: toRem(123);
+      // min-width: 0;
+
 
       &.active {
         background: var(--light-pink);
