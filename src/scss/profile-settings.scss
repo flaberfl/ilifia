@@ -1,0 +1,59 @@
+.profile {
+
+  /* .profile__content */
+  &__content {}
+}
+
+.profile-settings {
+
+  /* .profile-settings__content */
+  &__content {}
+
+  /* .profile-settings__form */
+  &__form {}
+}
+
+.form {
+
+  /* .form__line */
+  &__line {
+    display: flex;
+  }
+
+  /* .form__line--data */
+  &__line--data {}
+
+  /* .form__column */
+  &__column {}
+
+  /* .form__button */
+  &__button {}
+
+  /* .form__line--email */
+  &__line--email {}
+
+  /* .form__line--passw */
+  &__line--passw {}
+}
+
+.add-photo {
+
+  /* .add-post__file */
+  &__file {
+    input {
+      display: none;
+    }
+  }
+}
+
+
+
+.input {}
+
+.button {}
+
+.button-form-confirm {}
+
+.input-passw {}
+
+.input-passw-confirm {}
