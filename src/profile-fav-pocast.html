@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Ilifia - ЛК - Медитации"
+"title":"Ilifia - ЛК - Подкасты"
 })
 
 <body>
@@ -65,7 +65,7 @@
 
 						</aside>
 
-						<div class="profile__content profile-favorite__content profile-favorite__meditation">
+						<div class="profile__content profile-favorite__content profile-favorite__podcast">
 
 							<div class="profile__top">
 								<ul class="profile__header">
@@ -93,7 +93,7 @@
 											<span>Рецепты</span>
 										</a>
 									</li>
-									<li class="active">
+									<li class="">
 										<a href="profile-fav-meditation.html" class="profile__item-header"><svg width="16" height="20"
 												viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -103,7 +103,7 @@
 											<span>Медитации</span>
 										</a>
 									</li>
-									<li class="">
+									<li class="active">
 										<a href="profile-fav-pocast.html" class="profile__item-header">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -139,285 +139,6 @@
 
 
 								</ul>
-							</div>
-
-							<div class="meditation-articles">
-
-								<div class="meditation-section__item meditation-articles__item">
-
-									<div class="meditation-articles__media-box articles__media">
-
-										<img src="@img/blog/med-photo.jpg" alt="" class="meditation__media-photo">
-
-										<div class="favorite-btn enable">
-											<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path opacity="0.5"
-													d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
-													fill="none" stroke="white" stroke-width="2" />
-											</svg>
-										</div>
-									</div>
-									<div class="audio-player" data-audio-src="@img/1.mp3">
-
-
-										<div class="additional-content">
-											<h3>Крепко заснуть</h3>
-											<h4>Краткое описание</h4>
-
-											<button class="play-pause-btn">
-												<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<path
-														d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
-														fill="white" />
-												</svg>
-
-												<svg class="icon-pause" style="display: none;" width="48" height="48" viewBox="0 0 48 48"
-													fill="none" xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<rect x="17" y="13" width="5" height="22" rx="2.5" fill="white" />
-													<rect x="26" y="13" width="5" height="22" rx="2.5" fill="white" />
-												</svg>
-											</button>
-										</div>
-
-										<div class="player-controls">
-											<div class="progress-container">
-												<div class="progress-track">
-													<div class="progress-fill"></div>
-													<div class="progress-thumb"></div>
-												</div>
-												<div class="time-row">
-													<span class="current-time">0:00</span>
-													<span class="total-time">0:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="meditation-section__item meditation-articles__item">
-
-									<div class="meditation-articles__media-box articles__media">
-
-										<img src="@img/blog/med-photo.jpg" alt="" class="meditation__media-photo">
-
-										<div class="favorite-btn enable">
-											<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path opacity="0.5"
-													d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
-													fill="none" stroke="white" stroke-width="2" />
-											</svg>
-										</div>
-									</div>
-									<div class="audio-player" data-audio-src="@img/1.mp3">
-
-
-										<div class="additional-content">
-											<h3>Крепко заснуть</h3>
-											<h4>Краткое описание</h4>
-
-											<button class="play-pause-btn">
-												<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<path
-														d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
-														fill="white" />
-												</svg>
-
-												<svg class="icon-pause" style="display: none;" width="48" height="48" viewBox="0 0 48 48"
-													fill="none" xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<rect x="17" y="13" width="5" height="22" rx="2.5" fill="white" />
-													<rect x="26" y="13" width="5" height="22" rx="2.5" fill="white" />
-												</svg>
-											</button>
-										</div>
-
-										<div class="player-controls">
-											<div class="progress-container">
-												<div class="progress-track">
-													<div class="progress-fill"></div>
-													<div class="progress-thumb"></div>
-												</div>
-												<div class="time-row">
-													<span class="current-time">0:00</span>
-													<span class="total-time">0:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="meditation-section__item meditation-articles__item">
-
-									<div class="meditation-articles__media-box articles__media">
-
-										<img src="@img/blog/med-photo.jpg" alt="" class="meditation__media-photo">
-
-										<div class="favorite-btn enable">
-											<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path opacity="0.5"
-													d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
-													fill="none" stroke="white" stroke-width="2" />
-											</svg>
-										</div>
-									</div>
-									<div class="audio-player" data-audio-src="@img/1.mp3">
-
-
-										<div class="additional-content">
-											<h3>Крепко заснуть</h3>
-											<h4>Краткое описание</h4>
-
-											<button class="play-pause-btn">
-												<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<path
-														d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
-														fill="white" />
-												</svg>
-
-												<svg class="icon-pause" style="display: none;" width="48" height="48" viewBox="0 0 48 48"
-													fill="none" xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<rect x="17" y="13" width="5" height="22" rx="2.5" fill="white" />
-													<rect x="26" y="13" width="5" height="22" rx="2.5" fill="white" />
-												</svg>
-											</button>
-										</div>
-
-										<div class="player-controls">
-											<div class="progress-container">
-												<div class="progress-track">
-													<div class="progress-fill"></div>
-													<div class="progress-thumb"></div>
-												</div>
-												<div class="time-row">
-													<span class="current-time">0:00</span>
-													<span class="total-time">0:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="meditation-section__item meditation-articles__item">
-
-									<div class="meditation-articles__media-box articles__media">
-
-										<img src="@img/blog/med-photo.jpg" alt="" class="meditation__media-photo">
-
-										<div class="favorite-btn enable">
-											<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path opacity="0.5"
-													d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
-													fill="none" stroke="white" stroke-width="2" />
-											</svg>
-										</div>
-									</div>
-									<div class="audio-player" data-audio-src="@img/1.mp3">
-
-
-										<div class="additional-content">
-											<h3>Крепко заснуть</h3>
-											<h4>Краткое описание</h4>
-
-											<button class="play-pause-btn">
-												<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<path
-														d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
-														fill="white" />
-												</svg>
-
-												<svg class="icon-pause" style="display: none;" width="48" height="48" viewBox="0 0 48 48"
-													fill="none" xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<rect x="17" y="13" width="5" height="22" rx="2.5" fill="white" />
-													<rect x="26" y="13" width="5" height="22" rx="2.5" fill="white" />
-												</svg>
-											</button>
-										</div>
-
-										<div class="player-controls">
-											<div class="progress-container">
-												<div class="progress-track">
-													<div class="progress-fill"></div>
-													<div class="progress-thumb"></div>
-												</div>
-												<div class="time-row">
-													<span class="current-time">0:00</span>
-													<span class="total-time">0:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="meditation-section__item meditation-articles__item">
-
-									<div class="meditation-articles__media-box articles__media">
-
-										<img src="@img/blog/med-photo.jpg" alt="" class="meditation__media-photo">
-
-										<div class="favorite-btn enable">
-											<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path opacity="0.5"
-													d="M12.7671 2.38208C13.3658 0.539455 15.9731 0.539464 16.5718 2.38208L18.8755 9.47388H26.3335C28.2707 9.47419 29.0756 11.9533 27.5083 13.092L21.4761 17.4758L23.7798 24.5676C24.3785 26.4101 22.27 27.9424 20.7026 26.804L14.6694 22.4202L8.63623 26.804C7.06883 27.9424 4.96041 26.4101 5.55908 24.5676L7.86279 17.4758L1.83057 13.092C0.263235 11.9533 1.0682 9.47419 3.00537 9.47388H10.4634L12.7671 2.38208Z"
-													fill="none" stroke="white" stroke-width="2" />
-											</svg>
-										</div>
-									</div>
-									<div class="audio-player" data-audio-src="@img/1.mp3">
-
-
-										<div class="additional-content">
-											<h3>Крепко заснуть</h3>
-											<h4>Краткое описание</h4>
-
-											<button class="play-pause-btn">
-												<svg class="icon-play" width="48" height="48" viewBox="0 0 48 48" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<path
-														d="M34 21.4019C36 22.5566 36 25.4434 34 26.5981L21.25 33.9593C19.25 35.114 16.75 33.6706 16.75 31.3612L16.75 16.6388C16.75 14.3294 19.25 12.886 21.25 14.0407L34 21.4019Z"
-														fill="white" />
-												</svg>
-
-												<svg class="icon-pause" style="display: none;" width="48" height="48" viewBox="0 0 48 48"
-													fill="none" xmlns="http://www.w3.org/2000/svg">
-													<circle cx="24" cy="24" r="24" fill="#FFAED1" />
-													<rect x="17" y="13" width="5" height="22" rx="2.5" fill="white" />
-													<rect x="26" y="13" width="5" height="22" rx="2.5" fill="white" />
-												</svg>
-											</button>
-										</div>
-
-										<div class="player-controls">
-											<div class="progress-container">
-												<div class="progress-track">
-													<div class="progress-fill"></div>
-													<div class="progress-thumb"></div>
-												</div>
-												<div class="time-row">
-													<span class="current-time">0:00</span>
-													<span class="total-time">0:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
 							</div>
 
 
