@@ -13,6 +13,10 @@
     // display: flex;
     // width: 100%;
     // overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: toRem(20);
+
+    border-bottom: 2px solid var(--grey);
     overflow-x: auto;
     scrollbar-width: none;
 
@@ -28,11 +32,8 @@
     // max-width: toRem(570);
 
     display: flex;
-    padding-bottom: 10px;
-    margin-bottom: toRem(20);
     justify-content: space-between;
 
-    border-bottom: 2px solid var(--grey);
 
     gap: toRem(6);
 
@@ -51,7 +52,7 @@
       flex-wrap: nowrap;
       // white-space: nowrap;
 
-      @include adaptiveValue("width", 570, 320);
+      @include adaptiveValue("width", 570, 300);
 
     }
 
@@ -106,46 +107,51 @@
 .active {}
 
 
-// ._profile {
-.training-articles {
+._profile {
+  .training-articles {
 
-  @media (max-width: toEm(1030)) {
-    grid-template-columns: auto auto;
+    @media (max-width: toEm(1030)) {
+      grid-template-columns: auto auto;
+    }
+
+    @media (max-width: toEm(600)) {
+      grid-template-columns: 1fr;
+    }
+
+    /* .training-articles__item */
+    &__item {
+      @media (max-width: toEm(600)) {
+        margin: 0 auto;
+        max-width: toRem(300);
+      }
+    }
+
+    /* .training-articles__media */
+    &__media {
+      border-radius: toRem(10) toRem(10) 0 0;
+    }
+
+    /* .training-articles__link */
+    &__link {}
+
+    /* .training-articles__image */
+    &__image {}
+
+    /* .training-articles__body */
+    &__body {
+      padding: toRem(15);
+    }
+
+    /* .training-articles__title */
+    &__title {
+      font-size: 20px;
+
+    }
+
+    /* .training-articles__decsr */
+    &__decsr {
+      font-size: 14px;
+    }
   }
 
-  @media (max-width: toEm(600)) {
-    grid-template-columns: 1fr;
-  }
-
-  /* .training-articles__item */
-  &__item {}
-
-  /* .training-articles__media */
-  &__media {
-    border-radius: toRem(10) toRem(10) 0 0;
-  }
-
-  /* .training-articles__link */
-  &__link {}
-
-  /* .training-articles__image */
-  &__image {}
-
-  /* .training-articles__body */
-  &__body {
-    padding: toRem(15);
-  }
-
-  /* .training-articles__title */
-  &__title {
-    font-size: 20px;
-
-  }
-
-  /* .training-articles__decsr */
-  &__decsr {
-    font-size: 14px;
-  }
 }
-
-// }
