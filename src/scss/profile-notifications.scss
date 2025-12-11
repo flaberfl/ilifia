@@ -1,0 +1,128 @@
+.profile {
+
+  /* .profile__content */
+  &__content {}
+}
+
+.profile-notifications {
+
+  /* .profile-notifications__content */
+  &__content {
+    padding: toRem(20);
+  }
+
+  /* .profile-notifications__top */
+  &__top {
+    margin-bottom: toRem(20);
+
+    @media (min-width:$mobile) {
+      padding-bottom: toRem(20);
+      border-bottom: 2px solid var(--grey);
+
+    }
+  }
+
+  /* .profile-notifications__list */
+  &__list {
+    display: grid;
+    gap: toRem(10);
+  }
+
+  /* .profile-notifications__item */
+  &__item {
+    padding: toRem(10) toRem(15);
+    display: flex;
+    gap: toRem(20);
+    align-items: flex-end;
+    justify-content: space-between;
+
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+
+    @media (max-width: toEm(600)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &.not-check {
+      .profile-notifications__title {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: 0;
+          top: 50%;
+          border-radius: 50px;
+          transform: translate(0px, -50%);
+
+          background-color: var(--bright-green);
+        }
+      }
+    }
+  }
+
+  /* .profile-notifications__box */
+  &__box {}
+
+  /* .profile-notifications__date */
+  &__date {
+    font-size: toRem(14);
+    margin-bottom: toRem(10);
+
+    opacity: 0.5;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(12);
+    }
+  }
+
+  /* .profile-notifications__title */
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-left: toRem(20);
+
+    @include adaptiveValue("gap", 20, 15);
+
+    span {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: toRem(14);
+      line-height: normal;
+    }
+  }
+
+  /* .profile-notifications__button */
+  &__button {
+    height: toRem(40);
+
+    font-size: 16px;
+
+    @media (max-width: toEm(600)) {
+      align-self: flex-end;
+    }
+  }
+}
+
+.checkbox {
+
+  /* .checkbox__input */
+  &__input {}
+
+  /* .checkbox__label */
+  &__label {}
+
+  /* .checkbox__text */
+  &__text {
+    font-size: toRem(15);
+  }
+}
+
+.not-check {}
+
+.button {}
