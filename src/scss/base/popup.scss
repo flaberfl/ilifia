@@ -83,6 +83,14 @@ body::after {
 	@include adaptiveValue("padding-top", 54, 50);
 	@include adaptiveValue("padding-bottom", 54, 50);
 
+	.subscription-popup & {
+		@media (max-width: toEm(600)) {
+			height: toRem(430);
+
+			background-color: $grayColor;
+		}
+	}
+
 	.lock & {
 		visibility: visible;
 	}
@@ -311,6 +319,10 @@ body::after {
 
 		margin-bottom: toRem(5);
 		// @include adaptiveValue("margin-bottom", 20, 30);
+
+		@media (max-width: toEm(600)) {
+			margin-bottom: toRem(30);
+		}
 	}
 
 	/* .popup__action */
@@ -325,6 +337,10 @@ body::after {
 
 		line-height: normal;
 		font-size: toRem(14);
+
+		@media (max-width: toEm(600)) {
+			display: none;
+		}
 	}
 
 	/* .popup__progress */
@@ -361,23 +377,70 @@ body::after {
 
 /* Показываем мобильные элементы на маленьких экранах */
 @media (max-width: 600px) {
-  .progress-container {
-    display: none;
-  }
-
-  #mobile-controls {
-    display: block;
-    text-align: center;
-  }
-
-  #mobile-controls div {
-    margin-bottom: 10px;
-  }
+	.progress-container {
+		display: none;
+	}
 }
 
-/* Скрываем мобильные элементы на больших экранах */
-@media (min-width: 601px) {
-  #mobile-controls {
-    display: none;
-  }
+#mobile-controls {
+	display: none;
+
+	@media (max-width: toEm(600)) {
+		display: block;
+		text-align: center;
+	}
+
+	._select-active .select__body {
+		background-color: #fff;
+		height: 33px;
+
+	}
+
+	.select {
+		width: 144px !important;
+		height: 28px;
+		border-radius: 5px;
+	}
+
+}
+
+#mobile-controls div {
+	margin-bottom: 10px;
+}
+
+.change-date {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	label {
+		font-size: 14px;
+		text-align: left;
+	}
+}
+
+.popup__month-count {
+	display: flex;
+	width: 100px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 5px;
+	height: 28px;
+}
+
+#decrease-btn,
+#increase-btn {
+	flex: 0 0 30px;
+}
+
+#month-count {
+	text-align: center;
+}
+
+#popup__footer-button[disabled] {
+	// opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+	background: var(--dark-grey);
+	/* Другие стили для disabled состояния */
 }

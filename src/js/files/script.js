@@ -366,6 +366,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // "Текст для 21 точки без подписи"
   ];
 
+
+
+  const priceButton = document.getElementById('popup__footer-button');
+
+  // Функция, которая включает/отключает кнопку
+  function toggleButtonState() {
+    // Получаем текст из #price
+    const priceText = document.getElementById('price').textContent.trim();
+    // Преобразуем в число (если пусто, то 0)
+    const totalPrice = parseInt(priceText) || 0;
+
+    if (totalPrice === 0) {
+      priceButton.setAttribute('disabled', 'disabled');
+    } else {
+      priceButton.removeAttribute('disabled');
+    }
+  }
+
+  // Вызываем при инициализации, чтобы установить начальное состояние
+  toggleButtonState();
+
+
   // Проверки
   if (fixedPrices.length !== pointsCount || fixedTexts.length !== pointsCount) {
     console.error("Количество цен или текстов не совпадает с количеством точек!");
@@ -520,6 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectedStart === null || selectedEnd === null) {
       // Если точки не выбраны или это одна точка — можно оставить 0 или очистить
       document.getElementById('price').textContent = '0'; // или '' если хочешь пусто
+      toggleButtonState();
       return;
     }
 
@@ -530,6 +553,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Выводим только сумму
     document.getElementById('price').textContent = total;
+    toggleButtonState();
   }
 
   function updatePeriodText() {
@@ -587,7 +611,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let value = parseInt(monthCountInput.value);
     if (value > 1) {
       monthCountInput.value = value - 1;
-      updateMobilePrice();
+      updateMobilePrice(); // Обновляем цену
     }
   });
 
@@ -595,12 +619,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let value = parseInt(monthCountInput.value);
     if (value < 21) {
       monthCountInput.value = value + 1;
+      updateMobilePrice(); // Обновляем цену
+    }
+  });
+
+
+  document.addEventListener('selectCallback', function (e) {
+    // Проверяем, что событие пришло от нужного select
+    if (e.detail.select.id === 'month-select') {
       updateMobilePrice();
     }
   });
 
-  // Обработчик для изменения месяца
-  monthSelect.addEventListener('change', updateMobilePrice);
+  // Обработчик для изменения месяца в select
+  // monthSelect.addEventListener('change', updateMobilePrice);
 
   // Функция пересчёта суммы
   function updateMobilePrice() {
@@ -619,6 +651,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     priceSpan.textContent = total;
+    toggleButtonState();
   }
 
   // Изначально вызываем, чтобы установить сумму

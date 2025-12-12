@@ -9,7 +9,7 @@
 	</div>
 </div> -->
 
-<div id="subscription-popup" aria-hidden="true" class="popup">
+<div id="subscription-popup" aria-hidden="true" class="popup subscription-popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -39,45 +39,46 @@
 								<div id="period-text" class="period-text">с 3 по 9 месяцы</div>
 							</div>
 
-
 						</div>
-
 					</div>
 
-					<div id="mobile-controls" style="display: none;">
-						<div>
+					<div id="mobile-controls">
+						<div class="change-date">
 							<label for="month-select">Укажите ваш текущий месяц:</label>
-							<select id="month-select">
-								<option value="0">1 мес</option>
-								<option value="1">2 мес</option>
-								<option value="2">3 мес</option>
-								<option value="3">4 мес</option>
-								<option value="4">5 мес</option>
-								<option value="5">6 мес</option>
-								<option value="6">7 мес</option>
-								<option value="7">8 мес</option>
-								<option value="8">9 мес</option>
-								<option value="9">10 мес</option>
-								<option value="10">11 мес</option>
-								<option value="11">12 мес</option>
-								<option value="12">13 мес</option>
-								<option value="13">14 мес</option>
-								<option value="14">15 мес</option>
-								<option value="15">16 мес</option>
-								<option value="16">17 мес</option>
-								<option value="17">18 мес</option>
-								<option value="18">19 мес</option>
-								<option value="19">20 мес</option>
-								<option value="20">21 мес</option>
-								
-								<!-- <option value="20">21 мес</option> -->
-							</select>
+							<div class="popup__select">
+								<select data-open id="month-select">
+									<option value="" selected></option>
+									<option value="0">1 месяц</option>
+									<option value="1">2 месяц</option>
+									<option value="2">3 месяц</option>
+									<option value="3">4 месяц</option>
+									<option value="4">5 месяц</option>
+									<option value="5">6 месяц</option>
+									<option value="6">7 месяц</option>
+									<option value="7">8 месяц</option>
+									<option value="8">9 месяц</option>
+									<option value="9">10 месяц</option>
+									<option value="10">11 месяц</option>
+									<option value="11">12 месяц</option>
+									<option value="12">13 месяц</option>
+									<option value="13">14 месяц</option>
+									<option value="14">15 месяц</option>
+									<option value="15">16 месяц</option>
+									<option value="16">17 месяц</option>
+									<option value="17">18 месяц</option>
+									<option value="18">19 месяц</option>
+									<option value="19">20 месяц</option>
+									<option value="20">21 месяц</option>
+								</select>
+							</div>
 						</div>
-						<div>
+						<div class="change-date">
 							<label for="month-count">Сколько вы планируете заниматься?</label>
-							<button id="decrease-btn">-</button>
-							<input type="number" id="month-count" value="1" min="1" max="21" readonly />
-							<button id="increase-btn">+</button>
+							<div class="popup__month-count">
+								<button id="decrease-btn">-</button>
+								<input type="number" id="month-count" value="1" min="1" max="21" readonly />
+								<button id="increase-btn">+</button>
+							</div>
 						</div>
 					</div>
 
@@ -90,7 +91,7 @@
 							</div>
 						</div>
 
-						<a href="" class="popup__footer-button button">Перейти к оплате</a>
+						<a href="" class="popup__footer-button button" id="popup__footer-button">Перейти к оплате</a>
 
 					</div>
 
