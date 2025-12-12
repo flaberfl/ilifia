@@ -151,7 +151,6 @@ body::after {
 	right: 0;
 	height: 2px;
 	background-color: #B7B7B7;
-	opacity: .2;
 	z-index: 1;
 }
 
@@ -163,9 +162,9 @@ body::after {
 	/* Толще */
 	background-color: black;
 	/* Другой цвет */
-	width: 0;
+	width: 10px;
 	transition: width 0.3s ease;
-	z-index: 2;
+	z-index: 20;
 }
 
 .point {
@@ -228,13 +227,13 @@ body::after {
 	top: calc(50% + 50px);
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	padding: 4px 8px;
-	border-radius: 4px;
-	font-size: 12px;
+	background-color: $lightGreenColor;
+	color: $mainColor;
+	padding: toRem(5) toRem(10);
+	border-radius: 5px;
+	font-size: 10px;
 	opacity: 0;
-	transition: opacity 0.2s;
+	transition: opacity 0.3s;
 	white-space: nowrap;
 	z-index: 4;
 }

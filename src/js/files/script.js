@@ -354,6 +354,8 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < pointsCount; i++) {
     if (i < 9) {
       labels.push(`${i + 1} мес`); // только до 9 мес
+    } else if (i === 9) {
+      labels.push("послеродовое восстановление"); // для 10-й точки
     } else {
       labels.push(""); // пустая подпись для остальных
     }
@@ -373,8 +375,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const pos = (i / (pointsCount - 1)) * 100;
     point.style.left = `${pos}%`;
 
-    // Создаем label ТОЛЬКО если у точки есть подпись
-    if (labels[i]) {
+    // Создаем label ТОЛЬКО если у точки есть подпись И индекс != 9
+    if (labels[i] && i !== 9) {
       const label = document.createElement('div');
       label.className = `point-label ${i % 2 === 0 ? 'bottom-label' : 'top-label'}`;
       label.textContent = labels[i];
@@ -492,16 +494,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updatePeriodText() {
-    // Проверяем, что обе точки выбраны и это **разные** точки (диапазон)
     if (selectedStart !== null && selectedEnd !== null && selectedStart !== selectedEnd) {
-      // Если начало диапазона — от 1 до 9, а конец — после 9
-      if (selectedStart < 9 && selectedEnd > 9) {
+      // Если начало диапазона — от 1 до 9, а конец — 10 или дальше
+      if (selectedStart < 9 && selectedEnd >= 9) {
         // Выводим "с ? мес до послеродового восстановления"
         const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
         periodText.textContent = `с ${startLabel} до послеродового восстановления`;
       }
       // Если диапазон от 1 до 9 (обе точки до 9)
-      else if (selectedStart < 9 && selectedEnd <= 9) {
+      else if (selectedStart < 9 && selectedEnd < 9) {
         // Выводим обычный формат
         const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
         const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
@@ -519,7 +520,6 @@ document.addEventListener('DOMContentLoaded', function () {
       periodText.style.left = `${pos}%`;
       periodText.classList.add('visible');
     } else {
-      // Если точки не выбраны или это одна точка — скрываем плашку
       periodText.classList.remove('visible');
     }
   }
