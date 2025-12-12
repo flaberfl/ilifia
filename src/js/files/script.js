@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function updatePriceDisplay() {
     if (selectedStart === null || selectedEnd === null) {
       // Если точки не выбраны или это одна точка — можно оставить 0 или очистить
-      document.getElementById('price').textContent = ''; // или '' если хочешь пусто
+      document.getElementById('price').textContent = '0'; // или '' если хочешь пусто
       return;
     }
 

@@ -75,7 +75,7 @@ body::after {
 	border-radius: toRem(20);
 
 	max-width: toRem(656);
-	min-height: toRem(530);
+	height: toRem(530);
 
 
 	@include adaptiveValue("padding-right", 70, 15);
@@ -131,9 +131,7 @@ body::after {
 .popup__text {
 	display: flex;
 	flex-direction: column;
-	// padding-top: toRem(30);
 	height: 100%;
-	// display: grid;
 }
 
 
@@ -283,9 +281,9 @@ body::after {
 
 	/* .popup__text */
 	&__text {
-		.subscription-popup & {
-			display: grid;
-		}
+		// .subscription-popup & {
+		// 	display: grid;
+		// }
 	}
 
 	/* .popup__title */
@@ -311,7 +309,8 @@ body::after {
 		font-size: 10px;
 		opacity: 0.5;
 
-		@include adaptiveValue("margin-bottom", 20, 30);
+		margin-bottom: toRem(5);
+		// @include adaptiveValue("margin-bottom", 20, 30);
 	}
 
 	/* .popup__action */
@@ -320,7 +319,13 @@ body::after {
 	}
 
 	/* .popup__change-date */
-	&__change-date {}
+	&__change-date {
+		max-width: toRem(334);
+		margin-bottom: toRem(8);
+
+		line-height: normal;
+		font-size: toRem(14);
+	}
 
 	/* .popup__progress */
 	&__progress {}
