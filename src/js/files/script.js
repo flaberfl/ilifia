@@ -410,18 +410,39 @@ document.addEventListener('DOMContentLoaded', function () {
   let selectedStart = null;
   let selectedEnd = null;
 
-  function selectRange(startIndex) {
-    if (selectedStart === null) {
-      selectedStart = startIndex;
-      selectedEnd = startIndex;
-    } else if (selectedEnd === null) {
-      selectedEnd = startIndex;
-      if (selectedStart > selectedEnd) {
-        [selectedStart, selectedEnd] = [selectedEnd, selectedStart];
+  function selectRange(clickedIndex) {
+    if (selectedStart === null && selectedEnd === null) {
+      // Ничего не выбрано -> выбрать первую
+      selectedStart = clickedIndex;
+      selectedEnd = clickedIndex;
+    } else if (selectedStart !== null && selectedEnd !== null) {
+      if (selectedStart === selectedEnd) {
+        // Выбрана одна точка
+        if (selectedStart === clickedIndex) {
+          // Кликнули на неё же -> сброс
+          selectedStart = null;
+          selectedEnd = null;
+        } else {
+          // Кликнули на другую -> сделать диапазон
+          selectedEnd = clickedIndex;
+          if (selectedStart > selectedEnd) {
+            [selectedStart, selectedEnd] = [selectedEnd, selectedStart];
+          }
+        }
+      } else {
+        // Диапазон выбран
+        if (clickedIndex === selectedStart) {
+          // Кликнули на start -> остаётся только end
+          selectedStart = selectedEnd;
+        } else if (clickedIndex === selectedEnd) {
+          // Кликнули на end -> остаётся только start
+          selectedEnd = selectedStart;
+        } else {
+          // Кликнули на другую -> сбросить всё и выбрать новую
+          selectedStart = clickedIndex;
+          selectedEnd = clickedIndex;
+        }
       }
-    } else {
-      selectedStart = startIndex;
-      selectedEnd = startIndex;
     }
 
     updatePoints();
@@ -433,8 +454,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function updatePoints() {
     document.querySelectorAll('.point').forEach((p, idx) => {
       p.classList.remove('active');
-      if (idx >= selectedStart && idx <= selectedEnd) {
-        p.classList.add('active');
+      if (selectedStart !== null && selectedEnd !== null) {
+        if (idx >= selectedStart && idx <= selectedEnd) {
+          p.classList.add('active');
+        }
       }
     });
   }
@@ -466,19 +489,35 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updatePeriodText() {
-    if (selectedStart === null || selectedEnd === null) {
+    // Проверяем, что обе точки выбраны и это **разные** точки (диапазон)
+    if (selectedStart !== null && selectedEnd !== null && selectedStart !== selectedEnd) {
+      const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+      const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+
+      periodText.textContent = `с ${startLabel} по ${endLabel}`;
+      const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
+      const pos = (midIndex / (pointsCount - 1)) * 100;
+      periodText.style.left = `${pos}%`;
+      periodText.classList.add('visible');
+    } else {
+      // Если точки не выбраны или это одна точка — скрываем плашку
       periodText.classList.remove('visible');
-      return;
     }
-
-    // Используем метки, но если подпись пустая, можно показать "точка N"
-    const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
-    const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
-
-    periodText.textContent = `с ${startLabel} по ${endLabel}`;
-    const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
-    const pos = (midIndex / (pointsCount - 1)) * 100;
-    periodText.style.left = `${pos}%`;
-    periodText.classList.add('visible');
   }
+
+  // function updatePeriodText() {
+  //   if (selectedStart === null || selectedEnd === null) {
+  //     periodText.classList.remove('visible');
+  //     return;
+  //   }
+
+  //   const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+  //   const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+
+  //   periodText.textContent = `с ${startLabel} по ${endLabel}`;
+  //   const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
+  //   const pos = (midIndex / (pointsCount - 1)) * 100;
+  //   periodText.style.left = `${pos}%`;
+  //   periodText.classList.add('visible');
+  // }
 });
