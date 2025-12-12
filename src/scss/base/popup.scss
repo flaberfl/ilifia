@@ -359,14 +359,25 @@ body::after {
 	&__price {}
 }
 
-.progress-container {}
+/* Показываем мобильные элементы на маленьких экранах */
+@media (max-width: 600px) {
+  .progress-container {
+    display: none;
+  }
 
-.progress-bar {}
+  #mobile-controls {
+    display: block;
+    text-align: center;
+  }
 
-.progress-line {}
+  #mobile-controls div {
+    margin-bottom: 10px;
+  }
+}
 
-.hover-text {}
-
-.period-text {}
-
-.button {}
+/* Скрываем мобильные элементы на больших экранах */
+@media (min-width: 601px) {
+  #mobile-controls {
+    display: none;
+  }
+}

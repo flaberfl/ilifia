@@ -563,6 +563,67 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+
+
+  // Элементы для мобильной версии
+  const mobileControls = document.getElementById('mobile-controls');
+  const monthSelect = document.getElementById('month-select');
+  const monthCountInput = document.getElementById('month-count');
+  const decreaseBtn = document.getElementById('decrease-btn');
+  const increaseBtn = document.getElementById('increase-btn');
+  const priceSpan = document.getElementById('price');
+
+  // Заполняем select динамически (опционально)
+  for (let i = 0; i < pointsCount; i++) {
+    const option = document.createElement('option');
+    const label = labels[i] || `точка ${i + 1}`;
+    option.value = i;
+    option.textContent = label;
+    monthSelect.appendChild(option);
+  }
+
+  // Обработчики для кнопок счётчика
+  decreaseBtn.addEventListener('click', () => {
+    let value = parseInt(monthCountInput.value);
+    if (value > 1) {
+      monthCountInput.value = value - 1;
+      updateMobilePrice();
+    }
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    let value = parseInt(monthCountInput.value);
+    if (value < 21) {
+      monthCountInput.value = value + 1;
+      updateMobilePrice();
+    }
+  });
+
+  // Обработчик для изменения месяца
+  monthSelect.addEventListener('change', updateMobilePrice);
+
+  // Функция пересчёта суммы
+  function updateMobilePrice() {
+    const startIndex = parseInt(monthSelect.value);
+    const count = parseInt(monthCountInput.value);
+    const endIndex = startIndex + count - 1;
+
+    if (endIndex >= pointsCount) {
+      // Не выходим за границы
+      return;
+    }
+
+    let total = 0;
+    for (let i = startIndex; i <= endIndex; i++) {
+      total += prices[i];
+    }
+
+    priceSpan.textContent = total;
+  }
+
+  // Изначально вызываем, чтобы установить сумму
+  updateMobilePrice();
+
   // function updatePeriodText() {
   //   if (selectedStart === null || selectedEnd === null) {
   //     periodText.classList.remove('visible');
