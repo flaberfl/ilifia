@@ -23,12 +23,13 @@ label {
 .input {
 	width: 100%;
 	display: block;
-	padding: toRem(20);
+	padding: toRem(10) toRem(16);
 	caret-color: $mainColor;
 	height: toRem(40);
-	padding-left: toRem(20);
 	border: 1px solid $grayColor;
 	border-radius: 5px; // background: $grayBackColor;
+
+	font-size: toRem(15);
 
 
 	@media (max-width:$mobile) {
