@@ -12,9 +12,50 @@
 <div id="subscription-popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
+			<button data-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L15 15M1 15L15 1" stroke="#282828" stroke-width="2" stroke-linecap="round" />
+				</svg></button>
 			<div class="popup__text">
-				Popup content
+				<h2 class="popup__title">Выберите срок подписки</h2>
+				<h3 class="popup__subtitle">и получите индивидуальную стоимость</h2>
+
+					<div class="popup__slogan">
+						Каждый месяц — дешевле на 100 рублей.
+					</div>
+
+					<div class="popup__action">
+						<div class="popup__change-date">Укажите ваш текущий месяц и до какого срока вы планируете заниматься</div>
+
+						<div class="popup__progress">
+
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress-fill"></div>
+								</div>
+								<div id="points-container"></div>
+								<div id="hover-text" class="hover-text"></div>
+								<div id="period-text" class="period-text">с 3 по 9 месяцы</div>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<div class="popup__footer">
+						<div class="popup__price-box">
+							<div id="price">Сумма: 0</div>
+							<!-- <div class="popup__price-name">Стоимость</div> -->
+							<div class="popup__price">
+								<span>1990</span>₽
+							</div>
+						</div>
+
+						<a href="" class="popup__footer__button button">Перейти к оплате</a>
+
+					</div>
+
 			</div>
 		</div>
 	</div>

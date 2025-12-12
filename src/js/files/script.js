@@ -298,3 +298,187 @@ document.addEventListener('DOMContentLoaded', function () {
   // По умолчанию показываем все статьи
   showArticlesByActiveCategories();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('#points-container');
+  const progressBar = document.querySelector('.progress-bar');
+  const progressFill = document.querySelector('.progress-fill');
+  const hoverText = document.querySelector('#hover-text');
+  const periodText = document.querySelector('#period-text');
+  const priceDiv = document.querySelector('#price');
+
+  const pointsCount = 21;
+  const labels = [];
+  const texts = [];
+  const prices = [];
+
+  // Фиксированные цены
+  const fixedPrices = [
+    100, 150, 200, 250, 300, 350, 400, 450, 500, // 1-9 мес
+    550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100 // 10-21 без подписей
+  ];
+
+  // Фиксированные тексты
+  const fixedTexts = [
+    "Текст для 1 месяца",
+    "Текст для 2 месяца",
+    "Текст для 3 месяца",
+    "Текст для 4 месяца",
+    "Текст для 5 месяца",
+    "Текст для 6 месяца",
+    "Текст для 7 месяца",
+    "Текст для 8 месяца",
+    "Текст для 9 месяца",
+    "Текст для 10 точки без подписи",
+    "Текст для 11 точки без подписи",
+    "Текст для 12 точки без подписи",
+    "Текст для 13 точки без подписи",
+    "Текст для 14 точки без подписи",
+    "Текст для 15 точки без подписи",
+    "Текст для 16 точки без подписи",
+    "Текст для 17 точки без подписи",
+    "Текст для 18 точки без подписи",
+    "Текст для 19 точки без подписи",
+    "Текст для 20 точки без подписи",
+    "Текст для 21 точки без подписи"
+  ];
+
+  // Проверки
+  if (fixedPrices.length !== pointsCount || fixedTexts.length !== pointsCount) {
+    console.error("Количество цен или текстов не совпадает с количеством точек!");
+    return;
+  }
+
+  for (let i = 0; i < pointsCount; i++) {
+    if (i < 9) {
+      labels.push(`${i + 1} мес`); // только до 9 мес
+    } else {
+      labels.push(""); // пустая подпись для остальных
+    }
+
+    texts.push(fixedTexts[i]);
+    prices.push(fixedPrices[i]);
+  }
+
+  // Устанавливаем точки
+  for (let i = 0; i < pointsCount; i++) {
+    const point = document.createElement('div');
+    point.className = 'point';
+    point.dataset.index = i;
+    point.dataset.price = prices[i];
+
+    // Расположение точки
+    const pos = (i / (pointsCount - 1)) * 100;
+    point.style.left = `${pos}%`;
+
+    // Создаем label ТОЛЬКО если у точки есть подпись
+    if (labels[i]) {
+      const label = document.createElement('div');
+      label.className = `point-label ${i % 2 === 0 ? 'bottom-label' : 'top-label'}`;
+      label.textContent = labels[i];
+      label.style.left = `${pos}%`;
+      label.style[(i % 2 === 0 ? 'bottom' : 'top')] = '25px';
+
+      container.appendChild(label);
+    }
+
+    container.appendChild(point);
+
+    // Hover
+    point.addEventListener('mouseenter', function (e) {
+      const idx = parseInt(this.dataset.index);
+      hoverText.textContent = texts[idx];
+      const rect = this.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      hoverText.style.left = `${rect.left - containerRect.left + rect.width / 2}px`;
+      hoverText.style.opacity = 1;
+    });
+
+    point.addEventListener('mouseleave', function (e) {
+      hoverText.style.opacity = 0;
+    });
+
+    // Click
+    point.addEventListener('click', function (e) {
+      const idx = parseInt(this.dataset.index);
+      selectRange(idx);
+    });
+  }
+
+  let selectedStart = null;
+  let selectedEnd = null;
+
+  function selectRange(startIndex) {
+    if (selectedStart === null) {
+      selectedStart = startIndex;
+      selectedEnd = startIndex;
+    } else if (selectedEnd === null) {
+      selectedEnd = startIndex;
+      if (selectedStart > selectedEnd) {
+        [selectedStart, selectedEnd] = [selectedEnd, selectedStart];
+      }
+    } else {
+      selectedStart = startIndex;
+      selectedEnd = startIndex;
+    }
+
+    updatePoints();
+    updateProgressFill();
+    updatePriceDisplay();
+    updatePeriodText();
+  }
+
+  function updatePoints() {
+    document.querySelectorAll('.point').forEach((p, idx) => {
+      p.classList.remove('active');
+      if (idx >= selectedStart && idx <= selectedEnd) {
+        p.classList.add('active');
+      }
+    });
+  }
+
+  function updateProgressFill() {
+    if (selectedStart === null || selectedEnd === null) {
+      progressFill.style.width = '0';
+      return;
+    }
+
+    const startOffset = (selectedStart / (pointsCount - 1)) * 100;
+    const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
+    const width = endOffset - startOffset;
+    progressFill.style.left = `${startOffset}%`;
+    progressFill.style.width = `${width}%`;
+  }
+
+  function updatePriceDisplay() {
+    if (selectedStart === null || selectedEnd === null) {
+      priceDiv.textContent = 'Сумма: 0';
+      return;
+    }
+
+    let total = 0;
+    for (let i = selectedStart; i <= selectedEnd; i++) {
+      total += prices[i];
+    }
+    priceDiv.textContent = `Сумма: ${total}`;
+  }
+
+  function updatePeriodText() {
+    if (selectedStart === null || selectedEnd === null) {
+      periodText.classList.remove('visible');
+      return;
+    }
+
+    // Используем метки, но если подпись пустая, можно показать "точка N"
+    const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+    const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+
+    periodText.textContent = `с ${startLabel} по ${endLabel}`;
+    const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
+    const pos = (midIndex / (pointsCount - 1)) * 100;
+    periodText.style.left = `${pos}%`;
+    periodText.classList.add('visible');
+  }
+});
