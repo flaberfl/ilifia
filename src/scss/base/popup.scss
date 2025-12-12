@@ -75,7 +75,6 @@ body::after {
 	border-radius: toRem(20);
 
 	max-width: toRem(656);
-	height: toRem(530);
 
 
 	@include adaptiveValue("padding-right", 70, 15);
@@ -84,11 +83,24 @@ body::after {
 	@include adaptiveValue("padding-bottom", 54, 50);
 
 	.subscription-popup & {
+		height: toRem(530);
+
 		@media (max-width: toEm(600)) {
 			height: toRem(430);
 
 			background-color: $grayColor;
 		}
+	}
+
+	.pay-popup & {
+		max-width: toRem(1068);
+
+		background-color: var(--grey);
+
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@include adaptiveValue("padding-right", 50, 15);
+		@include adaptiveValue("padding-left", 50, 15);
 	}
 
 	.lock & {
@@ -109,16 +121,6 @@ body::after {
 	position: absolute;
 	top: 20px;
 	right: 40px;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
-	// margin-left: auto;
-
-	// background: $mainColor;
-	// border-radius: 50%;
-
-	// @include adaptiveValue("width", 70, 40);
-	// @include adaptiveValue("height", 70, 40);
 
 	svg {
 		@include adaptiveValue("width", 16, 14);
@@ -309,6 +311,10 @@ body::after {
 
 		@include adaptiveValue("font-size", 20, 16);
 		@include adaptiveValue("margin-bottom", 40, 10);
+
+		&--pay {
+			margin-bottom: toRem(10);
+		}
 	}
 
 	/* .popup__slogan */
@@ -444,3 +450,84 @@ body::after {
 	background: var(--dark-grey);
 	/* Другие стили для disabled состояния */
 }
+
+
+.popup {
+
+	/* .popup__wrapper */
+	&__wrapper {}
+
+	/* .popup__content */
+	&__content {}
+
+	/* .popup__close */
+	&__close {}
+
+	/* .popup__text */
+	&__text {}
+
+	/* .popup__title */
+	&__title {}
+
+	/* .popup__subtitle */
+	&__subtitle {}
+
+	/* .popup__footer */
+	&__footer {}
+
+	/* .popup__price-box */
+	&__price-box {}
+
+	/* .popup__price-name */
+	&__price-name {}
+
+	/* .popup__price */
+	&__price {}
+
+	/* .popup__footer-button */
+	&__footer-button {}
+}
+
+.pay-popup {
+
+	/* .pay-popup__body */
+	&__body {}
+
+	/* .pay-popup__banks */
+	&__banks {}
+
+	/* .pay-popup__banks-items */
+	&__banks-items {}
+
+	/* .pay-popup__banks-item */
+	&__banks-item {}
+
+	/* .pay-popup__data */
+	&__data {}
+
+	/* .pay-popup__form */
+	&__form {}
+}
+
+.input {}
+
+.input-number-card {}
+
+.input-number-date {}
+
+.input-name-card {}
+
+.input-cvv {}
+
+.form {
+
+	/* .form__line */
+	&__line {}
+
+	/* .form__line--promocode */
+	&__line--promocode {}
+}
+
+.input-promocode {}
+
+.button {}

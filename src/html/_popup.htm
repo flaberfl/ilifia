@@ -101,8 +101,86 @@
 	</div>
 </div>
 
+<div id="pay-popup" aria-hidden="true" class="popup pay-popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L15 15M1 15L15 1" stroke="#282828" stroke-width="2" stroke-linecap="round" />
+				</svg></button>
+
+			<div class="popup__text">
+				<h2 class="popup__title mb-30-20">Страница оплаты</h2>
+				<div class="pay-popup__body">
+					<div class="pay-popup__banks">
+						<h3 class="popup__subtitle popup__subtitle--pay">Выберите способ оплаты</h2>
+							<div class="pay-popup__banks-items">
+								<div class="pay-popup__banks-item">
+									Банковская карта
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/01.png" alt="СБП">
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/02.png" alt="Долями">
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/03.png" alt="Подели">
+								</div>
+								<div class="pay-popup__banks-item">
+									QR-код
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/04.png" alt="Яндекс Сплит">
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/05.png" alt="Сбер-Пэй">
+								</div>
+								<div class="pay-popup__banks-item">
+									<img src="@img/pay/06.png" alt="Т-Пэй">
+								</div>
+							</div>
+					</div>
+					<div class="pay-popup__data">
+						<h3 class="popup__subtitle">Укажите данные</h2>
+							<div class="pay-popup__form">
+								<input autocomplete="off" type="text" value="4444 4444 4444 4444" name="form[]" data-error="Ошибка"
+									placeholder="0000 0000 0000 0000" class="input input-number-card">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Месяц / Год"
+									class="input input-number-date">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									placeholder="Имя владельца карты" class="input input-name-card">
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="CVV"
+									class="input input-cvv">
+								<div class="form__line form__line--promocode">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите промокод"
+										class="input input-promocode">
+								</div>
+
+								<div class="popup__footer">
+									<div class="popup__price-box">
+										<!-- <div id="price">Сумма: 0</div> -->
+										<div class="popup__price-name">Стоимость</div>
+										<div class="popup__price">
+											<span id="price">0</span> ₽
+										</div>
+									</div>
+
+									<a href="" class="popup__footer-button button" id="popup__footer-button">Оплатить</a>
+								</div>
+
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
 
 <a href="" data-popup="#subscription-popup"></a>
+<a href="" data-popup="#pay-popup"></a>
 <!-- <a href="" data-popup="#callback"></a>
 <a href="" data-popup="#help-popup"></a>
 <a href="" data-popup="#promocode-popup"></a>
