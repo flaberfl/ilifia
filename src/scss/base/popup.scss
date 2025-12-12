@@ -154,17 +154,18 @@ body::after {
 	z-index: 1;
 }
 
-.progress-fill {
+.progress-line {
 	position: absolute;
 	top: 0;
+	/* Должно быть внутри .progress-bar */
 	left: 0;
 	height: 8px;
-	/* Толще */
-	background-color: black;
-	/* Другой цвет */
-	width: 10px;
+	/* Толщина */
+	background-color: green;
+	/* Цвет */
+	width: 0;
 	transition: width 0.3s ease;
-	z-index: 20;
+	z-index: 2;
 }
 
 .point {

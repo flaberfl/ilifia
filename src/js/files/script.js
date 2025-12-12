@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconPlay = player.querySelector('.icon-play');
     const iconPause = player.querySelector('.icon-pause');
     const progressTrack = player.querySelector('.progress-track');
-    const progressFill = player.querySelector('.progress-fill');
+    const progressFill = player.querySelector('.progress-line');
     const progressThumb = player.querySelector('.progress-thumb');
     const currentTimeEl = player.querySelector('.current-time');
     const totalTimeEl = player.querySelector('.total-time');
@@ -476,13 +476,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
     const width = endOffset - startOffset;
 
+    console.log('Обновление полосы: left =', startOffset, 'width =', width);
+
     progressFill.style.left = `${startOffset}%`;
     progressFill.style.width = `${width}%`;
   }
 
+  //   function updatePriceDisplay() {
+  //     if (selectedStart === null || selectedEnd === null) {
+  //       priceDiv.textContent = 'Сумма: 0';
+  //       return;
+  //     }
+
+  //     let total = 0;
+  //     for (let i = selectedStart; i <= selectedEnd; i++) {
+  //       total += prices[i];
+  //     }
+  //     priceDiv.textContent = `Сумма: ${total}`;
+  //   }
+
   function updatePriceDisplay() {
     if (selectedStart === null || selectedEnd === null) {
-      priceDiv.textContent = 'Сумма: 0';
+      // Если точки не выбраны или это одна точка — можно оставить 0 или очистить
+      document.getElementById('price').textContent = ''; // или '' если хочешь пусто
       return;
     }
 
@@ -490,7 +506,9 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = selectedStart; i <= selectedEnd; i++) {
       total += prices[i];
     }
-    priceDiv.textContent = `Сумма: ${total}`;
+
+    // Выводим только сумму
+    document.getElementById('price').textContent = total;
   }
 
   function updatePeriodText() {
