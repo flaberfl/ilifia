@@ -463,14 +463,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateProgressFill() {
-    if (selectedStart === null || selectedEnd === null) {
+    if (selectedStart === null || selectedEnd === null || selectedStart === selectedEnd) {
+      // Если точки не выбраны или это одна точка — скрываем полосу
       progressFill.style.width = '0';
       return;
     }
 
+    // Вычисляем позиции начала и конца диапазона
     const startOffset = (selectedStart / (pointsCount - 1)) * 100;
     const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
     const width = endOffset - startOffset;
+
     progressFill.style.left = `${startOffset}%`;
     progressFill.style.width = `${width}%`;
   }
@@ -491,10 +494,26 @@ document.addEventListener('DOMContentLoaded', function () {
   function updatePeriodText() {
     // Проверяем, что обе точки выбраны и это **разные** точки (диапазон)
     if (selectedStart !== null && selectedEnd !== null && selectedStart !== selectedEnd) {
-      const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
-      const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+      // Если начало диапазона — от 1 до 9, а конец — после 9
+      if (selectedStart < 9 && selectedEnd > 9) {
+        // Выводим "с ? мес до послеродового восстановления"
+        const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+        periodText.textContent = `с ${startLabel} до послеродового восстановления`;
+      }
+      // Если диапазон от 1 до 9 (обе точки до 9)
+      else if (selectedStart < 9 && selectedEnd <= 9) {
+        // Выводим обычный формат
+        const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+        const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+        periodText.textContent = `с ${startLabel} по ${endLabel}`;
+      }
+      // Если обе точки после 9
+      else {
+        // Выводим "послеродовое восстановление"
+        periodText.textContent = 'послеродовое восстановление';
+      }
 
-      periodText.textContent = `с ${startLabel} по ${endLabel}`;
+      // Позиционируем плашку посередине между start и end
       const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
       const pos = (midIndex / (pointsCount - 1)) * 100;
       periodText.style.left = `${pos}%`;

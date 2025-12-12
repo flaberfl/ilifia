@@ -149,8 +149,9 @@ body::after {
 	top: 50%;
 	left: 0;
 	right: 0;
-	height: 4px;
-	background-color: #ccc;
+	height: 2px;
+	background-color: #B7B7B7;
+	opacity: .2;
 	z-index: 1;
 }
 
@@ -158,8 +159,10 @@ body::after {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
-	background-color: green;
+	height: 8px;
+	/* Толще */
+	background-color: black;
+	/* Другой цвет */
 	width: 0;
 	transition: width 0.3s ease;
 	z-index: 2;
@@ -169,23 +172,23 @@ body::after {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 16px;
-	height: 16px;
-	background-color: #007bff;
+	width: 10px;
+	height: 10px;
+	background-color: #B7B7B7;
 	border-radius: 50%;
-	z-index: 3;
+	z-index: 30;
 	transition: transform 0.2s, background-color 0.2s;
 	cursor: pointer;
 }
 
 .point:hover {
-	transform: translate(-50%, -50%) scale(1.5);
+	transform: translate(-50%, -50%) scale(1.6);
 }
 
 .point.active {
-	transform: translate(-50%, -50%) scale(1.5);
-	background-color: green;
-	border: 2px solid darkgreen;
+	transform: translate(-50%, -50%) scale(1.6);
+	background-color: $brightGreenColor;
+	border: 2px solid #B7B7B7;
 }
 
 .point-label {
