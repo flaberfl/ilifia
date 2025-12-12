@@ -68,6 +68,7 @@
 						<div class="profile__content profile-settings__content">
 
 							<form action="" class="profile-settings__form form">
+
 								<div class="form__line form__line--data">
 									<div class="form__column form__column--data">
 										<label for="photo">Фото профиля</label>
@@ -106,11 +107,12 @@
 									</div>
 
 								</div>
+
 								<div class="form__line form__line--email">
 									<div class="form__column">
 										<label for="email">Имя</label>
 										<input autocomplete="off" type="text" id="email" name="email" data-error="Ошибка"
-											value="pochta@mail.ru" placeholder="" class="input">
+											value="pochta@mail.ru" placeholder="" class="input input--email">
 									</div>
 									<input autocomplete="off" type="text" name="code-confirm" data-error="Ошибка"
 										placeholder="Код подтверждения" class="input">
@@ -120,10 +122,11 @@
 								<div class="form__line form__line--passw">
 									<div class="form__column">
 										<label for="passw">Смена пароля</label>
-										<input autocomplete="off" type="text" id="passw" name="passw" data-error="Ошибка"
+										<input autocomplete="off" type="password" id="passw" name="passw" data-error="Ошибка"
 											placeholder="Новый пароль" class="input input-passw">
+											<button class="form__viewpass" type="button"><img src="@img/show-pass.svg"></button>
 									</div>
-									<input autocomplete="off" type="text" id="passw-confirm" name="passw-confirm" data-error="Ошибка"
+									<input autocomplete="off" type="password" id="passw-confirm" name="passw-confirm" data-error="Ошибка"
 										placeholder="Повторить пароль" class="input input-passw-confirm">
 									<a href="" class="button button-form-confirm">Подтвердить</a>
 								</div>
@@ -144,3 +147,4 @@
 </body>
 
 </html>
+

@@ -45,9 +45,9 @@ label {
 		color: #d42023;
 
 
-		.input::placeholder {
-			display: none;
-		}
+		// .input::placeholder {
+		// 	display: none;
+		// }
 	}
 }
 
@@ -59,25 +59,6 @@ label {
 
 }
 
-.input {
-
-	&::placeholder {
-		font-weight: 400;
-		font-size: 20px;
-		color: rgba(255, 255, 255, 0.8);
-		font-family: $secondFamily;
-
-		@media (max-width:$mobile) {
-			font-size: toRem(14);
-		}
-	}
-
-	.footer & {
-		&::placeholder {
-			font-size: toRem(16);
-		}
-	}
-}
 
 .textarea[placeholder]:not([data-placeholder-nohiden]),
 .input[placeholder]:not([data-placeholder-nohiden]),
