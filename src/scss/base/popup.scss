@@ -115,6 +115,7 @@ body::after {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
 	@include adaptiveValue("padding-bottom", 60, 45);
+
 }
 
 .popup__close {
@@ -317,7 +318,7 @@ body::after {
 		}
 
 		&--data {
-			margin-bottom: toRem(20);
+			margin-bottom: toRem(10);
 		}
 	}
 
@@ -513,27 +514,48 @@ body::after {
 		// justify-content: space-between;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+
+		@media (max-width: toEm(929)) {
+			gap: toRem(30)
+		}
 	}
 
 	/* .pay-popup__banks */
 	&__banks {
-		padding-right: 40px;
+		// padding-right: 40px;
+		@include adaptiveValue("padding-right", 40, 15);
+
+		@media (max-width: toEm(929)) {
+			padding-right: 0;
+		}
 	}
 
 	/* .pay-popup__banks-items */
 	&__banks-items {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
 		gap: toRem(10);
+		grid-template-columns: repeat(4, 1fr);
+
+		@media (max-width:$tablet) {}
+
+		@media (max-width: toEm(905)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width:$mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
 	}
 
 	/* .pay-popup__banks-item */
 	&__banks-item {
 		display: flex;
 		justify-content: center;
+		padding: toRem(10);
 		align-items: center;
-		width: 120px;
-		height: 69px;
+		// width: 120px;
+		// height: 69px;
 		cursor: pointer;
 
 		text-align: center;
@@ -542,13 +564,22 @@ body::after {
 
 		line-height: normal;
 		@include adaptiveValue("font-size", 14, 10);
+
+		@include adaptiveValue("width", 120, 83);
+		@include adaptiveValue("height", 69, 46);
 	}
 
 	/* .pay-popup__data */
 	&__data {
-		padding-left: 40px;
+		// padding-left: 40px;
 
 		border-left: 1px solid rgba(40, 40, 40, .15);
+		@include adaptiveValue("padding-left", 40, 15);
+
+		@media (max-width: toEm(929)) {
+			padding-left: 0;
+			border-left: none;
+		}
 	}
 
 	/* .pay-popup__form */
