@@ -77,32 +77,35 @@
 												placeholder="" class="input">
 										</label>
 									</div>
-									<div class="form__column">
-										<label for="name">Имя</label>
-										<input autocomplete="off" type="text" id="name" name="name" data-error="Ошибка" value="Александра"
-											placeholder="" class="input">
-									</div>
-									<div class="form__column">
-										<label for="surname">Фамилия</label>
-										<input autocomplete="off" type="text" name="surname" data-error="Ошибка" placeholder=""
-											value="Александрова" class="input">
+
+									<div class="form__data">
+										<div class="form__column">
+											<label for="name">Имя</label>
+											<input autocomplete="off" type="text" id="name" name="name" data-error="Ошибка" value="Александра"
+												placeholder="" class="input">
+										</div>
+										<div class="form__column">
+											<label for="surname">Фамилия</label>
+											<input autocomplete="off" type="text" name="surname" data-error="Ошибка" placeholder=""
+												value="Александрова" class="input">
+										</div>
+
+										<div class="form__column">
+											<label for="citySelect">Город</label>
+											<select id="citySelect" name="city" data-class-modif="form">
+												<option value="1" selected>Москва</option>
+												<option value="2" selected>Новосибирск</option>
+												<option value="3" selected>Екатеринбург</option>
+												<option value="4" selected>Челябинск</option>
+												<option value="5" selected>Самара</option>
+												<option value="6" selected>Омск</option>
+												<option value="7" selected>Воронеж</option>
+												<option value="8" selected>Донецк</option>
+											</select>
+										</div>
 									</div>
 
-									<div class="form__column">
-										<label for="citySelect">Город</label>
-										<select id="citySelect" name="city" data-class-modif="form">
-											<option value="1" selected>Москва</option>
-											<option value="2" selected>Новосибирск</option>
-											<option value="3" selected>Екатеринбург</option>
-											<option value="4" selected>Челябинск</option>
-											<option value="5" selected>Самара</option>
-											<option value="6" selected>Омск</option>
-											<option value="7" selected>Воронеж</option>
-											<option value="8" selected>Донецк</option>
-										</select>
-									</div>
-
-									<div class="form__column">
+									<div class="form__column form__column--save-btn">
 										<button type="submit" class="form__button button">Сохранить</button>
 									</div>
 
@@ -110,7 +113,7 @@
 
 								<div class="form__line form__line--email">
 									<div class="form__column">
-										<label for="email">Имя</label>
+										<label for="email">Смена электронной почты</label>
 										<input autocomplete="off" type="text" id="email" name="email" data-error="Ошибка"
 											value="pochta@mail.ru" placeholder="" class="input input--email">
 									</div>

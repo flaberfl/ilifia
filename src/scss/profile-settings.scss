@@ -19,12 +19,16 @@
   &__line {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 
+    @include adaptiveValue("gap", 20, 15);
 
     /* .form__line--data */
     &--data {
       margin-bottom: toRem(50);
+
+      @media (max-width: toEm(540)) {
+        flex-wrap: wrap;
+      }
 
       .input {
         width: 150px;
@@ -35,17 +39,38 @@
       margin-bottom: toRem(30);
       align-items: flex-end;
 
+      @media (max-width: toEm(880)) {
+        flex-wrap: wrap;
+      }
+
       .form__column {
-        flex: 0 0 357px;
+        // flex: 0 0 357px;
+        width: 100%;
       }
     }
 
     &--passw {
       align-items: flex-end;
 
+      @media (max-width: toEm(880)) {
+        flex-wrap: wrap;
+      }
+
       .form__column {
         width: 100%;
       }
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 20, 15);
+
+
+    @media (max-width: toEm(540)) {
+      width: 50%;
+      order: -1;
     }
   }
 
@@ -57,11 +82,22 @@
   }
 
 
-  &__column--data {}
+  &__column--data {
+    @media (max-width: toEm(540)) {
+      width: 40%;
+    }
+  }
 
   /* .form__column */
   &__column {
     position: relative;
+
+    &--save-btn {
+
+      @media (max-width: toEm(540)) {
+        width: 100%;
+      }
+    }
   }
 
   /* .form__button */
