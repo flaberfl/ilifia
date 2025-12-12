@@ -119,16 +119,25 @@
 									<a href="" class="button button-form-confirm">Подтвердить</a>
 								</div>
 
+								<label for="passw">Смена пароля</label>
 								<div class="form__line form__line--passw">
 									<div class="form__column">
-										<label for="passw">Смена пароля</label>
-										<input autocomplete="off" type="password" id="passw" name="passw" data-error="Ошибка"
+										<input autocomplete="off" type="password" name="new_password" data-error="Ошибка"
 											placeholder="Новый пароль" class="input input-passw">
-											<button class="form__viewpass" type="button"><img src="@img/show-pass.svg"></button>
+										<button class="form__viewpass" type="button">
+											<img src="@img/show-pass.svg" class="icon-show">
+											<img src="@img/hide-pass.svg" class="icon-hide" style="display: none;">
+										</button>
 									</div>
-									<input autocomplete="off" type="password" id="passw-confirm" name="passw-confirm" data-error="Ошибка"
-										placeholder="Повторить пароль" class="input input-passw-confirm">
-									<a href="" class="button button-form-confirm">Подтвердить</a>
+									<div class=" form__column">
+										<input autocomplete="off" type="password" name="confirm_password" data-error="Ошибка"
+											placeholder="Повторить пароль" class="input input-passw-confirm">
+										<button class="form__viewpass" type="button">
+											<img src="@img/show-pass.svg" class="icon-show">
+											<img src="@img/hide-pass.svg" class="icon-hide" style="display: none;">
+										</button>
+									</div>
+									<a href="" class=" button button-form-confirm">Подтвердить</a>
 								</div>
 							</form>
 
@@ -147,4 +156,3 @@
 </body>
 
 </html>
-

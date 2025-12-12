@@ -1,10 +1,20 @@
 // Подключение функционала "Чертоги Фрилансера"
 // Подключение списка активных модуле
-import { flsModules } from "../modules.js";
+import {
+	flsModules
+} from "../modules.js";
 // Вспомогательные функции
-import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
+import {
+	isMobile,
+	_slideUp,
+	_slideDown,
+	_slideToggle,
+	FLS
+} from "../functions.js";
 // Модуль прокрутки к блоку
-import { gotoBlock } from "../scroll/gotoblock.js";
+import {
+	gotoBlock
+} from "../scroll/gotoblock.js";
 //================================================================================================================================================================================================================================================================================================================================
 
 /*
@@ -12,7 +22,10 @@ import { gotoBlock } from "../scroll/gotoblock.js";
 */
 
 // Работа с полями формы.
-export function formFieldsInit(options = { viewPass: false, autoHeight: false }) {
+export function formFieldsInit(options = {
+	viewPass: false,
+	autoHeight: false
+}) {
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
 		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
@@ -36,16 +49,70 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 		}
 	});
 	// Если включено, добавляем функционал "Показать пароль"
+	// if (options.viewPass) {
+	// 	document.addEventListener("click", function (e) {
+	// 		let targetElement = e.target;
+	// 		if (targetElement.closest('[class*="__viewpass"]')) {
+	// 			let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
+	// 			targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
+	// 			targetElement.classList.toggle('_viewpass-active');
+	// 		}
+	// 	});
+	// }
+
+	// if (options.viewPass) {
+	// 	document.addEventListener("click", function (e) {
+	// 		let targetElement = e.target;
+	// 		if (targetElement.closest('[class*="__viewpass"]')) {
+	// 			let button = targetElement.closest('[class*="__viewpass"]'); // Находим кнопку
+	// 			let input = button.parentElement.querySelector('input');
+
+	// 			if (!input) {
+	// 				console.error('Input не найден для кнопки показа пароля.');
+	// 				return;
+	// 			}
+
+	// 			let inputType = button.classList.contains('_viewpass-active') ? "password" : "text";
+	// 			input.setAttribute("type", inputType);
+	// 			button.classList.toggle('_viewpass-active');
+	// 		}
+	// 	});
+	// }
+
 	if (options.viewPass) {
 		document.addEventListener("click", function (e) {
 			let targetElement = e.target;
 			if (targetElement.closest('[class*="__viewpass"]')) {
-				let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
-				targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
-				targetElement.classList.toggle('_viewpass-active');
+				let button = targetElement.closest('[class*="__viewpass"]');
+				// Ищем input только внутри той же обёртки, что и кнопка
+				let input = button.closest('.form__column').querySelector('input[type="password"], input[type="text"]');
+				let iconShow = button.querySelector('.icon-show');
+				let iconHide = button.querySelector('.icon-hide');
+
+				if (!input || !iconShow || !iconHide) {
+					console.error('Не найдены необходимые элементы для кнопки показа пароля.');
+					return;
+				}
+
+				// Переключаем тип input
+				if (input.type === "password") {
+					input.type = "text";
+				} else {
+					input.type = "password";
+				}
+
+				// Переключаем видимость иконок
+				if (input.type === "text") {
+					iconShow.style.display = 'none';
+					iconHide.style.display = 'block';
+				} else {
+					iconShow.style.display = 'block';
+					iconHide.style.display = 'none';
+				}
 			}
 		});
 	}
+
 	// Если включено, добавляем функционал "Автовысота"
 	if (options.autoHeight) {
 		const textareas = document.querySelectorAll('textarea[data-autoheight]');
@@ -63,6 +130,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 					}
 				});
 			});
+
 			function setHeight(textarea, height) {
 				textarea.style.height = `${height}px`;
 			}
@@ -192,7 +260,7 @@ export function formSubmit() {
 					alert("Ошибка");
 					form.classList.remove('_sending');
 				}
-			} else if (form.hasAttribute('data-dev')) {	// Если режим разработки
+			} else if (form.hasAttribute('data-dev')) { // Если режим разработки
 				e.preventDefault();
 				formSent(form);
 			}
@@ -213,7 +281,7 @@ export function formSubmit() {
 			}
 		}));
 		// Попап показывает, если подключен модуль попапов
-// и для формы указана настройка
+		// и для формы указана настройка
 		setTimeout(() => {
 			if (flsModules.popup) {
 				const popup = form.dataset.popupMessage;
@@ -225,6 +293,7 @@ export function formSubmit() {
 		// Сообщаем консоли
 		formLogging(`Форму відправлено!`);
 	}
+
 	function formLogging(message) {
 		FLS(`[Форми]: ${message}`);
 	}
@@ -373,6 +442,7 @@ export function formRating() {
 			document.addEventListener('click', formRatingAction)
 		});
 	}
+
 	function formRatingAction(e) {
 		const targetElement = e.target;
 		if (targetElement.closest('.rating__input')) {
@@ -383,6 +453,7 @@ export function formRating() {
 			ratingSet ? formRatingGet(rating, ratingValue) : null;
 		}
 	}
+
 	function formRatingInit(rating, ratingSize) {
 		let ratingItems = ``;
 		for (let index = 0; index < ratingSize; index++) {
@@ -395,6 +466,7 @@ export function formRating() {
 		}
 		rating.insertAdjacentHTML("beforeend", ratingItems)
 	}
+
 	function formRatingGet(rating, ratingValue) {
 		// Здесь отправка оценки (ratingValue) на бекенд...
 		// Получаем новую  оценку formRatingSend()
@@ -402,6 +474,7 @@ export function formRating() {
 		const resultRating = ratingValue;
 		formRatingSet(rating, resultRating);
 	}
+
 	function formRatingSet(rating, value) {
 		const ratingItems = rating.querySelectorAll('.rating__item');
 		const resultFullItems = parseInt(value);
@@ -421,6 +494,7 @@ export function formRating() {
 			}
 		});
 	}
+
 	function formRatingSend() {
 
 	}
