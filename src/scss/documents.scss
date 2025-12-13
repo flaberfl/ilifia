@@ -32,6 +32,10 @@
     grid-template-columns: 1fr toRem(387);
 
     @include adaptiveValue("gap", 120, 30);
+
+    @media (max-width:$tablet){
+      grid-template-columns: auto;
+    }
   }
 
   // .documents__content
