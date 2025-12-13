@@ -672,4 +672,27 @@ document.addEventListener('DOMContentLoaded', function () {
   //   periodText.style.left = `${pos}%`;
   //   periodText.classList.add('visible');
   // }
+
+
+
+    // Находим все элементы с классом pay-popup__banks-item
+    const bankItems = document.querySelectorAll('.pay-popup__banks-item');
+
+    bankItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Проверяем, есть ли у текущего элемента класс active
+        const isActive = this.classList.contains('active');
+
+        // Убираем класс active у всех элементов
+        bankItems.forEach(el => el.classList.remove('active'));
+
+        // Если элемент не был активен, добавляем ему класс active
+        if (!isActive) {
+          this.classList.add('active');
+        }
+        // Если был активен — мы просто убрали у всех, включая его, класс, и ничего не добавляем
+      });
+    });
+
+
 });
