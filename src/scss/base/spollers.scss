@@ -115,12 +115,12 @@
 			top: 50%;
 			background-color: $mainColor;
 			height: 2px;
-			width: 19px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
 
-			// @media (max-width: toEm(660)) {
-			// 	top: 20%;
-			// }
+			@media (max-width:$mobile) {
+				right: toRem(10);
+			}
 		}
 
 		&::before {
