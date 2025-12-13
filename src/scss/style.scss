@@ -124,7 +124,9 @@ body {
 		@include adaptiveValue("padding-top", 140, 100);
 	}
 
-	&._profile {
+
+	&._profile,
+	&.documents {
 		padding-top: toRem(100) !important;
 		// @include adaptiveValue("padding-top", 120, 80);
 	}
