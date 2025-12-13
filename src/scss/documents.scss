@@ -139,9 +139,19 @@
   // .contacts-info__line
 
   &__line {
+    a {
+      display: block;
+      text-decoration: underline;
+      &:not(:last-child) {margin-bottom: toRem(10);}
+    }
+
     p {
-      @include adaptiveValue("font-size", 16, 14);
       line-height: normal;
+      @include adaptiveValue("font-size", 16, 14);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
     }
   }
 }
