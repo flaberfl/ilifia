@@ -179,9 +179,41 @@
 	</div>
 </div>
 
+<div id="sign-up-popup" aria-hidden="true" class="popup sign-up-popup popup_show">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L15 15M1 15L15 1" stroke="#282828" stroke-width="2" stroke-linecap="round" />
+				</svg></button>
+
+			<div class="popup__text sign-up-popup__text">
+				<img src="@img/popup-logo.png" alt="Логотип" class="mb-30-20">
+				<h2 class="sign-up-popup__title popup__title mb-30-20">Регистрация аккаунта</h2>
+
+				<form action="" class="sign-up-popup__form forn">
+					<input autocomplete="off" type="text" name="tel" data-error="Ошибка" placeholder="Телефон"
+						class="input input-tel-reg mb-20-10">
+					<button type="submit" class="button sign-up-popup__button" disabled>Получить код</button>
+					<div class="sign-up-popup__accept">
+						<div class="checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку
+									<a href="personal-data.html">персональных данных</a></span></label>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
 
 <a href="" data-popup="#subscription-popup"></a>
 <a href="" data-popup="#pay-popup"></a>
+<a href="" data-popup="#sign-up-popup"></a>
 <!-- <a href="" data-popup="#callback"></a>
 <a href="" data-popup="#help-popup"></a>
 <a href="" data-popup="#promocode-popup"></a>

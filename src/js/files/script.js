@@ -675,24 +675,74 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // Находим все элементы с классом pay-popup__banks-item
-    const bankItems = document.querySelectorAll('.pay-popup__banks-item');
+  // ВЫДЕЛЕНИЕ БАНКОВСКИХ ЛОГОТИПОВ
 
-    bankItems.forEach(item => {
-      item.addEventListener('click', function () {
-        // Проверяем, есть ли у текущего элемента класс active
-        const isActive = this.classList.contains('active');
+  // Находим все элементы с классом pay-popup__banks-item
+  const bankItems = document.querySelectorAll('.pay-popup__banks-item');
 
-        // Убираем класс active у всех элементов
-        bankItems.forEach(el => el.classList.remove('active'));
+  bankItems.forEach(item => {
+    item.addEventListener('click', function () {
+      // Проверяем, есть ли у текущего элемента класс active
+      const isActive = this.classList.contains('active');
 
-        // Если элемент не был активен, добавляем ему класс active
-        if (!isActive) {
-          this.classList.add('active');
-        }
-        // Если был активен — мы просто убрали у всех, включая его, класс, и ничего не добавляем
-      });
+      // Убираем класс active у всех элементов
+      bankItems.forEach(el => el.classList.remove('active'));
+
+      // Если элемент не был активен, добавляем ему класс active
+      if (!isActive) {
+        this.classList.add('active');
+      }
+      // Если был активен — мы просто убрали у всех, включая его, класс, и ничего не добавляем
     });
+  });
+
+  // ОБРАБОТКА ФОРМЫ РЕГИСТРАЦИИ
+
+    const form = document.querySelector('.sign-up-popup__form');
+    const telInput = form.querySelector('input[name="tel"]');
+    const consentCheckbox = form.querySelector('input[name="form\\[\\]"]'); // Обратите внимание на экранирование []
+    const button = form.querySelector('button[type="submit"]');
+    const initialButtonText = button.textContent.trim(); // Сохраняем исходный текст кнопки ("Получить код")
+
+    /**
+     * Функция обновления состояния кнопки
+     */
+    function updateButtonState() {
+      const isTelValid = validatePhone(telInput.value);
+      const isConsentChecked = consentCheckbox.checked;
+
+      if (isTelValid) {
+        button.textContent = 'Регистрация';
+      } else {
+        button.textContent = initialButtonText;
+      }
+
+      if (isTelValid && isConsentChecked) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    }
+
+    /**
+     * Функция валидации номера телефона (минимум 7 цифр)
+     * @param {string} phone
+     * @returns {boolean}
+     */
+    function validatePhone(phone) {
+      // Извлекаем все цифры из строки
+      const digitsOnly = phone.replace(/\D/g, '');
+      return digitsOnly.length >= 7;
+    }
+
+    // Слушатель для поля телефона (событие 'input' для реального времени)
+    telInput.addEventListener('input', updateButtonState);
+
+    // Слушатель для чекбокса
+    consentCheckbox.addEventListener('change', updateButtonState);
+
+    // Инициализация состояния при загрузке (на случай, если поля уже заполнены)
+    updateButtonState();
 
 
 });
