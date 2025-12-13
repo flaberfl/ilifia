@@ -618,7 +618,14 @@ body::after {
 
 	// .sign-up-popup__form
 
-	&__form {}
+	&__form {
+		.input {
+			text-align: center;
+
+			@include adaptiveValue("height", 50, 40);
+
+		}
+	}
 
 	// .sign-up-popup__button
 
@@ -650,14 +657,14 @@ body::after {
 
 .input {}
 
-.input-tel-reg,
-.input-enter-code {
-	text-align: center;
-	@include adaptiveValue("height", 50, 40);
+// .input-tel-reg,
+// .input-enter-code {
+// 	text-align: center;
+// 	@include adaptiveValue("height", 50, 40);
 
-	// &::placeholder {
-	// }
-}
+// 	// &::placeholder {
+// 	// }
+// }
 
 .button {}
 

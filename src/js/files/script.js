@@ -698,53 +698,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ОБРАБОТКА ФОРМЫ РЕГИСТРАЦИИ
 
-  // const form = document.querySelector('.sign-up-popup__form');
-  // const telInput = form.querySelector('input[name="tel"]');
-  // const consentCheckbox = form.querySelector('input[name="form\\[\\]"]'); // Обратите внимание на экранирование []
-  // const button = form.querySelector('button[type="submit"]');
-  // const initialButtonText = button.textContent.trim(); // Сохраняем исходный текст кнопки ("Получить код")
-
-  // /**
-  //  * Функция обновления состояния кнопки
-  //  */
-  // function updateButtonState() {
-  //   const isTelValid = validatePhone(telInput.value);
-  //   const isConsentChecked = consentCheckbox.checked;
-
-  //   if (isTelValid) {
-  //     button.textContent = 'Регистрация';
-  //   } else {
-  //     button.textContent = initialButtonText;
-  //   }
-
-  //   if (isTelValid && isConsentChecked) {
-  //     button.disabled = false;
-  //   } else {
-  //     button.disabled = true;
-  //   }
-  // }
-
-  // /**
-  //  * Функция валидации номера телефона (минимум 7 цифр)
-  //  * @param {string} phone
-  //  * @returns {boolean}
-  //  */
-  // function validatePhone(phone) {
-  //   // Извлекаем все цифры из строки
-  //   const digitsOnly = phone.replace(/\D/g, '');
-  //   return digitsOnly.length >= 7;
-  // }
-
-  // // Слушатель для поля телефона (событие 'input' для реального времени)
-  // telInput.addEventListener('input', updateButtonState);
-
-  // // Слушатель для чекбокса
-  // consentCheckbox.addEventListener('change', updateButtonState);
-
-  // // Инициализация состояния при загрузке (на случай, если поля уже заполнены)
-  // updateButtonState();
-
-
     const form = document.querySelector('.sign-up-popup__form');
     const telInput = form.querySelector('input[name="tel"]');
     const codeInput = form.querySelector('input[name="code"]'); // Новое поле
@@ -832,6 +785,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Инициализация состояния при загрузке
     updateButtonState();
+
+
+    // ВТОРАЯ ФОРМА АВТОРИЗАЦИИ
+
+    // --- Вторая форма (внутри #sign-in-popup) ---
+    const form2 = document.querySelector('#sign-in-popup .sign-up-popup__form.forn');
+
+    if (form2) {
+        const nameInput = form2.querySelector('input[name="name"]');
+        const loginInput = form2.querySelector('input[name="login"]');
+        const passwInput = form2.querySelector('input[name="passw"]');
+        const consentCheckbox2 = form2.querySelector('input[name="form\\[\\]"]');
+        const button2 = form2.querySelector('button[type="submit"]');
+
+        // Проверяем, что все элементы найдены
+        if (nameInput && loginInput && passwInput && consentCheckbox2 && button2) {
+            function updateButtonState2() {
+                const isNameFilled = nameInput.value.trim() !== '';
+                const isLoginFilled = loginInput.value.trim() !== '';
+                const isPasswFilled = passwInput.value.trim() !== '';
+                const isConsentChecked = consentCheckbox2.checked;
+
+                if (isNameFilled && isLoginFilled && isPasswFilled && isConsentChecked) {
+                    button2.removeAttribute('disabled');
+                } else {
+                    button2.setAttribute('disabled', '');
+                }
+            }
+
+            // Добавляем слушатели событий
+            nameInput.addEventListener('input', updateButtonState2);
+            loginInput.addEventListener('input', updateButtonState2);
+            passwInput.addEventListener('input', updateButtonState2);
+            consentCheckbox2.addEventListener('change', updateButtonState2);
+
+            // Инициализируем состояние кнопки при загрузке
+            updateButtonState2();
+        } else {
+            console.warn("Не все элементы формы найдены внутри #sign-in-popup");
+        }
+    } else {
+        console.warn("Форма входа не найдена внутри #sign-in-popup");
+    }
 
 
 });

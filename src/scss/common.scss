@@ -118,6 +118,10 @@ section.profile {
   @include adaptiveValue("margin-bottom", 110, 70);
 }
 
+.mb-10 {
+  margin-bottom: toRem(10);
+}
+
 .mb-30 {
   margin-bottom: toRem(30);
 }
