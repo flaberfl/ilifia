@@ -6,74 +6,74 @@
 	display: grid;
 	gap: 15px;
 
-	&__icon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		border-radius: 50%;
-		flex-shrink: 0;
+	// &__icon {
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	position: relative;
+	// 	border-radius: 50%;
+	// 	flex-shrink: 0;
 
-		@include adaptiveValue("width", 36, 30);
-		@include adaptiveValue("height", 36, 30);
+	// 	@include adaptiveValue("width", 36, 30);
+	// 	@include adaptiveValue("height", 36, 30);
 
-		&::before {
-			content: '';
-			position: absolute;
-			transition: all 0.3s;
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			border: 1px solid $masterColor;
-		}
+	// 	&::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		transition: all 0.3s;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		border-radius: 50%;
+	// 		border: 1px solid $mainColor;
+	// 	}
 
-		@media (any-hover: hover) {
-			&:hover {
-				&::before {
-					content: '';
-					background: $masterColor;
-					border: 1px solid $masterColor;
-				}
+	// 	@media (any-hover: hover) {
+	// 		&:hover {
+	// 			&::before {
+	// 				content: '';
+	// 				background: $mainColor;
+	// 				border: 1px solid $mainColor;
+	// 			}
 
-				svg {
-					path {
-						stroke: $whiteColor;
-					}
-				}
-			}
-		}
+	// 			svg {
+	// 				path {
+	// 					stroke: $mainColor;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
 
 
-		svg {
-			position: relative;
-			z-index: 100;
-			transition: all 0.3s;
-		}
+	// 	svg {
+	// 		position: relative;
+	// 		z-index: 100;
+	// 		transition: all 0.3s;
+	// 	}
 
-		._spoller-active & {
-			&::before {
-				content: '';
-				background: $secondColor;
-				border-color: $secondColor;
-			}
+	// 	._spoller-active & {
+	// 		&::before {
+	// 			content: '';
+	// 			background: $mainColor;
+	// 			border-color: $mainColor;
+	// 		}
 
-			svg {
+	// 		svg {
 
-				transform: rotate(45deg);
+	// 			transform: rotate(45deg);
 
-				path {
-					stroke: $whiteColor;
-				}
-			}
+	// 			path {
+	// 				stroke: $mainColor;
+	// 			}
+	// 		}
 
-		}
-	}
+	// 	}
+	// }
 }
 
 // Спойлер
 .spollers__item {
 	overflow: hidden;
-	@include adaptiveValue("border-radius", 10, 4);
+	border-radius: toRem(10)
 }
 
 // Заголовок спойлера
@@ -86,11 +86,14 @@
 	text-align: left;
 	position: relative;
 	list-style: none;
+	padding: 10px 15px;
+	color: #000;
+	background-color: $grayColor;
 
 	transition: all 0.3s;
 
+	height: 40px;
 
-	@include adaptiveValue("height", 74, 60);
 
 	// @media (max-width:$mobile) {
 	// 	font-size: toRem(18);
@@ -104,52 +107,49 @@
 	._spoller-init & {
 		cursor: pointer;
 
-		// &::before,
-		// &::after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	right: toRem(26);
-		// 	top: 50%;
-		// 	background-color: #000;
-		// 	height: 2px;
-		// 	width: 9px;
-		// 	transition: transform 0.5s ease 0s;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: toRem(26);
+			top: 50%;
+			background-color: $mainColor;
+			height: 2px;
+			width: 19px;
+			transition: transform 0.5s ease 0s;
 
-		// 	@media (max-width: toEm(660)) {
-		// 		top: 20%;
-		// 	}
-		// }
+			// @media (max-width: toEm(660)) {
+			// 	top: 20%;
+			// }
+		}
 
-		// &::before {
-		// 	transform: translate(-75%, -50%) rotate(40deg);
-		// }
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
 
-		// &::after {
-		// 	transform: translate(0, -50%) rotate(-40deg);
-		// }
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
 
 		&._spoller-active {
 			border-radius: 10px 10px 0 0;
 
-			@media (max-width:$mobile) {
-				border-radius: 4px 4px 0 0;
+
+			// color: $mainColor;
+
+			&::before,
+			&::after {
+				background-color: $mainColor;
+
 			}
 
-			// color: $garkGreenColor;
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
 
-			// &::before,
-			// &::after {
-			// 	// background-color: $mainColor;
-
-			// }
-
-			// &::before {
-			// 	transform: translateX(-75%) rotate(-40deg);
-			// }
-
-			// &::after {
-			// 	transform: rotate(40deg);
-			// }
+			&::after {
+				transform: rotate(40deg);
+			}
 		}
 
 		/*
@@ -191,25 +191,12 @@
 
 // Контент спойлера
 .spollers__body {
-	// padding: toRem(20);
-	// padding-left: 2px;
-	// @include adaptiveValue("padding-top", 36, 27);
-	background: $whiteColor;
+	background: $grayColor;
+	padding: 10px 15px;
 
+	// font-weight: 400;
+	// font-size: 16px;
+	line-height: normal;
+	color: rgba(0, 0, 0, 0.75);
 
-	font-family: $secondColor;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 125%;
-	color: rgba(0, 0, 0, 0.7);
-
-
-	padding-bottom: toRem(30);
-	padding-left: toRem(20);
-	// @include adaptiveValue("padding-left", 30, 15);
-	@include adaptiveValue("padding-right", 30, 15);
-
-	@media (max-width:$mobile) {
-		// padding-left: 0;
-	}
 }
