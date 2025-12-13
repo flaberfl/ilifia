@@ -1,0 +1,147 @@
+.privacy {
+
+  // .privacy__container--intro
+
+  &__container--intro {}
+
+  // .privacy__container
+
+  &__container {}
+
+  // .privacy__title
+
+  &__title {
+    font-weight: 600;
+    font-family: $fontFamily;
+  }
+}
+
+.article {
+
+  // .article__container--intro
+
+  &__container--intro {}
+}
+
+.documents {
+
+  // .documents__body
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr toRem(387);
+
+    @include adaptiveValue("gap", 120, 30);
+  }
+
+  // .documents__content
+
+  &__content {}
+
+  // .documents__top-line
+
+  &__top-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 15;
+  }
+
+  // .documents__town
+
+  &__town {}
+
+  // .documents__date
+
+  &__date {}
+
+  // .documents__subtitle
+
+  &__subtitle {
+    display: grid;
+    gap: 30px;
+
+    font-size: 15px;
+    line-height: normal;
+
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  // .documents__contacts
+
+  &__contacts {}
+
+  // .documents__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: toRem(10);
+    height: 44px;
+    padding: 10px;
+    width: 100%;
+
+    border-radius: 10px;
+    text-align: center;
+
+
+    background-color: $grayColor;
+    font-size: 12px;
+  }
+
+  // .documents__link--pdf
+
+  &__link--pdf {
+    width: 100%;
+  }
+
+  // .documents__contacts-title
+
+  &__contacts-title {
+    margin-bottom: toRem(10);
+
+    font-size: 12px;
+  }
+
+  // .documents__other-docs
+
+  &__other-docs {
+    display: flex;
+    gap: toRem(20);
+
+    @include adaptiveValue("margin-bottom", 50, 30);
+  }
+
+  // .documents__link--offerta
+
+  &__link--offerta {}
+
+  // .documents__link--personal-data
+
+  &__link--personal-data {}
+}
+
+
+.contacts-info {
+
+  // .contacts-info__title
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    @include adaptiveValue("font-size", 16, 14);
+  }
+
+  // .contacts-info__line
+
+  &__line {
+    p {
+      @include adaptiveValue("font-size", 16, 14);
+      line-height: normal;
+    }
+  }
+}
