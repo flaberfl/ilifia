@@ -698,11 +698,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ОБРАБОТКА ФОРМЫ РЕГИСТРАЦИИ
 
+  // const form = document.querySelector('.sign-up-popup__form');
+  // const telInput = form.querySelector('input[name="tel"]');
+  // const consentCheckbox = form.querySelector('input[name="form\\[\\]"]'); // Обратите внимание на экранирование []
+  // const button = form.querySelector('button[type="submit"]');
+  // const initialButtonText = button.textContent.trim(); // Сохраняем исходный текст кнопки ("Получить код")
+
+  // /**
+  //  * Функция обновления состояния кнопки
+  //  */
+  // function updateButtonState() {
+  //   const isTelValid = validatePhone(telInput.value);
+  //   const isConsentChecked = consentCheckbox.checked;
+
+  //   if (isTelValid) {
+  //     button.textContent = 'Регистрация';
+  //   } else {
+  //     button.textContent = initialButtonText;
+  //   }
+
+  //   if (isTelValid && isConsentChecked) {
+  //     button.disabled = false;
+  //   } else {
+  //     button.disabled = true;
+  //   }
+  // }
+
+  // /**
+  //  * Функция валидации номера телефона (минимум 7 цифр)
+  //  * @param {string} phone
+  //  * @returns {boolean}
+  //  */
+  // function validatePhone(phone) {
+  //   // Извлекаем все цифры из строки
+  //   const digitsOnly = phone.replace(/\D/g, '');
+  //   return digitsOnly.length >= 7;
+  // }
+
+  // // Слушатель для поля телефона (событие 'input' для реального времени)
+  // telInput.addEventListener('input', updateButtonState);
+
+  // // Слушатель для чекбокса
+  // consentCheckbox.addEventListener('change', updateButtonState);
+
+  // // Инициализация состояния при загрузке (на случай, если поля уже заполнены)
+  // updateButtonState();
+
+
     const form = document.querySelector('.sign-up-popup__form');
     const telInput = form.querySelector('input[name="tel"]');
-    const consentCheckbox = form.querySelector('input[name="form\\[\\]"]'); // Обратите внимание на экранирование []
+    const codeInput = form.querySelector('input[name="code"]'); // Новое поле
+    const consentCheckbox = form.querySelector('input[name="form\\[\\]"]');
     const button = form.querySelector('button[type="submit"]');
-    const initialButtonText = button.textContent.trim(); // Сохраняем исходный текст кнопки ("Получить код")
+    const initialButtonText = button.textContent.trim();
+
+    let stageOneComplete = false; // Флаг для отслеживания завершения первого этапа
 
     /**
      * Функция обновления состояния кнопки
@@ -714,13 +764,28 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isTelValid) {
         button.textContent = 'Регистрация';
       } else {
+        // Если телефон недействителен, всегда показываем "Получить код" и отключаем
         button.textContent = initialButtonText;
+        button.disabled = true;
+        return;
       }
 
-      if (isTelValid && isConsentChecked) {
-        button.disabled = false;
+      // Если первый этап ещё не пройден
+      if (!stageOneComplete) {
+        // Активна только при согласии
+        if (isConsentChecked) {
+          button.disabled = false;
+        } else {
+          button.disabled = true;
+        }
       } else {
-        button.disabled = true;
+        // Если первый этап пройден, проверяем также и код
+        const isCodeEntered = codeInput.value.trim().length > 0; // Предположим, что код может быть любым, просто введённым
+        if (isConsentChecked && isCodeEntered) {
+          button.disabled = false;
+        } else {
+          button.disabled = true;
+        }
       }
     }
 
@@ -730,18 +795,42 @@ document.addEventListener('DOMContentLoaded', function () {
      * @returns {boolean}
      */
     function validatePhone(phone) {
-      // Извлекаем все цифры из строки
       const digitsOnly = phone.replace(/\D/g, '');
       return digitsOnly.length >= 7;
     }
 
-    // Слушатель для поля телефона (событие 'input' для реального времени)
+    // Слушатель для клика по кнопке
+    button.addEventListener('click', function (e) {
+      // Проверяем, активна ли кнопка и мы на первом этапе
+      if (!this.disabled && !stageOneComplete) {
+        e.preventDefault(); // Предотвращаем отправку формы (если action не пустой)
+
+        // Показываем поле ввода кода
+        codeInput.style.display = 'block';
+
+        // Меняем текст кнопки на "Регистрация" (уже должен быть, но на всякий случай)
+        this.textContent = 'Регистрация';
+
+        // Переходим ко второму этапу
+        stageOneComplete = true;
+
+        // Обновляем состояние кнопки, т.к. теперь участвует новое поле
+        updateButtonState();
+      }
+      // Если кнопка активна и stageOneComplete=true, то можно позволить форме отправиться
+      // или обработать отправку как обычно (но вы сказали, что это пока не нужно)
+    });
+
+    // Слушатель для поля телефона
     telInput.addEventListener('input', updateButtonState);
 
     // Слушатель для чекбокса
     consentCheckbox.addEventListener('change', updateButtonState);
 
-    // Инициализация состояния при загрузке (на случай, если поля уже заполнены)
+    // Слушатель для нового поля кода
+    codeInput.addEventListener('input', updateButtonState); // При каждом вводе проверяем
+
+    // Инициализация состояния при загрузке
     updateButtonState();
 
 

@@ -650,7 +650,8 @@ body::after {
 
 .input {}
 
-.input-tel-reg {
+.input-tel-reg,
+.input-enter-code {
 	text-align: center;
 	@include adaptiveValue("height", 50, 40);
 

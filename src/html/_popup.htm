@@ -191,9 +191,11 @@
 				<img src="@img/popup-logo.png" alt="Логотип" class="mb-30-20">
 				<h2 class="sign-up-popup__title popup__title mb-30-20">Регистрация аккаунта</h2>
 
-				<form action="" class="sign-up-popup__form forn">
+				<!-- <form action="" class="sign-up-popup__form forn">
 					<input autocomplete="off" type="text" name="tel" data-error="Ошибка" placeholder="Телефон"
 						class="input input-tel-reg mb-20-10">
+					<input autocomplete="off" type="text" name="enter-code" data-error="Ошибка" placeholder="Ввести код"
+						class="input input-enter-code mb-20-10" style="display: none;">
 					<button type="submit" class="button sign-up-popup__button" disabled>Получить код</button>
 					<div class="sign-up-popup__accept">
 						<div class="checkbox">
@@ -202,8 +204,25 @@
 									<a href="personal-data.html">персональных данных</a></span></label>
 						</div>
 					</div>
-				</form>
+				</form> -->
 
+				<form action="" class="sign-up-popup__form forn">
+					<input autocomplete="off" type="text" name="tel" data-error="Ошибка" placeholder="Телефон"
+						class="input input-tel-reg mb-20-10">
+					<input autocomplete="off" type="text" name="code" data-error="Ошибка" placeholder="Введите код"
+						class="input input-enter-code mb-20-10" style="display: none;">
+					<button type="submit" class="button sign-up-popup__button" disabled>Получить код</button>
+					<div class="sign-up-popup__accept">
+						<div class="checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_1" class="checkbox__label">
+								<span class="checkbox__text">Даю согласие на обработку
+									<a href="personal-data.html">персональных данных</a>
+								</span>
+							</label>
+						</div>
+					</div>
+				</form>
 			</div>
 
 		</div>
