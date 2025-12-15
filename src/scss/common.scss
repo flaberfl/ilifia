@@ -160,6 +160,15 @@ section.profile {
   }
 }
 
+.block .play-pause-btn {
+  pointer-events: none;
+}
+
+.block .cast-link {
+  pointer-events: none;
+}
+
+
 .favorite-btn {
   cursor: pointer;
   position: absolute;
