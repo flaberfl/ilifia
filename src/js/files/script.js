@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconPlay = player.querySelector('.icon-play');
     const iconPause = player.querySelector('.icon-pause');
     const progressTrack = player.querySelector('.progress-track');
-    const progressFill = player.querySelector('.progress-line');
+    const progressFill2 = player.querySelector('.progress-fill');
     const progressThumb = player.querySelector('.progress-thumb');
     const currentTimeEl = player.querySelector('.current-time');
     const totalTimeEl = player.querySelector('.total-time');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обновляем прогресс во время воспроизведения
     audio.addEventListener('timeupdate', () => {
       const percent = (audio.currentTime / audio.duration) * 100;
-      progressFill.style.width = `${percent}%`;
+      progressFill2.style.width = `${percent}%`;
       progressThumb.style.left = `${percent}%`;
       currentTimeEl.textContent = formatTime(audio.currentTime);
     });
