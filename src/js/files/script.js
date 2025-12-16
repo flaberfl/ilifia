@@ -302,9 +302,309 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // const container = document.querySelector('#points-container');
+  // const progressBar = document.querySelector('.progress-bar');
+  // const hoverText = document.querySelector('#hover-text');
+  // const periodText = document.querySelector('#period-text');
+  // const priceDiv = document.querySelector('#price');
+
+  // const pointsCount = 21;
+  // const labels = [];
+  // const texts = [];
+  // const prices = [];
+
+  // // Фиксированные цены
+  // const fixedPrices = [
+  //   1990, 1890, 1790, 1690, 1590, 1490, 1390, 1290, 1190, // 1-9 мес
+  //   1140, 1090, 1040, 990, 940, 890, 840, 790, 740, 690, 640, 590 // 10-21 без подписей
+  // ];
+
+  // // Фиксированные тексты
+  // const fixedTexts = [
+  //   "Облегчим симптомы токсикоза",
+  //   "Поможем подобрать блюда будущей маме",
+  //   "Рассказываем про изменения в организме",
+  //   "Поможем сохранить активность и радость от движения",
+  //   "Научим слушать свое телое",
+  //   "Научим дышать правильно",
+  //   "Готовим тело к мягким родам",
+  //   "Уменьшаем отеки и судороги в ногах",
+  //   "Переводим тревогу в спокойствие",
+  //   "Начинаем восстановление после родов бережно",
+  //   "Восстанавливаем мышцы тазового дна",
+  //   "Расслабляем мышцы спины после дня с ребенком",
+  //   "Помогаем снова почувствовать мышцы",
+  //   "Укрепляем любовь к себе",
+  //   "Возвращаем себе сексуальнность",
+  //   "Помогаем вернуть силы после бессонных ночей",
+  //   "Возвращаем ощущение комфорта и лёгкости",
+  //   "Стабилизируем эмоциональное состояние",
+  //   "Восстанавливаем силы медитациями",
+  //   "Выпрямляем осанку без боли",
+  //   "Полностью восстанавливаем организм"
+  // ];
+
+
+
+  // const priceButton = document.getElementById('popup__footer-button');
+
+  // // Функция, которая включает/отключает кнопку
+  // function toggleButtonState() {
+  //   // Получаем текст из #price
+  //   const priceText = document.getElementById('price').textContent.trim();
+  //   // Преобразуем в число (если пусто, то 0)
+  //   const totalPrice = parseInt(priceText) || 0;
+
+  //   if (totalPrice === 0) {
+  //     priceButton.setAttribute('disabled', 'disabled');
+  //   } else {
+  //     priceButton.removeAttribute('disabled');
+  //   }
+  // }
+
+  // // Вызываем при инициализации, чтобы установить начальное состояние
+  // toggleButtonState();
+
+
+  // // Проверки
+  // if (fixedPrices.length !== pointsCount || fixedTexts.length !== pointsCount) {
+  //   console.error("Количество цен или текстов не совпадает с количеством точек!");
+  //   return;
+  // }
+
+  // for (let i = 0; i < pointsCount; i++) {
+  //   if (i < 9) {
+  //     labels.push(`${i + 1} мес`); // только до 9 мес
+  //   } else if (i === 9) {
+  //     labels.push("послеродовое восстановление"); // для 10-й точки
+  //   } else {
+  //     labels.push(""); // пустая подпись для остальных
+  //   }
+
+  //   texts.push(fixedTexts[i]);
+  //   prices.push(fixedPrices[i]);
+  // }
+
+  // // Устанавливаем точки
+  // for (let i = 0; i < pointsCount; i++) {
+  //   const point = document.createElement('div');
+  //   point.className = 'point';
+  //   point.dataset.index = i;
+  //   point.dataset.price = prices[i];
+
+  //   // Расположение точки
+  //   const pos = (i / (pointsCount - 1)) * 100;
+  //   point.style.left = `${pos}%`;
+
+  //   // Создаем label ТОЛЬКО если у точки есть подпись И индекс != 9
+  //   if (labels[i] && i !== 9) {
+  //     const label = document.createElement('div');
+  //     label.className = `point-label ${i % 2 === 0 ? 'bottom-label' : 'top-label'}`;
+  //     label.textContent = labels[i];
+  //     label.style.left = `${pos}%`;
+  //     label.style[(i % 2 === 0 ? 'bottom' : 'top')] = '25px';
+
+  //     container.appendChild(label);
+  //   }
+
+  //   container.appendChild(point);
+
+  //   // Hover
+  //   point.addEventListener('mouseenter', function (e) {
+  //     const idx = parseInt(this.dataset.index);
+  //     hoverText.textContent = texts[idx];
+  //     const rect = this.getBoundingClientRect();
+  //     const containerRect = container.getBoundingClientRect();
+  //     hoverText.style.left = `${rect.left - containerRect.left + rect.width / 2}px`;
+  //     hoverText.style.opacity = 1;
+  //   });
+
+  //   point.addEventListener('mouseleave', function (e) {
+  //     hoverText.style.opacity = 0;
+  //   });
+
+  //   // Click
+  //   point.addEventListener('click', function (e) {
+  //     const idx = parseInt(this.dataset.index);
+  //     selectRange(idx);
+  //   });
+  // }
+
+  // let selectedStart = null;
+  // let selectedEnd = null;
+
+  // function selectRange(clickedIndex) {
+  //   if (selectedStart === null && selectedEnd === null) {
+  //     // Ничего не выбрано -> выбрать первую
+  //     selectedStart = clickedIndex;
+  //     selectedEnd = clickedIndex;
+  //   } else if (selectedStart !== null && selectedEnd !== null) {
+  //     if (selectedStart === selectedEnd) {
+  //       // Выбрана одна точка
+  //       if (selectedStart === clickedIndex) {
+  //         // Кликнули на неё же -> сброс
+  //         selectedStart = null;
+  //         selectedEnd = null;
+  //       } else {
+  //         // Кликнули на другую -> сделать диапазон
+  //         selectedEnd = clickedIndex;
+  //         if (selectedStart > selectedEnd) {
+  //           [selectedStart, selectedEnd] = [selectedEnd, selectedStart];
+  //         }
+  //       }
+  //     } else {
+  //       // Диапазон выбран
+  //       if (clickedIndex === selectedStart) {
+  //         // Кликнули на start -> остаётся только end
+  //         selectedStart = selectedEnd;
+  //       } else if (clickedIndex === selectedEnd) {
+  //         // Кликнули на end -> остаётся только start
+  //         selectedEnd = selectedStart;
+  //       } else {
+  //         // Кликнули на другую -> сбросить всё и выбрать новую
+  //         selectedStart = clickedIndex;
+  //         selectedEnd = clickedIndex;
+  //       }
+  //     }
+  //   }
+
+  //   updatePoints();
+  //   updatePriceDisplay();
+  //   updatePeriodText();
+  // }
+
+  // function updatePoints() {
+  //   document.querySelectorAll('.point').forEach((p, idx) => {
+  //     p.classList.remove('active');
+  //     if (selectedStart !== null && selectedEnd !== null) {
+  //       if (idx >= selectedStart && idx <= selectedEnd) {
+  //         p.classList.add('active');
+  //       }
+  //     }
+  //   });
+  // }
+
+  // function updatePriceDisplay() {
+  //   if (selectedStart === null || selectedEnd === null) {
+  //     // Если точки не выбраны или это одна точка — можно оставить 0 или очистить
+  //     document.getElementById('price').textContent = '0'; // или '' если хочешь пусто
+  //     toggleButtonState();
+  //     return;
+  //   }
+
+  //   let total = 0;
+  //   for (let i = selectedStart; i <= selectedEnd; i++) {
+  //     total += prices[i];
+  //   }
+
+  //   // Выводим только сумму
+  //   document.getElementById('price').textContent = total;
+  //   toggleButtonState();
+  // }
+
+  // function updatePeriodText() {
+  //   if (selectedStart !== null && selectedEnd !== null && selectedStart !== selectedEnd) {
+  //     // Если начало диапазона — от 1 до 9, а конец — 10 или дальше
+  //     if (selectedStart < 9 && selectedEnd >= 9) {
+  //       // Выводим "с ? мес до послеродового восстановления"
+  //       const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+  //       periodText.textContent = `с ${startLabel} до послеродового восстановления`;
+  //     }
+  //     // Если диапазон от 1 до 9 (обе точки до 9)
+  //     else if (selectedStart < 9 && selectedEnd < 9) {
+  //       // Выводим обычный формат
+  //       const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
+  //       const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+  //       periodText.textContent = `с ${startLabel} по ${endLabel}`;
+  //     }
+  //     // Если обе точки после 9
+  //     else {
+  //       // Выводим "послеродовое восстановление"
+  //       periodText.textContent = 'послеродовое восстановление';
+  //     }
+
+  //     // Позиционируем плашку посередине между start и end
+  //     const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
+  //     const pos = (midIndex / (pointsCount - 1)) * 100;
+  //     periodText.style.left = `${pos}%`;
+  //     periodText.classList.add('visible');
+  //   } else {
+  //     periodText.classList.remove('visible');
+  //   }
+  // }
+
+
+
+  // // Элементы для мобильной версии
+  // const mobileControls = document.getElementById('mobile-controls');
+  // const monthSelect = document.getElementById('month-select');
+  // const monthCountInput = document.getElementById('month-count');
+  // const decreaseBtn = document.getElementById('decrease-btn');
+  // const increaseBtn = document.getElementById('increase-btn');
+  // const priceSpan = document.getElementById('price');
+
+  // // Заполняем select динамически (опционально)
+  // for (let i = 0; i < pointsCount; i++) {
+  //   const option = document.createElement('option');
+  //   const label = labels[i] || `точка ${i + 1}`;
+  //   option.value = i;
+  //   option.textContent = label;
+  //   monthSelect.appendChild(option);
+  // }
+
+  // // Обработчики для кнопок счётчика
+  // decreaseBtn.addEventListener('click', () => {
+  //   let value = parseInt(monthCountInput.value);
+  //   if (value > 1) {
+  //     monthCountInput.value = value - 1;
+  //     updateMobilePrice(); // Обновляем цену
+  //   }
+  // });
+
+  // increaseBtn.addEventListener('click', () => {
+  //   let value = parseInt(monthCountInput.value);
+  //   if (value < 21) {
+  //     monthCountInput.value = value + 1;
+  //     updateMobilePrice(); // Обновляем цену
+  //   }
+  // });
+
+
+  // document.addEventListener('selectCallback', function (e) {
+  //   // Проверяем, что событие пришло от нужного select
+  //   if (e.detail.select.id === 'month-select') {
+  //     updateMobilePrice();
+  //   }
+  // });
+
+
+  // // Функция пересчёта суммы
+  // function updateMobilePrice() {
+  //   const startIndex = parseInt(monthSelect.value);
+  //   const count = parseInt(monthCountInput.value);
+  //   const endIndex = startIndex + count - 1;
+
+  //   if (endIndex >= pointsCount) {
+  //     // Не выходим за границы
+  //     return;
+  //   }
+
+  //   let total = 0;
+  //   for (let i = startIndex; i <= endIndex; i++) {
+  //     total += prices[i];
+  //   }
+
+  //   priceSpan.textContent = total;
+  //   toggleButtonState();
+  // }
+
+  // // Изначально вызываем, чтобы установить сумму
+  // updateMobilePrice();
+
+
   const container = document.querySelector('#points-container');
   const progressBar = document.querySelector('.progress-bar');
-  // const progressFill = document.querySelector('.progress-fill');
   const hoverText = document.querySelector('#hover-text');
   const periodText = document.querySelector('#period-text');
   const priceDiv = document.querySelector('#price');
@@ -313,12 +613,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const labels = [];
   const texts = [];
   const prices = [];
-
-  // Фиксированные цены
-  const fixedPrices = [
-    1990, 1890, 1790, 1690, 1590, 1490, 1390, 1290, 1190, // 1-9 мес
-    1140, 1090, 1040, 990, 940, 890, 840, 790, 740, 690, 640, 590 // 10-21 без подписей
-  ];
 
   // Фиксированные тексты
   const fixedTexts = [
@@ -345,15 +639,10 @@ document.addEventListener('DOMContentLoaded', function () {
     "Полностью восстанавливаем организм"
   ];
 
-
-
   const priceButton = document.getElementById('popup__footer-button');
 
-  // Функция, которая включает/отключает кнопку
   function toggleButtonState() {
-    // Получаем текст из #price
     const priceText = document.getElementById('price').textContent.trim();
-    // Преобразуем в число (если пусто, то 0)
     const totalPrice = parseInt(priceText) || 0;
 
     if (totalPrice === 0) {
@@ -363,27 +652,34 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Вызываем при инициализации, чтобы установить начальное состояние
   toggleButtonState();
 
-
-  // Проверки
-  if (fixedPrices.length !== pointsCount || fixedTexts.length !== pointsCount) {
-    console.error("Количество цен или текстов не совпадает с количеством точек!");
-    return;
-  }
-
+  // Генерация подписей и текстов
   for (let i = 0; i < pointsCount; i++) {
     if (i < 9) {
-      labels.push(`${i + 1} мес`); // только до 9 мес
+      labels.push(`${i + 1} мес`);
     } else if (i === 9) {
-      labels.push("послеродовое восстановление"); // для 10-й точки
+      labels.push("послеродовое восстановление");
     } else {
-      labels.push(""); // пустая подпись для остальных
+      labels.push("");
     }
 
     texts.push(fixedTexts[i]);
-    prices.push(fixedPrices[i]);
+    prices.push(0);
+  }
+
+  // Функция расчёта цены в диапазоне (от 1-го до N-го месяца)
+  function calculatePriceInRange(start, end) {
+    const count = end - start + 1;
+    let total = 0;
+    for (let i = 0; i < count; i++) {
+      if (i < 9) {
+        total += Math.max(0, 1990 - i * 100);
+      } else {
+        total += Math.max(0, 1290 - (i - 9) * 50);
+      }
+    }
+    return total;
   }
 
   // Устанавливаем точки
@@ -391,26 +687,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const point = document.createElement('div');
     point.className = 'point';
     point.dataset.index = i;
-    point.dataset.price = prices[i];
 
-    // Расположение точки
     const pos = (i / (pointsCount - 1)) * 100;
     point.style.left = `${pos}%`;
 
-    // Создаем label ТОЛЬКО если у точки есть подпись И индекс != 9
     if (labels[i] && i !== 9) {
       const label = document.createElement('div');
       label.className = `point-label ${i % 2 === 0 ? 'bottom-label' : 'top-label'}`;
       label.textContent = labels[i];
       label.style.left = `${pos}%`;
       label.style[(i % 2 === 0 ? 'bottom' : 'top')] = '25px';
-
       container.appendChild(label);
     }
 
     container.appendChild(point);
 
-    // Hover
     point.addEventListener('mouseenter', function (e) {
       const idx = parseInt(this.dataset.index);
       hoverText.textContent = texts[idx];
@@ -424,7 +715,6 @@ document.addEventListener('DOMContentLoaded', function () {
       hoverText.style.opacity = 0;
     });
 
-    // Click
     point.addEventListener('click', function (e) {
       const idx = parseInt(this.dataset.index);
       selectRange(idx);
@@ -470,7 +760,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     updatePoints();
-    // updateProgressFill();
     updatePriceDisplay();
     updatePeriodText();
   }
@@ -486,85 +775,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // function updateProgressFill() {
-  //   if (selectedStart === null || selectedEnd === null || selectedStart === selectedEnd) {
-  //     // Если точки не выбраны или это одна точка — скрываем полосу
-  //     progressFill.style.width = '0';
-  //     return;
-  //   }
-
-  //   // Вычисляем позиции начала и конца диапазона
-  //   const startOffset = (selectedStart / (pointsCount - 1)) * 100;
-  //   const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
-  //   const width = endOffset - startOffset;
-
-  //   console.log('Обновление полосы: left =', startOffset, 'width =', width);
-
-  //   progressFill.style.left = `${startOffset}%`;
-  //   progressFill.style.width = `${width}%`;
-  // }
-
-
-
-
-
-
-
-
-
-  //   function updatePriceDisplay() {
-  //     if (selectedStart === null || selectedEnd === null) {
-  //       priceDiv.textContent = 'Сумма: 0';
-  //       return;
-  //     }
-
-  //     let total = 0;
-  //     for (let i = selectedStart; i <= selectedEnd; i++) {
-  //       total += prices[i];
-  //     }
-  //     priceDiv.textContent = `Сумма: ${total}`;
-  //   }
-
   function updatePriceDisplay() {
     if (selectedStart === null || selectedEnd === null) {
-      // Если точки не выбраны или это одна точка — можно оставить 0 или очистить
-      document.getElementById('price').textContent = '0'; // или '' если хочешь пусто
+      document.getElementById('price').textContent = '0';
       toggleButtonState();
       return;
     }
 
-    let total = 0;
-    for (let i = selectedStart; i <= selectedEnd; i++) {
-      total += prices[i];
-    }
-
-    // Выводим только сумму
+    const total = calculatePriceInRange(selectedStart, selectedEnd);
     document.getElementById('price').textContent = total;
     toggleButtonState();
   }
 
   function updatePeriodText() {
     if (selectedStart !== null && selectedEnd !== null && selectedStart !== selectedEnd) {
-      // Если начало диапазона — от 1 до 9, а конец — 10 или дальше
       if (selectedStart < 9 && selectedEnd >= 9) {
-        // Выводим "с ? мес до послеродового восстановления"
         const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
         periodText.textContent = `с ${startLabel} до послеродового восстановления`;
-      }
-      // Если диапазон от 1 до 9 (обе точки до 9)
-      else if (selectedStart < 9 && selectedEnd < 9) {
-        // Выводим обычный формат
+      } else if (selectedStart < 9 && selectedEnd < 9) {
         const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
         const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
         periodText.textContent = `с ${startLabel} по ${endLabel}`;
-      }
-      // Если обе точки после 9
-      else {
-        // Выводим "послеродовое восстановление"
+      } else {
         periodText.textContent = 'послеродовое восстановление';
       }
 
-      // Позиционируем плашку посередине между start и end
       const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
       const pos = (midIndex / (pointsCount - 1)) * 100;
       periodText.style.left = `${pos}%`;
@@ -574,9 +809,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // --- МОБИЛЬНАЯ ЧАСТЬ ---
 
-
-  // Элементы для мобильной версии
   const mobileControls = document.getElementById('mobile-controls');
   const monthSelect = document.getElementById('month-select');
   const monthCountInput = document.getElementById('month-count');
@@ -584,7 +818,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const increaseBtn = document.getElementById('increase-btn');
   const priceSpan = document.getElementById('price');
 
-  // Заполняем select динамически (опционально)
   for (let i = 0; i < pointsCount; i++) {
     const option = document.createElement('option');
     const label = labels[i] || `точка ${i + 1}`;
@@ -593,48 +826,38 @@ document.addEventListener('DOMContentLoaded', function () {
     monthSelect.appendChild(option);
   }
 
-  // Обработчики для кнопок счётчика
   decreaseBtn.addEventListener('click', () => {
     let value = parseInt(monthCountInput.value);
     if (value > 1) {
       monthCountInput.value = value - 1;
-      updateMobilePrice(); // Обновляем цену
+      updateMobilePrice();
     }
   });
 
   increaseBtn.addEventListener('click', () => {
     let value = parseInt(monthCountInput.value);
-    if (value < 21) {
+    if (value < pointsCount) {
       monthCountInput.value = value + 1;
-      updateMobilePrice(); // Обновляем цену
-    }
-  });
-
-
-  document.addEventListener('selectCallback', function (e) {
-    // Проверяем, что событие пришло от нужного select
-    if (e.detail.select.id === 'month-select') {
       updateMobilePrice();
     }
   });
 
-  // Обработчик для изменения месяца в select
-  // monthSelect.addEventListener('change', updateMobilePrice);
-
-  // Функция пересчёта суммы
   function updateMobilePrice() {
-    const startIndex = parseInt(monthSelect.value);
     const count = parseInt(monthCountInput.value);
-    const endIndex = startIndex + count - 1;
 
-    if (endIndex >= pointsCount) {
-      // Не выходим за границы
+    if (count <= 0 || count > pointsCount) {
+      priceSpan.textContent = '0';
+      toggleButtonState();
       return;
     }
 
     let total = 0;
-    for (let i = startIndex; i <= endIndex; i++) {
-      total += prices[i];
+    for (let i = 0; i < count; i++) {
+      if (i < 9) {
+        total += Math.max(0, 1990 - i * 100);
+      } else {
+        total += Math.max(0, 1290 - (i - 9) * 50);
+      }
     }
 
     priceSpan.textContent = total;
@@ -644,22 +867,35 @@ document.addEventListener('DOMContentLoaded', function () {
   // Изначально вызываем, чтобы установить сумму
   updateMobilePrice();
 
-  // function updatePeriodText() {
-  //   if (selectedStart === null || selectedEnd === null) {
-  //     periodText.classList.remove('visible');
-  //     return;
-  //   }
+  // Обработчик изменения месяца
+  monthSelect.addEventListener('change', function () {
+    const idx = parseInt(this.value);
 
-  //   const startLabel = labels[selectedStart] || `точка ${selectedStart + 1}`;
-  //   const endLabel = labels[selectedEnd] || `точка ${selectedEnd + 1}`;
+    // Снимаем выделение со всех точек
+    document.querySelectorAll('.point').forEach(p => p.classList.remove('active'));
+    // Выделяем точку, соответствующую значению select
+    const targetPoint = document.querySelector(`.point[data-index="${idx}"]`);
+    if (targetPoint) {
+      targetPoint.classList.add('active');
+    }
 
-  //   periodText.textContent = `с ${startLabel} по ${endLabel}`;
-  //   const midIndex = Math.floor((selectedStart + selectedEnd) / 2);
-  //   const pos = (midIndex / (pointsCount - 1)) * 100;
-  //   periodText.style.left = `${pos}%`;
-  //   periodText.classList.add('visible');
-  // }
+    // Считаем цену от 0 до idx (включительно), т.е. (idx + 1) месяцев
+    const count = idx + 1;
+    let total = 0;
+    for (let i = 0; i < count; i++) {
+      if (i < 9) {
+        total += Math.max(0, 1990 - i * 100);
+      } else {
+        total += Math.max(0, 1290 - (i - 9) * 50);
+      }
+    }
 
+    document.getElementById('price').textContent = total;
+    toggleButtonState();
+  });
+
+  // --- ОСТАЛЬНЫЙ КОД (формы и т.д.) ---
+  // ...
 
 
   // ВЫДЕЛЕНИЕ БАНКОВСКИХ ЛОГОТИПОВ
