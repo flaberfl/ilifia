@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('#points-container');
   const progressBar = document.querySelector('.progress-bar');
-  const progressFill = document.querySelector('.progress-fill');
+  // const progressFill = document.querySelector('.progress-fill');
   const hoverText = document.querySelector('#hover-text');
   const periodText = document.querySelector('#period-text');
   const priceDiv = document.querySelector('#price');
@@ -316,54 +316,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Фиксированные цены
   const fixedPrices = [
-    100, 150, 200, 250, 300, 350, 400, 450, 500, // 1-9 мес
-    550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100 // 10-21 без подписей
+    1990, 1890, 1790, 1690, 1590, 1490, 1390, 1290, 1190, // 1-9 мес
+    1140, 1090, 1040, 990, 940, 890, 840, 790, 740, 690, 640, 590 // 10-21 без подписей
   ];
 
   // Фиксированные тексты
   const fixedTexts = [
+    "Облегчим симптомы токсикоза",
+    "Поможем подобрать блюда будущей маме",
     "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    "Рассказываем про изменения в организме",
-    // "Текст для 1 месяца",
-    // "Текст для 2 месяца",
-    // "Текст для 3 месяца",
-    // "Текст для 4 месяца",
-    // "Текст для 5 месяца",
-    // "Текст для 6 месяца",
-    // "Текст для 7 месяца",
-    // "Текст для 8 месяца",
-    // "Текст для 9 месяца",
-    // "Текст для 10 точки без подписи",
-    // "Текст для 11 точки без подписи",
-    // "Текст для 12 точки без подписи",
-    // "Текст для 13 точки без подписи",
-    // "Текст для 14 точки без подписи",
-    // "Текст для 15 точки без подписи",
-    // "Текст для 16 точки без подписи",
-    // "Текст для 17 точки без подписи",
-    // "Текст для 18 точки без подписи",
-    // "Текст для 19 точки без подписи",
-    // "Текст для 20 точки без подписи",
-    // "Текст для 21 точки без подписи"
+    "Поможем сохранить активность и радость от движения",
+    "Научим слушать свое телое",
+    "Научим дышать правильно",
+    "Готовим тело к мягким родам",
+    "Уменьшаем отеки и судороги в ногах",
+    "Переводим тревогу в спокойствие",
+    "Начинаем восстановление после родов бережно",
+    "Восстанавливаем мышцы тазового дна",
+    "Расслабляем мышцы спины после дня с ребенком",
+    "Помогаем снова почувствовать мышцы",
+    "Укрепляем любовь к себе",
+    "Возвращаем себе сексуальнность",
+    "Помогаем вернуть силы после бессонных ночей",
+    "Возвращаем ощущение комфорта и лёгкости",
+    "Стабилизируем эмоциональное состояние",
+    "Восстанавливаем силы медитациями",
+    "Выпрямляем осанку без боли",
+    "Полностью восстанавливаем организм"
   ];
 
 
@@ -491,7 +470,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     updatePoints();
-    updateProgressFill();
+    // updateProgressFill();
     updatePriceDisplay();
     updatePeriodText();
   }
@@ -507,23 +486,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function updateProgressFill() {
-    if (selectedStart === null || selectedEnd === null || selectedStart === selectedEnd) {
-      // Если точки не выбраны или это одна точка — скрываем полосу
-      progressFill.style.width = '0';
-      return;
-    }
+  // function updateProgressFill() {
+  //   if (selectedStart === null || selectedEnd === null || selectedStart === selectedEnd) {
+  //     // Если точки не выбраны или это одна точка — скрываем полосу
+  //     progressFill.style.width = '0';
+  //     return;
+  //   }
 
-    // Вычисляем позиции начала и конца диапазона
-    const startOffset = (selectedStart / (pointsCount - 1)) * 100;
-    const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
-    const width = endOffset - startOffset;
+  //   // Вычисляем позиции начала и конца диапазона
+  //   const startOffset = (selectedStart / (pointsCount - 1)) * 100;
+  //   const endOffset = (selectedEnd / (pointsCount - 1)) * 100;
+  //   const width = endOffset - startOffset;
 
-    console.log('Обновление полосы: left =', startOffset, 'width =', width);
+  //   console.log('Обновление полосы: left =', startOffset, 'width =', width);
 
-    progressFill.style.left = `${startOffset}%`;
-    progressFill.style.width = `${width}%`;
-  }
+  //   progressFill.style.left = `${startOffset}%`;
+  //   progressFill.style.width = `${width}%`;
+  // }
+
+
+
+
+
+
+
+
 
   //   function updatePriceDisplay() {
   //     if (selectedStart === null || selectedEnd === null) {
@@ -698,136 +685,136 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ОБРАБОТКА ФОРМЫ РЕГИСТРАЦИИ
 
-    const form = document.querySelector('.sign-up-popup__form');
-    const telInput = form.querySelector('input[name="tel"]');
-    const codeInput = form.querySelector('input[name="code"]'); // Новое поле
-    const consentCheckbox = form.querySelector('input[name="form\\[\\]"]');
-    const button = form.querySelector('button[type="submit"]');
-    const initialButtonText = button.textContent.trim();
+  const form = document.querySelector('.sign-up-popup__form');
+  const telInput = form.querySelector('input[name="tel"]');
+  const codeInput = form.querySelector('input[name="code"]'); // Новое поле
+  const consentCheckbox = form.querySelector('input[name="form\\[\\]"]');
+  const button = form.querySelector('button[type="submit"]');
+  const initialButtonText = button.textContent.trim();
 
-    let stageOneComplete = false; // Флаг для отслеживания завершения первого этапа
+  let stageOneComplete = false; // Флаг для отслеживания завершения первого этапа
 
-    /**
-     * Функция обновления состояния кнопки
-     */
-    function updateButtonState() {
-      const isTelValid = validatePhone(telInput.value);
-      const isConsentChecked = consentCheckbox.checked;
+  /**
+   * Функция обновления состояния кнопки
+   */
+  function updateButtonState() {
+    const isTelValid = validatePhone(telInput.value);
+    const isConsentChecked = consentCheckbox.checked;
 
-      if (isTelValid) {
-        button.textContent = 'Регистрация';
-      } else {
-        // Если телефон недействителен, всегда показываем "Получить код" и отключаем
-        button.textContent = initialButtonText;
-        button.disabled = true;
-        return;
-      }
-
-      // Если первый этап ещё не пройден
-      if (!stageOneComplete) {
-        // Активна только при согласии
-        if (isConsentChecked) {
-          button.disabled = false;
-        } else {
-          button.disabled = true;
-        }
-      } else {
-        // Если первый этап пройден, проверяем также и код
-        const isCodeEntered = codeInput.value.trim().length > 0; // Предположим, что код может быть любым, просто введённым
-        if (isConsentChecked && isCodeEntered) {
-          button.disabled = false;
-        } else {
-          button.disabled = true;
-        }
-      }
-    }
-
-    /**
-     * Функция валидации номера телефона (минимум 7 цифр)
-     * @param {string} phone
-     * @returns {boolean}
-     */
-    function validatePhone(phone) {
-      const digitsOnly = phone.replace(/\D/g, '');
-      return digitsOnly.length >= 7;
-    }
-
-    // Слушатель для клика по кнопке
-    button.addEventListener('click', function (e) {
-      // Проверяем, активна ли кнопка и мы на первом этапе
-      if (!this.disabled && !stageOneComplete) {
-        e.preventDefault(); // Предотвращаем отправку формы (если action не пустой)
-
-        // Показываем поле ввода кода
-        codeInput.style.display = 'block';
-
-        // Меняем текст кнопки на "Регистрация" (уже должен быть, но на всякий случай)
-        this.textContent = 'Регистрация';
-
-        // Переходим ко второму этапу
-        stageOneComplete = true;
-
-        // Обновляем состояние кнопки, т.к. теперь участвует новое поле
-        updateButtonState();
-      }
-      // Если кнопка активна и stageOneComplete=true, то можно позволить форме отправиться
-      // или обработать отправку как обычно (но вы сказали, что это пока не нужно)
-    });
-
-    // Слушатель для поля телефона
-    telInput.addEventListener('input', updateButtonState);
-
-    // Слушатель для чекбокса
-    consentCheckbox.addEventListener('change', updateButtonState);
-
-    // Слушатель для нового поля кода
-    codeInput.addEventListener('input', updateButtonState); // При каждом вводе проверяем
-
-    // Инициализация состояния при загрузке
-    updateButtonState();
-
-
-    // ВТОРАЯ ФОРМА АВТОРИЗАЦИИ
-
-    // --- Вторая форма (внутри #sign-in-popup) ---
-    const form2 = document.querySelector('#sign-in-popup .sign-up-popup__form.forn');
-
-    if (form2) {
-        const nameInput = form2.querySelector('input[name="name"]');
-        const loginInput = form2.querySelector('input[name="login"]');
-        const passwInput = form2.querySelector('input[name="passw"]');
-        const consentCheckbox2 = form2.querySelector('input[name="form\\[\\]"]');
-        const button2 = form2.querySelector('button[type="submit"]');
-
-        // Проверяем, что все элементы найдены
-        if (nameInput && loginInput && passwInput && consentCheckbox2 && button2) {
-            function updateButtonState2() {
-                const isNameFilled = nameInput.value.trim() !== '';
-                const isLoginFilled = loginInput.value.trim() !== '';
-                const isPasswFilled = passwInput.value.trim() !== '';
-                const isConsentChecked = consentCheckbox2.checked;
-
-                if (isNameFilled && isLoginFilled && isPasswFilled && isConsentChecked) {
-                    button2.removeAttribute('disabled');
-                } else {
-                    button2.setAttribute('disabled', '');
-                }
-            }
-
-            // Добавляем слушатели событий
-            nameInput.addEventListener('input', updateButtonState2);
-            loginInput.addEventListener('input', updateButtonState2);
-            passwInput.addEventListener('input', updateButtonState2);
-            consentCheckbox2.addEventListener('change', updateButtonState2);
-
-            // Инициализируем состояние кнопки при загрузке
-            updateButtonState2();
-        } else {
-            console.warn("Не все элементы формы найдены внутри #sign-in-popup");
-        }
+    if (isTelValid) {
+      button.textContent = 'Регистрация';
     } else {
-        console.warn("Форма входа не найдена внутри #sign-in-popup");
+      // Если телефон недействителен, всегда показываем "Получить код" и отключаем
+      button.textContent = initialButtonText;
+      button.disabled = true;
+      return;
     }
+
+    // Если первый этап ещё не пройден
+    if (!stageOneComplete) {
+      // Активна только при согласии
+      if (isConsentChecked) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    } else {
+      // Если первый этап пройден, проверяем также и код
+      const isCodeEntered = codeInput.value.trim().length > 0; // Предположим, что код может быть любым, просто введённым
+      if (isConsentChecked && isCodeEntered) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    }
+  }
+
+  /**
+   * Функция валидации номера телефона (минимум 7 цифр)
+   * @param {string} phone
+   * @returns {boolean}
+   */
+  function validatePhone(phone) {
+    const digitsOnly = phone.replace(/\D/g, '');
+    return digitsOnly.length >= 7;
+  }
+
+  // Слушатель для клика по кнопке
+  button.addEventListener('click', function (e) {
+    // Проверяем, активна ли кнопка и мы на первом этапе
+    if (!this.disabled && !stageOneComplete) {
+      e.preventDefault(); // Предотвращаем отправку формы (если action не пустой)
+
+      // Показываем поле ввода кода
+      codeInput.style.display = 'block';
+
+      // Меняем текст кнопки на "Регистрация" (уже должен быть, но на всякий случай)
+      this.textContent = 'Регистрация';
+
+      // Переходим ко второму этапу
+      stageOneComplete = true;
+
+      // Обновляем состояние кнопки, т.к. теперь участвует новое поле
+      updateButtonState();
+    }
+    // Если кнопка активна и stageOneComplete=true, то можно позволить форме отправиться
+    // или обработать отправку как обычно (но вы сказали, что это пока не нужно)
+  });
+
+  // Слушатель для поля телефона
+  telInput.addEventListener('input', updateButtonState);
+
+  // Слушатель для чекбокса
+  consentCheckbox.addEventListener('change', updateButtonState);
+
+  // Слушатель для нового поля кода
+  codeInput.addEventListener('input', updateButtonState); // При каждом вводе проверяем
+
+  // Инициализация состояния при загрузке
+  updateButtonState();
+
+
+  // ВТОРАЯ ФОРМА АВТОРИЗАЦИИ
+
+  // --- Вторая форма (внутри #sign-in-popup) ---
+  const form2 = document.querySelector('#sign-in-popup .sign-up-popup__form.forn');
+
+  if (form2) {
+    const nameInput = form2.querySelector('input[name="name"]');
+    const loginInput = form2.querySelector('input[name="login"]');
+    const passwInput = form2.querySelector('input[name="passw"]');
+    const consentCheckbox2 = form2.querySelector('input[name="form\\[\\]"]');
+    const button2 = form2.querySelector('button[type="submit"]');
+
+    // Проверяем, что все элементы найдены
+    if (nameInput && loginInput && passwInput && consentCheckbox2 && button2) {
+      function updateButtonState2() {
+        const isNameFilled = nameInput.value.trim() !== '';
+        const isLoginFilled = loginInput.value.trim() !== '';
+        const isPasswFilled = passwInput.value.trim() !== '';
+        const isConsentChecked = consentCheckbox2.checked;
+
+        if (isNameFilled && isLoginFilled && isPasswFilled && isConsentChecked) {
+          button2.removeAttribute('disabled');
+        } else {
+          button2.setAttribute('disabled', '');
+        }
+      }
+
+      // Добавляем слушатели событий
+      nameInput.addEventListener('input', updateButtonState2);
+      loginInput.addEventListener('input', updateButtonState2);
+      passwInput.addEventListener('input', updateButtonState2);
+      consentCheckbox2.addEventListener('change', updateButtonState2);
+
+      // Инициализируем состояние кнопки при загрузке
+      updateButtonState2();
+    } else {
+      console.warn("Не все элементы формы найдены внутри #sign-in-popup");
+    }
+  } else {
+    console.warn("Форма входа не найдена внутри #sign-in-popup");
+  }
 
 
 });
