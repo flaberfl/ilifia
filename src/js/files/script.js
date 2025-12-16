@@ -676,7 +676,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (i < 9) {
         total += Math.max(0, 1990 - i * 100);
       } else {
-        total += Math.max(0, 1290 - (i - 9) * 50);
+        total += Math.max(0, 1190 - (i - 8) * 50); // <-- ИСПРАВЛЕНО
       }
     }
     return total;
@@ -856,10 +856,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (i < 9) {
         total += Math.max(0, 1990 - i * 100);
       } else {
-        total += Math.max(0, 1290 - (i - 9) * 50);
+        total += Math.max(0, 1190 - (i - 8) * 50); // <-- ИСПРАВЛЕНО
       }
     }
-
     priceSpan.textContent = total;
     toggleButtonState();
   }
@@ -886,7 +885,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (i < 9) {
         total += Math.max(0, 1990 - i * 100);
       } else {
-        total += Math.max(0, 1290 - (i - 9) * 50);
+        total += Math.max(0, 1190 - (i - 8) * 50);
       }
     }
 
@@ -1053,9 +1052,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+
+  function debugCalculatePriceInRange(start, end) {
+    const count = end - start + 1;
+    let total = 0;
+    console.group("Расчёт цены от " + start + " до " + end);
+    for (let i = 0; i < count; i++) {
+      let price;
+      if (i < 9) {
+        price = Math.max(0, 1990 - i * 100);
+      } else {
+        price = Math.max(0, 1190 - (i - 8) * 50);
+      }
+      console.log("Месяц " + (i + 1) + " = " + price);
+      total += price;
+    }
+    console.log("Итого: " + total);
+    console.groupEnd();
+    return total;
+  }
+
+  // Вызов для проверки
+  debugCalculatePriceInRange(0, 20);
+
+
 });
-
-
 
 document.body.addEventListener('click', function (e) {
   const target = e.target.closest('a[data-popup="#pay-popup"]');
