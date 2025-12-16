@@ -1054,3 +1054,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+
+
+document.body.addEventListener('click', function (e) {
+  const target = e.target.closest('a[data-popup="#pay-popup"]');
+  if (target) {
+    // Сразу копируем цену
+    const currentPrice = document.querySelector('#subscription-popup #price').textContent;
+    const targetPriceElement = document.querySelector('#pay-popup #price');
+    if (targetPriceElement) {
+      targetPriceElement.textContent = currentPrice;
+    }
+  }
+});
