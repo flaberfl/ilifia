@@ -17,7 +17,9 @@
 		"devbuild": "gulp build --build --nowebp",
 		"noimgbuild": "gulp build --build --noimgopt",
 		"tmp": "gulp -f gulpfile.tmp.js",
-		"bem": "fls-bemtree-from-html"
+		"bem": "fls-bemtree-from-html",
+		"css:compare": "node compare-css.js"
+    // "dev": "webpack --mode development"
 	},
 	"devDependencies": {
 		"@babel/cli": "latest",
@@ -88,10 +90,19 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"diff": "^8.0.4",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"simplebar": "latest"
 	}
+}
+
+
+{
+  "scripts": {
+    "css:compare": "node compare-css.js",
+    "dev": "webpack --mode development"
+  }
 }
