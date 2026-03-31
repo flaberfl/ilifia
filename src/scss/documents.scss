@@ -27,13 +27,21 @@
 
   // .documents__body
 
+  &__cottant34 {
+    @include adaptiveValue("font-size", 16, 8);
+  }
+
+  &__main43 {
+    @include adaptiveValue("margin-bottom", 50, 20);
+  }
+
   &__body {
     display: grid;
     grid-template-columns: 1fr toRem(387);
 
     @include adaptiveValue("gap", 120, 30);
 
-    @media (max-width:$tablet){
+    @media (max-width:$tablet) {
       grid-template-columns: auto;
     }
   }
@@ -146,7 +154,10 @@
     a {
       display: block;
       text-decoration: underline;
-      &:not(:last-child) {margin-bottom: toRem(10);}
+
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
     }
 
     p {

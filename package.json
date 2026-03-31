@@ -18,8 +18,7 @@
 		"noimgbuild": "gulp build --build --noimgopt",
 		"tmp": "gulp -f gulpfile.tmp.js",
 		"bem": "fls-bemtree-from-html",
-		"css:compare": "node compare-css.js"
-    // "dev": "webpack --mode development"
+		"css:compare": "node compare-css.cjs"
 	},
 	"devDependencies": {
 		"@babel/cli": "latest",
@@ -97,12 +96,4 @@
 		"react-dom": "^18.2.0",
 		"simplebar": "latest"
 	}
-}
-
-
-{
-  "scripts": {
-    "css:compare": "node compare-css.js",
-    "dev": "webpack --mode development"
-  }
 }
