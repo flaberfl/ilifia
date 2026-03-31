@@ -135,12 +135,12 @@ function initSliders() {
 				320: {
 					slidesPerView: 1.2,
 					spaceBetween: 20,
-	
+
 				},
 				500: {
 					slidesPerView: 4,
 					spaceBetween: 20,
-	
+
 				},
 
 				768: {
@@ -161,6 +161,96 @@ function initSliders() {
 				1920: {
 					slidesPerView: 5,
 					spaceBetween: 30,
+				},
+			},
+
+			// События
+			on: {
+
+				// init: function () {
+				// 	updatePaginationVisibility.call(this);
+				// },
+				// slideChange: function () {
+				// 	updatePaginationVisibility.call(this);
+				// }
+
+			}
+		});
+	}
+
+	if (document.querySelector('.landing-blog-health__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.landing-blog-health__slider', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			centeredSlidesBounds: true,
+
+			// slidesPerView: 1, // Показываем 3 слайда
+			// slidesPerGroup: 1,
+
+			// spaceBetween: 10,
+			loop: true,
+			// loopAdditionalSlides: 3,
+			// autoHeight: true,
+			speed: 1200,
+
+			lazy: true,
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.recipes-block-btn.swiper-button-prev',
+				nextEl: '.recipes-block-btn.swiper-button-next',
+			},
+
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+					centeredSlides: true,
+					centeredSlidesBounds: true,
+					speed: 700,
+				},
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+					centeredSlidesBounds: false,
+					speed: 700,
+					loop: 'false'
+				},
+
+				768: {
+					centeredSlides: true,
+					centeredSlidesBounds: true,
+					slidesPerView: 3,
+					speed: 700,
+					spaceBetween: -35,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: -35,
+				},
+
+				// 1245: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 10,
+				// },
+
+				1920: {
+					slidesPerView: 3,
+					spaceBetween: -35,
 				},
 			},
 
