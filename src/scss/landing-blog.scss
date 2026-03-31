@@ -26,16 +26,23 @@
 
   // .landing-blog__head--right
 
-  &__head--right {
-  }
+  &__head--right {}
 
   // .landing-blog__title
 
-  &__title {}
+  &__title {
+    margin-bottom: toRem(8);
+    display: block;
+
+    font-family: $secondFamily;
+    @include adaptiveValue("font-size", 64, 24);
+  }
 
   // .landing-blog__subtitle
 
-  &__subtitle {}
+  &__subtitle {
+    @include adaptiveValue("font-size", 20, 16);
+  }
 
   // .landing-blog__wrapper
 

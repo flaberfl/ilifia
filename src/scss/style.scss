@@ -121,6 +121,19 @@ body {
 
 .page {
 
+	&.landing-page {
+		// @include adaptiveValue("padding-top", 100, 80);
+		padding-top: toRem(100) !important;
+		
+		@media (max-width:$tablet){
+			padding-top: toRem(90) !important;
+		}
+		
+		@media (max-width:$mobile){
+			padding-top: toRem(80) !important; 
+		}
+	}
+
 	&:not(.main-page &) {
 		@include adaptiveValue("padding-top", 140, 100);
 	}
@@ -132,9 +145,7 @@ body {
 		// @include adaptiveValue("padding-top", 120, 80);
 	}
 
-	&.landing-page {
-		@include adaptiveValue("padding-top", 100, 80);
-	}
+
 
 }
 
