@@ -1,0 +1,118 @@
+.landing-blog {
+
+  // .landing-blog__container
+
+  &__container {}
+
+  // .landing-blog__head
+
+  &__head {
+    position: relative;
+    min-height: toRem(213);
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // width: 100%;
+
+    background-color: #fff;
+    border-radius: toRem(20);
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  // .landing-blog__head--right
+
+  &__head--right {
+  }
+
+  // .landing-blog__title
+
+  &__title {}
+
+  // .landing-blog__subtitle
+
+  &__subtitle {}
+
+  // .landing-blog__wrapper
+
+  &__wrapper {}
+
+  // .landing-blog__title-h2
+
+  &__title-h2 {}
+
+  // .landing-blog__link-all
+
+  &__link-all {}
+
+  // .landing-blog__item
+
+  &__item {}
+
+  // .landing-blog__media
+
+  &__media {}
+
+  // .landing-blog__link
+
+  &__link {}
+
+  // .landing-blog__image
+
+  &__image {}
+
+  // .landing-blog__name
+
+  &__name {}
+
+  // .landing-blog__decsr
+
+  &__decsr {}
+}
+
+.landing-blog-section {}
+
+.title-h2 {}
+
+.landing-blog-health {
+
+  // .landing-blog-health__slider
+
+  &__slider {}
+
+  // .landing-blog-health__wrapper
+
+  &__wrapper {}
+
+  // .landing-blog-health__slide
+
+  &__slide {}
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.block {}
+
+.articles {
+
+  // .articles__media
+
+  &__media {}
+}
+
+.favorite-btn {}
+
+.training-articles {
+
+  // .training-articles__info
+
+  &__info {}
+}

@@ -132,6 +132,10 @@ body {
 		// @include adaptiveValue("padding-top", 120, 80);
 	}
 
+	&.landing-page {
+		@include adaptiveValue("padding-top", 100, 80);
+	}
+
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -210,3 +214,4 @@ body {
 @import "profile-notifications";
 @import "profile-settings";
 @import "documents";
+@import "landing-blog";
