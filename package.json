@@ -18,7 +18,7 @@
 		"noimgbuild": "gulp build --build --noimgopt",
 		"tmp": "gulp -f gulpfile.tmp.js",
 		"bem": "fls-bemtree-from-html",
-		"css:compare": "node compare-css.cjs"
+		"css:changes": "gulp cssChanges --gulpfile gulpfile.changes.js"
 	},
 	"devDependencies": {
 		"@babel/cli": "latest",
@@ -65,9 +65,11 @@
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",
 		"nouislider": "latest",
-		"postcss": "latest",
+		"postcss": "^8.5.8",
+		"postcss-cli": "^11.0.1",
 		"postcss-loader": "latest",
 		"postcss-preset-env": "latest",
+		"postcss-split": "^0.0.4",
 		"pug": "latest",
 		"pug-loader": "latest",
 		"sass": "1.79.6",
@@ -89,6 +91,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"css-tree": "^3.2.1",
 		"diff": "^8.0.4",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",

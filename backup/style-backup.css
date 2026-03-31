@@ -3432,11 +3432,29 @@ section.profile {
   .form__data {
     gap: 1.25rem
   }
-  .documents__cottant {
-    font-size: 1rem
+  .article__install {
+    margin-bottom: 1.25rem
+  }
+  .article__install2 {
+    margin-bottom: 1.25rem
+  }
+  .article__install3 {
+    margin-bottom: 1.25rem
+  }
+  .article__install4 {
+    margin-bottom: 1.25rem
+  }
+  .article__install5 {
+    margin-bottom: 1.25rem
+  }
+  .article__installation {
+    margin-bottom: 1.25rem
+  }
+  .documents {
+    padding-top: 1.375rem
   }
   .documents__main {
-    margin-bottom: 3.125rem
+    font-size: 1.375rem
   }
   .documents__body {
     gap: 7.5rem
@@ -3923,11 +3941,29 @@ section.profile {
   .form__data {
     gap: .9375rem
   }
-  .documents__cottant {
-    font-size: .5rem
+  .article__install {
+    margin-bottom: .625rem
+  }
+  .article__install2 {
+    margin-bottom: .625rem
+  }
+  .article__install3 {
+    margin-bottom: .625rem
+  }
+  .article__install4 {
+    margin-bottom: .625rem
+  }
+  .article__install5 {
+    margin-bottom: .625rem
+  }
+  .article__installation {
+    margin-bottom: .625rem
+  }
+  .documents {
+    padding-top: .3125rem
   }
   .documents__main {
-    margin-bottom: 1.25rem
+    font-size: 1rem
   }
   .documents__body {
     gap: 1.875rem
@@ -5228,11 +5264,29 @@ section.profile {
   .form__data {
     gap: clamp(.9375rem ,.8263888889rem + .5555555556vw ,1.25rem)
   }
-  .documents__cottant {
-    font-size: clamp(.5rem ,.3222222222rem + .8888888889vw ,1rem)
+  .article__install {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .article__install2 {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .article__install3 {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .article__install4 {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .article__install5 {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .article__installation {
+    margin-bottom: clamp(.625rem ,.4027777778rem + 1.1111111111vw ,1.25rem)
+  }
+  .documents {
+    padding-top: clamp(.3125rem ,-.0652777778rem + 1.8888888889vw ,1.375rem)
   }
   .documents__main {
-    margin-bottom: clamp(1.25rem ,.5833333333rem + 3.3333333333vw ,3.125rem)
+    font-size: clamp(1rem ,.8666666667rem + .6666666667vw ,1.375rem)
   }
   .documents__body {
     gap: clamp(1.875rem ,-.125rem + 10vw ,7.5rem)

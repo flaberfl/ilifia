@@ -25,16 +25,6 @@
 
 .documents {
 
-  // .documents__body
-
-  &__cottant34 {
-    @include adaptiveValue("font-size", 16, 8);
-  }
-
-  &__main43 {
-    @include adaptiveValue("margin-bottom", 50, 20);
-  }
-
   &__body {
     display: grid;
     grid-template-columns: 1fr toRem(387);
