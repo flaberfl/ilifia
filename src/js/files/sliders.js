@@ -116,6 +116,46 @@ function initRecipesSlider() {
 	}
 }
 
+function initReviewsSlider() {
+	if (document.querySelector('.reviews__slider')) {
+		new Swiper('.reviews__slider', {
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			loop: true,
+			speed: 1200,
+			lazy: true,
+			navigation: {
+				prevEl: '.reviews__slider-btn.swiper-button-prev',
+				nextEl: '.reviews__slider-btn.swiper-button-next',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1920: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			}
+		});
+	}
+}
+
 // Функция для инициализации слайдера профиля
 function initProfileSlider() {
 	if (document.querySelector('.profile-header__slider')) {
@@ -157,6 +197,9 @@ function initSliders() {
 
 	// Инициализация слайдера профиля
 	initProfileSlider();
+
+	// Инициализация слайдера отзывов
+	initReviewsSlider();
 
 	// Инициализация слайдеров с навигацией
 	initNavigationSlider('landing-blog__slider--health', 'swiper-button-next--health');
