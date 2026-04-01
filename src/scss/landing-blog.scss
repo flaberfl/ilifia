@@ -1,5 +1,9 @@
 .landing-blog {
 
+  &.blog {
+    padding-bottom: toRem(0);
+  }
+
   // .landing-blog__container--intro
 
   &__container--intro {}
@@ -92,13 +96,16 @@
 
       @media (max-width:$mobile) {
         display: flex;
+        margin-top: toRem(20);
       }
     }
   }
 }
 
 
-.landing-blog-section {}
+.landing-blog-section {
+  @include adaptiveValue("margin-bottom", 70, 50);
+}
 
 
 

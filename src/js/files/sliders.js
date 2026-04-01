@@ -178,9 +178,9 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.landing-blog-health__slider')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.landing-blog__slider--health')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper('.landing-blog-health__slider', { //Указываем класс нужного слайдера
+		new Swiper('.landing-blog__slider--health', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
 			modules: [Navigation],
@@ -205,7 +205,147 @@ function initSliders() {
 			// Кнопки "влево/вправо"
 			navigation: {
 				// prevEl: '.landing-blog-health.swiper-button-prev',
-				nextEl: '.landing-blog-health.swiper-button-next',
+				nextEl: '.swiper-button-next--health.swiper-button-next',
+			},
+
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+				1920: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+
+			// События
+			on: {
+
+				// init: function () {
+				// 	updatePaginationVisibility.call(this);
+				// },
+				// slideChange: function () {
+				// 	updatePaginationVisibility.call(this);
+				// }
+
+			}
+		});
+	}
+	if (document.querySelector('.landing-blog__slider--podcast')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.landing-blog__slider--podcast', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
+
+			// slidesPerView: 1, // Показываем 3 слайда
+			// slidesPerGroup: 1,
+
+			// spaceBetween: 10,
+			loop: true,
+			// loopAdditionalSlides: 3,
+			// autoHeight: true,
+			speed: 1200,
+
+			lazy: true,
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				// prevEl: '.landing-blog-health.swiper-button-prev',
+				nextEl: '.swiper-button-next--podcast.swiper-button-next',
+			},
+
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+				1920: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+
+			// События
+			on: {
+
+				// init: function () {
+				// 	updatePaginationVisibility.call(this);
+				// },
+				// slideChange: function () {
+				// 	updatePaginationVisibility.call(this);
+				// }
+
+			}
+		});
+	}
+	if (document.querySelector('.landing-blog__slider--recipes')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.landing-blog__slider--recipes', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
+
+			// slidesPerView: 1, // Показываем 3 слайда
+			// slidesPerGroup: 1,
+
+			// spaceBetween: 10,
+			loop: true,
+			// loopAdditionalSlides: 3,
+			// autoHeight: true,
+			speed: 1200,
+
+			lazy: true,
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				// prevEl: '.landing-blog-health.swiper-button-prev',
+				nextEl: '.swiper-button-next--recipes.swiper-button-next',
 			},
 
 
