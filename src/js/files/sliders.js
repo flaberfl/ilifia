@@ -187,8 +187,8 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 'auto',
-			centeredSlides: true,
-			centeredSlidesBounds: true,
+			// centeredSlides: true,
+			// centeredSlidesBounds: true,
 
 			// slidesPerView: 1, // Показываем 3 слайда
 			// slidesPerGroup: 1,
@@ -204,53 +204,35 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.recipes-block-btn.swiper-button-prev',
-				nextEl: '.recipes-block-btn.swiper-button-next',
+				// prevEl: '.landing-blog-health.swiper-button-prev',
+				nextEl: '.landing-blog-health.swiper-button-next',
 			},
 
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
 
 			// Брейкпоинты
 			breakpoints: {
 				320: {
 					slidesPerView: 1.2,
 					spaceBetween: 20,
-					centeredSlides: true,
-					centeredSlidesBounds: true,
-					speed: 700,
 				},
 				500: {
 					slidesPerView: 2,
 					spaceBetween: 20,
-					centeredSlides: false,
-					centeredSlidesBounds: false,
-					speed: 700,
-					loop: 'false'
 				},
 
 				768: {
-					centeredSlides: true,
-					centeredSlidesBounds: true,
+
 					slidesPerView: 3,
-					speed: 700,
-					spaceBetween: -35,
+					spaceBetween: 20,
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: -35,
+					spaceBetween: 20,
 				},
-
-				// 1245: {
-				// 	slidesPerView: 3,
-				// 	spaceBetween: 10,
-				// },
 
 				1920: {
 					slidesPerView: 3,
-					spaceBetween: -35,
+					spaceBetween: 20,
 				},
 			},
 

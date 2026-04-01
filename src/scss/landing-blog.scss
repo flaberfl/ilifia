@@ -1,18 +1,14 @@
 .landing-blog {
 
-  // .landing-blog__container
+  // .landing-blog__container--intro
 
-  &__container {}
+  &__container--intro {}
 
   // .landing-blog__head
 
   &__head {
     position: relative;
     min-height: toRem(213);
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // width: 100%;
 
     background-color: #fff;
     border-radius: toRem(20);
@@ -49,12 +45,17 @@
     @include adaptiveValue("font-size", 64, 24);
   }
 
+
   // .landing-blog__subtitle
 
   &__subtitle {
     line-height: normal;
     @include adaptiveValue("font-size", 20, 16);
   }
+
+  // .landing-blog__container
+
+  &__container {}
 
   // .landing-blog__wrapper
 
@@ -63,9 +64,8 @@
   }
 
   // .landing-blog__title-h2
-
   &__title-h2 {
-    margin-bottom: toRem(20);
+    margin-bottom: toRem(10);
   }
 
   // .landing-blog__link-all
@@ -75,8 +75,8 @@
     align-items: center;
     gap: toRem(15);
 
-    @media (min-width:$mobile){
-       margin-bottom: toRem(30); 
+    @media (min-width:$mobile) {
+      margin-bottom: toRem(30);
     }
 
     @media (max-width:$mobile) {
@@ -91,71 +91,59 @@
       }
     }
   }
-
-  // .landing-blog__item
-
-  &__item {}
-
-  // .landing-blog__media
-
-  &__media {}
-
-  // .landing-blog__link
-
-  &__link {}
-
-  // .landing-blog__image
-
-  &__image {}
-
-  // .landing-blog__name
-
-  &__name {}
-
-  // .landing-blog__decsr
-
-  &__decsr {}
 }
+
 
 .landing-blog-section {}
 
-.title-h2 {}
+
 
 .landing-blog-health {
 
   // .landing-blog-health__slider
 
   &__slider {}
-
-  // .landing-blog-health__wrapper
-
-  &__wrapper {}
-
-  // .landing-blog-health__slide
-
-  &__slide {}
 }
 
 .swiper {}
 
-.swiper-wrapper {}
+.landing-blog-slider {
 
-.swiper-slide {}
+  // .landing-blog-slider__wrapper
 
-.block {}
+  &__wrapper {}
 
-.articles {
+  // .landing-blog-slider__slide
 
-  // .articles__media
+  &__slide {}
+
+  // .landing-blog-slider__item
+
+  &__item {}
+
+  // .landing-blog-slider__media
 
   &__media {}
-}
 
-.favorite-btn {}
+  // .landing-blog-slider__link
 
-.training-articles {
+  &__link {}
 
-  // .training-articles__info
+  // .landing-blog-slider__image
+
+  &__image {
+    border-radius: toRem(20);
+  }
+
+  // .landing-blog-slider__info
 
   &__info {}
+
+  // .landing-blog-slider__name
+
+  &__name {}
+
+  // .landing-blog-slider__decsr
+
+  &__decsr {}
 }
