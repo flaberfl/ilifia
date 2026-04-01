@@ -119,11 +119,22 @@
 
   // .landing-blog-slider__item
 
-  &__item {}
+  &__item {
+    background-color: red;
+    
+    border-radius: toRem(20);
+    overflow: hidden;
+  }
 
   // .landing-blog-slider__media
 
-  &__media {}
+  &__media {
+    border-radius: toRem(20);
+    overflow: hidden;
+    // position: relative;
+    // padding-bottom: 52%;
+
+  }
 
   // .landing-blog-slider__link
 
@@ -132,12 +143,28 @@
   // .landing-blog-slider__image
 
   &__image {
+    // position: absolute;
+    // inset: 0;
+    width: 100%;
+    height: 100%;
     border-radius: toRem(20);
+    object-fit: cover;
+    max-width: 100%;
   }
 
   // .landing-blog-slider__info
 
-  &__info {}
+  &__info {
+    padding: toRem(20);
+
+    // border-radius: 0 0 toRem(20);
+    // background-color: #fff;
+
+    @media (max-width:$tablet) {
+      padding: toRem(15);
+    }
+
+  }
 
   // .landing-blog-slider__name
 
