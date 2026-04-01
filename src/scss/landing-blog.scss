@@ -112,6 +112,31 @@
 .swiper {}
 
 .landing-blog-slider {
+  position: relative;
+
+  .swiper-button-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    z-index: 50;
+
+
+    @include adaptiveValue("width", 40, 36);
+    @include adaptiveValue("height", 40, 36);
+
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fff;
+        stroke: $pinkColor;
+      }
+    }
+  }
 
   // .landing-blog-slider__wrapper
 
