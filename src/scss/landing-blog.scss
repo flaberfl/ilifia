@@ -109,10 +109,22 @@
   &__slider {}
 }
 
-.swiper {}
 
 .landing-blog-slider {
   position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    // width: 30%;
+    height: 100%;
+    right: 0;
+    z-index: 20;
+    pointer-events: none;
+
+    background: linear-gradient(270deg, #f3f3f5 0%, rgba(243, 243, 245, 0) 100%);
+    @include adaptiveValue("width", 387, 90);
+  }
 
   .swiper-button-next {
     position: absolute;
@@ -144,7 +156,9 @@
 
   // .landing-blog-slider__slide
 
-  &__slide {}
+  &__slide {
+    cursor: pointer;
+  }
 
   // .landing-blog-slider__item
 
@@ -174,7 +188,14 @@
 
   // .landing-blog-slider__link
 
-  &__link {}
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 60;
+  }
 
   // .landing-blog-slider__image
 
