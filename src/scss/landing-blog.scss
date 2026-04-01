@@ -71,6 +71,8 @@
   &__title-h2 {
     margin-bottom: toRem(10);
 
+    @include adaptiveValue("font-size", 40, 20);
+
     @media (max-width:$mobile) {
       margin-bottom: toRem(20);
     }
