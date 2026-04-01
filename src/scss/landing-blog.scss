@@ -25,6 +25,7 @@
       position: absolute;
       right: 0;
       top: 0;
+      height: 100%;
 
       @media (max-width:$mobile) {
         display: none;
@@ -35,18 +36,18 @@
   // .landing-blog__head--right
 
   &__head--right {
+    position: relative;
+    z-index: 50;
+
     @include adaptiveValue("padding-top", 50, 40);
+    @include adaptiveValue("padding-bottom", 50, 40);
+
   }
 
   // .landing-blog__title
 
   &__title {
     margin-bottom: toRem(15);
-    position: relative;
-
-    z-index: 50;
-    // display: flex;
-    // align-items: center;
 
     font-family: $secondFamily;
     @include adaptiveValue("font-size", 64, 24);
@@ -255,5 +256,60 @@
   &__decsr {
     line-height: normal;
     @include adaptiveValue("font-size", 14, 12);
+  }
+}
+
+
+
+.reviews__slider {
+  position: relative;
+  // height: 200px;
+
+  .swiper-button-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    z-index: 50;
+
+
+    @include adaptiveValue("width", 40, 36);
+    @include adaptiveValue("height", 40, 36);
+
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fff;
+        stroke: $pinkColor;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    z-index: 50;
+
+
+    @include adaptiveValue("width", 40, 36);
+    @include adaptiveValue("height", 40, 36);
+
+    svg path {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fff;
+        stroke: $pinkColor;
+      }
+    }
   }
 }
