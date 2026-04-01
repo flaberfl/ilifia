@@ -66,6 +66,10 @@
   // .landing-blog__title-h2
   &__title-h2 {
     margin-bottom: toRem(10);
+
+    @media (max-width:$mobile) {
+      margin-bottom: toRem(20);
+    }
   }
 
   // .landing-blog__link-all
@@ -120,8 +124,8 @@
   // .landing-blog-slider__item
 
   &__item {
-    background-color: red;
-    
+    background-color: #fff;
+
     border-radius: toRem(20);
     overflow: hidden;
   }
@@ -131,8 +135,15 @@
   &__media {
     border-radius: toRem(20);
     overflow: hidden;
-    // position: relative;
-    // padding-bottom: 52%;
+
+
+    @media (min-width:$mobile) {
+      height: 200px;
+    }
+
+    @media (max-width:$mobile) {
+      aspect-ratio: 240 / 190;
+    }
 
   }
 
@@ -168,9 +179,18 @@
 
   // .landing-blog-slider__name
 
-  &__name {}
+  &__name {
+    margin-bottom: toRem(5);
+
+    line-height: normal;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 20, 16);
+  }
 
   // .landing-blog-slider__decsr
 
-  &__decsr {}
+  &__decsr {
+    line-height: normal;
+    @include adaptiveValue("font-size", 14, 12);
+  }
 }
