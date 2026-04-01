@@ -165,6 +165,9 @@ function initSliders() {
 	initNavigationSlider('landing-blog__slider--preparation-training', 'swiper-button-next--preparation-training');
 	initNavigationSlider('landing-blog__slider--preparation-docs', 'swiper-button-next--preparation-docs');
 	initNavigationSlider('landing-blog__slider--preparation-podcast', 'swiper-button-next--preparation-podcast');
+	initNavigationSlider('landing-blog__slider--preparation-meditations', 'swiper-button-next--preparation-meditations');
+	initNavigationSlider('landing-blog__slider--recovery-docs', 'swiper-button-next--recovery-docs');
+	initNavigationSlider('landing-blog__slider--recovery-training', 'swiper-button-next--recovery-training');
 }
 
 window.addEventListener("load", function (e) {
