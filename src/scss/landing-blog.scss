@@ -164,6 +164,7 @@
 
   &__item {
     background-color: #fff;
+    position: relative;
 
     border-radius: toRem(20);
     overflow: hidden;
@@ -195,6 +196,10 @@
     left: 0;
     top: 0;
     z-index: 60;
+
+    .block & {
+      pointer-events: none
+    }
   }
 
   // .landing-blog-slider__image
