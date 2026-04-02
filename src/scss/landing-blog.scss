@@ -265,6 +265,58 @@
   &__title {
     @include adaptiveValue("margin-bottom", 40, 30);
   }
+
+  &__body {
+    position: relative;
+
+    .swiper-button-next {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      z-index: 50;
+
+
+      @include adaptiveValue("width", 40, 36);
+      @include adaptiveValue("height", 40, 36);
+
+      svg path {
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        svg path {
+          fill: #fff;
+          stroke: $pinkColor;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      position: absolute;
+      left: -45px;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      z-index: 50;
+
+
+      @include adaptiveValue("width", 40, 36);
+      @include adaptiveValue("height", 40, 36);
+
+      svg path {
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        svg path {
+          fill: #fff;
+          stroke: $pinkColor;
+        }
+      }
+    }
+  }
 }
 
 .reviews__slider {
@@ -272,53 +324,6 @@
   z-index: 50;
   // height: 200px;
 
-  .swiper-button-next {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-
-    z-index: 50;
-
-
-    @include adaptiveValue("width", 40, 36);
-    @include adaptiveValue("height", 40, 36);
-
-    svg path {
-      transition: all 0.3s;
-    }
-
-    &:hover {
-      svg path {
-        fill: #fff;
-        stroke: $pinkColor;
-      }
-    }
-  }
-
-  .swiper-button-prev {
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translate(0, -50%);
-
-    z-index: 50;
-
-
-    @include adaptiveValue("width", 40, 36);
-    @include adaptiveValue("height", 40, 36);
-
-    svg path {
-      transition: all 0.3s;
-    }
-
-    &:hover {
-      svg path {
-        fill: #fff;
-        stroke: $pinkColor;
-      }
-    }
-  }
 }
 
 .slide-reviews {

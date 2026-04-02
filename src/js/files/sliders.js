@@ -144,7 +144,7 @@ function initReviewsSlider() {
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 3,
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
 				1920: {
