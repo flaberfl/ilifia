@@ -395,15 +395,41 @@
 
 
 .faq {
+  .spollers {
+    max-width: toRem(800);
+    margin: 0 auto;
+    margin-bottom: toRem(70);
+  }
 
-  .spollers__title,
   .spollers__body {
-    padding: toRem(20) toRem(40);
+    padding: 0 toRem(50) toRem(20);
 
     background-color: #fff;
 
+    font-size: toRem(16);
+
+
     @media (max-width:$mobile) {
-      padding: toRem(10) toRem(20);
+      padding: toRem(0) toRem(20) toRem(10);
+
+      font-size: toRem(14);
+    }
+  }
+
+  .spollers__title {
+    padding: toRem(20) toRem(40);
+    min-height: toRem(67);
+    height: auto;
+
+    background-color: #fff;
+    line-height: normal;
+
+    font-size: toRem(20);
+    font-weight: 600;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+      padding: toRem(10) toRem(30) toRem(10) toRem(20);
     }
   }
 
@@ -413,6 +439,8 @@
   /* .faq__title */
   &__title {
     margin-bottom: toRem(40);
+
+    text-align: center;
 
     @media (max-width:$mobile) {
       margin-bottom: toRem(30);
