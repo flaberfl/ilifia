@@ -555,6 +555,20 @@
   background-color: #fff;
 }
 
+.landing-callback {
+  &__title {
+    margin-bottom: toRem(50);
+
+    font-family: $secondFamily;
+    @include adaptiveValue("font-size", 64, 36);
+
+    @media (max-width:$mobile) {
+      margin-bottom: toRem(40);
+    }
+
+  }
+}
+
 .ask-exp-popup {
 
   .popup__wrapper {
@@ -568,6 +582,8 @@
   }
 
   &__title {
+    font-family: $secondFamily;
+    font-weight: 400;
     @include adaptiveValue("font-size", 24, 16);
   }
 
@@ -578,8 +594,8 @@
 
     font-size: toRem(16);
 
-    @media (max-width:$mobile){
-       width: 100%; 
+    @media (max-width:$mobile) {
+      width: 100%;
     }
   }
 }
