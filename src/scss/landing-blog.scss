@@ -392,3 +392,44 @@
 .landing-tariffs .tariffs__items {
   justify-content: center;
 }
+
+
+.faq {
+
+  .spollers__title,
+  .spollers__body {
+    padding: toRem(20) toRem(40);
+
+    background-color: #fff;
+
+    @media (max-width:$mobile) {
+      padding: toRem(10) toRem(20);
+    }
+  }
+
+  /* .faq__container */
+  &__container {}
+
+  /* .faq__title */
+  &__title {
+    margin-bottom: toRem(40);
+
+    @media (max-width:$mobile) {
+      margin-bottom: toRem(30);
+    }
+  }
+}
+
+.title-h2 {}
+
+.spollers {
+
+  /* .spollers__item */
+  &__item {}
+
+  /* .spollers__title */
+  &__title {}
+
+  /* .spollers__body */
+  &__body {}
+}
