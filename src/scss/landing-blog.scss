@@ -259,10 +259,17 @@
   }
 }
 
+.reviews {
+  position: relative;
 
+  &__title {
+    @include adaptiveValue("margin-bottom", 40, 30);
+  }
+}
 
 .reviews__slider {
   position: relative;
+  z-index: 50;
   // height: 200px;
 
   .swiper-button-next {
@@ -314,9 +321,42 @@
   }
 }
 
+.slide-reviews {
+  padding: toRem(20);
+
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+
+  backdrop-filter: blur(7px);
+  background: rgba(255, 255, 255, 0.5);
 
 
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+    margin-bottom: toRem(15);
+  }
 
-// <span class="slide-reviews__star slide-reviews__star--null"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4434 6.0188C11.7111 6.84284 12.4793 7.40161 13.3457 7.40161H18.623L14.3535 10.5032C13.6525 11.0125 13.3592 11.9155 13.627 12.7395L15.2578 17.759L10.9883 14.6565C10.2873 14.1472 9.33769 14.1472 8.63672 14.6565L4.36719 17.759L5.99805 12.7395C6.26579 11.9155 5.97246 11.0125 5.27148 10.5032L1.00195 7.40161H6.2793C7.14575 7.40161 7.91389 6.84284 8.18164 6.0188L9.8125 1.00024L11.4434 6.0188Z"
-// stroke="#FF96C3" stroke-width="2" /></svg></span>
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
 
+  &__content {
+    margin-bottom: toRem(20);
+
+    line-height: normal;
+    @include adaptiveValue("font-size", 16, 12);
+  }
+}
+
+
+.new-decor {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 5;
+}
