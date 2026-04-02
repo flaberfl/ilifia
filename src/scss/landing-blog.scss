@@ -261,6 +261,8 @@
 
 .reviews {
   position: relative;
+  @include adaptiveValue("padding-top", 70, 40);
+  @include adaptiveValue("padding-bottom", 70, 50);
 
   &__title {
     @include adaptiveValue("margin-bottom", 40, 30);
@@ -270,7 +272,7 @@
     position: relative;
 
     .reviews__slider-btns {
-      @media (max-width: toEm(1300)){
+      @media (max-width: toEm(1300)) {
         display: flex;
         gap: toRem(15);
         margin-top: toRem(20);
@@ -376,9 +378,17 @@
 
 .new-decor {
   position: absolute;
-  top: 130px;
+  top: 42%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   z-index: 5;
+}
+
+.landing-tariffs section {
+  background-color: $grayColor !important;
+}
+
+.landing-tariffs .tariffs__items {
+  justify-content: center;
 }

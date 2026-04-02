@@ -8,27 +8,29 @@
 
   /* .tariffs__items */
   &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: toRem(20);
+    display: flex;
+    justify-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap: toRem(20);
 
-    @media (max-width:$tablet) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      justify-items: center;
-    }
+    // @media (max-width:$tablet) {
+    //   grid-template-columns: 1fr 1fr;
+    //   grid-template-rows: 1fr 1fr;
+    //   justify-items: center;
+    // }
 
-    @media (max-width:$mobile) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-    }
+    // @media (max-width:$mobile) {
+    //   grid-template-columns: 1fr;
+    //   grid-template-rows: 1fr 1fr 1fr;
+    // }
   }
 
   /* .tariffs__item */
   &__item {
-    @media (max-width:$tablet) {
-      max-width: toRem(387);
-    }
+    max-width: toRem(387);
+
+    @media (max-width:$tablet) {}
   }
 
   /* .tariffs__label */
