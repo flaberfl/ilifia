@@ -214,6 +214,7 @@ function initSliders() {
 	initNavigationSlider('landing-blog__slider--payments', 'swiper-button-next--payments');
 	initNavigationSlider('landing-blog__slider--food-docs', 'swiper-button-next--food-docs');
 	initNavigationSlider('landing-blog__slider--food-recipes', 'swiper-button-next--food-recipes');
+	initNavigationSlider('landing-blog__slider--experts-docs', 'swiper-button-next--experts-docs');
 }
 
 window.addEventListener("load", function (e) {

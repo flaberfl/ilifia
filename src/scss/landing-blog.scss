@@ -139,6 +139,13 @@
     @include adaptiveValue("width", 387, 90);
   }
 
+  .landing-callback & {
+    &::before {
+      content: '';
+      background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
   .swiper-button-next {
     position: absolute;
     right: 0;
@@ -178,9 +185,16 @@
   &__item {
     background-color: #fff;
     position: relative;
+    background: rgba(255, 255, 255, 0.5);
 
     border-radius: toRem(20);
     overflow: hidden;
+    border: 2px solid #fff;
+
+    .landing-callback & {
+      border: 2px solid var(--grey);
+
+    }
   }
 
   // .landing-blog-slider__media
@@ -401,6 +415,10 @@
     margin-bottom: toRem(70);
   }
 
+  .spollers__item {
+    border: 2px solid var(--grey);
+  }
+
   .spollers__body {
     padding: 0 toRem(50) toRem(20) toRem(40);
 
@@ -531,4 +549,8 @@
     }
 
   }
+}
+
+.page.landing-callback {
+  background-color: #fff;
 }
