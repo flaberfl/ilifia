@@ -22,8 +22,8 @@
       bottom: 0;
     }
 
-    @media (max-width:$mobile){
-       min-height: toRem(300); 
+    @media (max-width:$mobile) {
+      min-height: toRem(300);
     }
   }
 
@@ -60,5 +60,35 @@
     @media (max-width: toEm(600)) {
       text-align: center;
     }
+  }
+}
+
+.scroll-button {
+  position: fixed;
+  right: 120px;
+  bottom: 70px;
+  z-index: 100;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  // justify-content: space-between;
+  max-width: toRem(257);
+  height: toRem(56);
+  // gap: toRem(40);
+
+  background-color: #fff;
+  border-radius: toRem(15);
+
+  span {
+    margin-left: toRem(47);
+    margin-right: toRem(38);
+    white-space: nowrap;
+
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  @media (max-width:$tablet){
+    display: none;
   }
 }
