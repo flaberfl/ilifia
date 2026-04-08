@@ -1,0 +1,64 @@
+.socium {
+
+  // .socium__container--intro
+
+  &__container--intro {}
+
+  // .socium__wrapper
+
+  &__wrapper {
+    position: relative;
+    min-height: toRem(407);
+
+    border-radius: toRem(20);
+    background-color: $lightGreenColor;
+
+    @include adaptiveValue("padding-bottom", 70, 60);
+    @include adaptiveValue("padding-top", 70, 60);
+
+    svg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (max-width:$mobile){
+       min-height: toRem(300); 
+    }
+  }
+
+  // .socium__container
+
+  &__container {
+    .intro__button {
+      position: relative;
+      z-index: 20;
+
+      background-color: #fff;
+      color: $mainColor;
+
+      @media (max-width: toEm(600)) {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        background-color: $brightGreenColor;
+      }
+    }
+  }
+
+  // .socium__title
+
+  &__title {
+    position: relative;
+    z-index: 20;
+    margin-bottom: toRem(40);
+    max-width: toRem(1045);
+
+    @media (max-width: toEm(600)) {
+      text-align: center;
+    }
+  }
+}
