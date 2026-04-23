@@ -74,6 +74,7 @@
   // justify-content: space-between;
   max-width: toRem(257);
   height: toRem(56);
+  border: 1px solid $brightGreenColor;
   // gap: toRem(40);
 
   background-color: #fff;
@@ -86,9 +87,19 @@
 
     font-weight: 600;
     font-size: 16px;
+
+    @media (max-width:$mobile){
+       display: none; 
+    }
   }
 
-  @media (max-width:$tablet){
-    display: none;
+
+  @media (max-width: toEm(1300)) {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  @media (max-width:$mobile){
+      
   }
 }
